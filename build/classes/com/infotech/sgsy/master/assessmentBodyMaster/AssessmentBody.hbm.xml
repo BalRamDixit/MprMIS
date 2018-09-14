@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.infotech.sgsy.master.assessmentBodyMaster.AssessmentBodyVO"  table="mst_assesment_body" schema="public">
+    
+        <id name="id" column="ab_id">
+    		<generator class="sequence">
+        		<param name="sequence">mst_assesment_body_Id_Seq</param>
+    		</generator>
+		</id>
+       
+       
+        <property name="assBodyName"                type="string"><column name="ab_name" /></property>
+        <property name="assBodyCode"                type="string"><column name="ab_code" /></property>
+        <property name="certifyAgencyId"               type="string"><column name="certify_Agency_id" /></property>
+        <property name="createdBy"                    type="string"><column name="created_by" /></property>
+        <property name="updatedBy"                    type="string"><column name="last_modified_by" /></property>
+        <property name="createdOnDate"                type="date"><column name="created_on" /></property>
+        <property name="updatedOnDate"                type="date"><column name="last_modified_on" /></property>
+        
+	</class>
+</hibernate-mapping>
+

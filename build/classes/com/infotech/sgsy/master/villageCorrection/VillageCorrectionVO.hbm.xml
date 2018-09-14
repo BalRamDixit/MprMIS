@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19 Jul, 2011 10:04:55 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.infotech.sgsy.master.villageCorrection.VillageCorrectionVO" table="mst_village_modification">
+        <id name="villageCode" type="java.lang.String">
+            <column name="village_code" />
+            <generator class="assigned" />
+        </id>
+        <property name="villageName" type="java.lang.String">
+            <column name="village_name" />
+        </property>
+        <property name="stateCode" type="java.lang.String">
+            <column name="state_code" />
+        </property>
+        <property name="districtCode" type="java.lang.String">
+            <column name="district_code" />
+        </property>
+        <property name="blockCode" type="java.lang.String">
+            <column name="block_code" />
+        </property>
+        <property name="gramPanchayatCode" type="java.lang.String">
+            <column name="grampanchayat_code" />
+        </property>
+        <property name="createdOn" type="java.util.Date">
+            <column name="created_on" />
+        </property>
+        <property name="createdBy" type="java.lang.String">
+            <column name="created_by" />
+        </property>
+        <property name="lastModifiedOn" type="java.util.Date">
+            <column name="modified_on" />
+        </property>
+        <property name="lastModifedBy" type="java.lang.String">
+            <column name="modifed_by" />
+        </property>
+        <property name="ruralUrbanArea" type="java.lang.String">
+            <column name="rural_urban_area" />
+        </property>
+        <property name="flag" type="java.lang.String">
+            <column name="flag" />
+        </property>
+    </class>
+</hibernate-mapping>

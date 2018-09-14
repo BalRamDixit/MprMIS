@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC  "-//Hibernate/Hibernate Configuration DTD 3.0//EN"       
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+
+<session-factory>	          
+
+<!-- ************************* HIBERNATE CONNECTION ************************* -->
+<!-- LocalHost Computer Database URL -->
+ <property name="connection.url">jdbc:postgresql://localhost:5432/ekaushal_main</property> 
+
+<!-- Manoj Computer Database URL -->
+<!-- <property name="connection.url">jdbc:postgresql://10.40.254.75:5432/ekaushal_main</property> -->
+<!-- Live Server Database Url -->
+<!--   <property name="connection.url">jdbc:postgresql://10.247.221.9:5432/ekaushal_main</property>		  -->
+
+<!-- Staging Server Database Url -->
+<!--   <property name="connection.url">jdbc:postgresql://10.249.75.152:5432/ekaushal_main</property>		  -->
+
+<property name="connection.driver_class">org.postgresql.Driver</property>	
+<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+<property name="connection.username">postgres</property>
+<property name="connection.password">postgres</property> 
+<property name="connection.pool_size">50</property> 
+<property name="hibernate.query.factory_class">org.hibernate.hql.classic.ClassicQueryTranslatorFactory</property>    
+<property name="hibernate.show_sql">true</property> 
+<property name="hibernate.hbm2ddl.auto">none</property>
+
+ <!-- THIS WILL SHOW US ALL SQL STATEMENTS -->
+
+<!-- THREAD ID THE SHORT NAME FOR "org.hibernate.context.ThreadLocalSessionContext" AND LET HIBERNATE BIND THE SESSION ATUOMATICALLY TO THE THREAD -->   
+<property name="current_session_context_class">thread</property>     
+<!-- ************************* HIBERNATE CONNECTION ENDS ************************* --> 
+
+<!-- *************************** HIBERNATE HBM MAPPING ************************* --> 
+
+<!-- *************************** NEW WORK ************************* --> 
+					  <!-- HIBERNATE NRLM MAPPING START  -->
+<!-- SRLM_MASTER_HBM -->
+
+<!-- PIA PROPOSAL STARTS -->
+<!-- By Komal start -->
+
+<!-- By KOmal end -->
+
+<!-- BANK HBM ENDS -->
+
+<!-- COMMON HBM STARTS -->
+<!-- <mapping resource="com/infotech/sgsy/master/financialYear/financialYear.hbm.xml" /> -->
+<mapping resource="com/infotech/sgsy/master/state/StateVO.hbm.xml" />
+<mapping resource="com/infotech/sgsy/master/district/DistrictVO.hbm.xml" />
+<mapping resource="com/infotech/sgsy/stateSetup/hrTeam/HRTeamVO.hbm.xml"/>
+<mapping resource="com/infotech/sgsy/projectSetupTarget/ProjectSetupTargetVO.hbm.xml"/>
+<mapping resource="com/infotech/sgsy/ppws/PpwsSetupActionVO.hbm.xml"/>
+<mapping resource="com/infotech/sgsy/projectSetup/projectDetails/ProjectDetailsVO.hbm.xml"/>
+<mapping resource="com/infotech/sgsy/projectSetup/tradeTarget/TradeTargetVO.hbm.xml"/>
+<mapping resource="com/infotech/sgsy/projectSetup/districtTarget/DistrictTargetVO.hbm.xml"/>
+<mapping resource="com/infotech/sgsy/tcSetup/tcSetupEntry/TcSetupVO.hbm.xml"/>
+<mapping resource="com/infotech/sgsy/monitoringalerts/MonitoringAlertVO.hbm.xml"/>
+<mapping resource="com/infotech/sgsy/monitoringpenalty/MonitoringPenaltyVO.hbm.xml"/>
+<mapping resource="com/infotech/sgsy/tcSetup/tcSetupTrade/TcSetupTradeActionVO.hbm.xml"/>
+
+<!--  by charvi -->
+<mapping resource="com/infotech/sgsy/stateSetupTarget/StateTargetVO.hbm.xml"/>
+ <mapping resource="com/infotech/sgsy/stateFinance/StateFinancialVO.hbm.xml"/>
+<mapping resource="com/infotech/sgsy/projectSanctionDetail/SanctionDetailVO.hbm.xml"/>
+
+
+<mapping resource="com/infotech/sgsy/tcSetup/tcSetupDue/TcSetupDueVO.hbm.xml"/>
+
+
+<!-- //...new added in march -->
+<mapping resource="com/infotech/sgsy/stateSanctionDetail/StateSanctionVO.hbm.xml"/>
+
+<!-- Changes Done by Manoj for Batch creation 10-03-2017 -->
+<mapping resource="com/infotech/sgsy/tcSetup/batchCreation/BatchCreationVO.hbm.xml"/>
+
+<mapping resource="com/infotech/sgsy/monitoringsystem/MonitoringInspectionVO.hbm.xml"/>
+
+<!-- HIBERNATE SGSY MAPPING ENDS  -->
+
+<!-- changes done by Balram Dixit 08-03-2017 for userAccessControlManagement-->
+<mapping resource="com/infotech/sgsy/userAccessControlManagement/AssignRoleMaster.hbm.xml"/>
+<mapping resource="com/infotech/sgsy/userAccessControlManagement/FormModuleMaster.hbm.xml"/>
+<mapping resource="com/infotech/sgsy/userAccessControlManagement/ProjectMapping.hbm.xml"/>
+<mapping resource="com/infotech/sgsy/userAccessControlManagement/RoleMaster.hbm.xml"/>
+<mapping resource="com/infotech/sgsy/userAccessControlManagement/UserMaster.hbm.xml"/>
+<!-- HIBERNATE SGSY MAPPING ENDS  -->
+
+<mapping resource="com/infotech/skills/candidateStatistics/CandidateVO.hbm.xml"/>
+<mapping resource="com/infotech/sgsy/state/monitor/MonitorPpwsTrainVO.hbm.xml"/>
+<mapping resource="com/infotech/sgsy/state/monitor/MonitorPpwsPlaceVO.hbm.xml"/>
+<mapping resource="com/infotech/sgsy/state/monitor/MonitorFirstInstVO.hbm.xml"/>
+
+<!-- add by kamal 28-03-2017 -->
+
+<mapping resource="com/infotech/sgsy/master/districtMasterNew/DistrictMasterVO.hbm.xml"/>
+<mapping resource="com/infotech/sgsy/master/specialArea/SpecialAreaVo.hbm.xml"/>
+<mapping resource="com/infotech/sgsy/master/designationMaster/DesignationMasterVo.hbm.xml"/>
+<!-- this is added for master  form by CHARVI SINGH -->
+<mapping resource="com/infotech/sgsy/master/ctsaMaster/CtsaMaster.hbm.xml"/>
+<mapping resource="com/infotech/sgsy/master/tsaMaster/TsaMaster.hbm.xml"/>
+<mapping resource="com/infotech/sgsy/master/appraisalAgencyMaster/AppraisalAgency.hbm.xml"/>
+<mapping resource="com/infotech/sgsy/master/assessmentBodyMaster/AssessmentBody.hbm.xml"/> 
+
+<!-- this is added for master  form by Manoj -->
+<mapping resource="com/infotech/sgsy/masterdata/projectTypeMaster/ProjectTypeMasterVO.hbm.xml"/>
+<mapping resource="com/infotech/sgsy/masterdata/sectorMaster/SectorMasterVO.hbm.xml"/>
+<mapping resource="com/infotech/sgsy/masterdata/constituencyMaster/ConstituencyMasterVO.hbm.xml"/>
+<mapping resource="com/infotech/sgsy/masterdata/tradeMaster/TradeMasterVO.hbm.xml"/>
+<!-- Added by Varun for Master Forms -->
+ <mapping resource="com/infotech/sgsy/master/certifyingAgency/CertifyingAgencyVO.hbm.xml"/>
+ <mapping resource="com/infotech/sgsy/master/sanctionPost/SanctionPostVO.hbm.xml"/>
+ 
+<mapping resource="com/infotech/sgsy/master/parliamentaryConstituencyMaster/ParliamentaryConstituencyMaster.hbm.xml"/> 
+<mapping resource="com/infotech/sgsy/tcSetup/batchCompletion/BatchCompletionVO.hbm.xml"/> 
+
+</session-factory>
+</hibernate-configuration>

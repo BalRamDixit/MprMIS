@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping> 
+
+	<class name="com.infotech.sgsy.master.grampanchayat.GramPanchayatVO" table="mst_gramPanchayat"> 
+		<id name="gramPanchayatCode" column="gramPanchayat_code" >		
+			<generator class="increment">			 		
+			</generator> 
+		</id>		
+		
+		
+ 	 	<property name="ruralUrbanArea" column="rural_urban_area" length="1" /> 
+ 		<property name="gramPanchayatName" column="gramPanchayat_name" length="30"/>
+ 		 
+ 		<property name="createdOn" column="created_On"  type="java.util.Date" length="10" /> 
+ 		<property name="createdBy" column="created_By" length="25"/> 		
+ 		<property name="lastModifiedOn" column="modified_On" type="java.util.Date" length="10" /> 
+ 		<property name="lastModifedBy" column="Modifed_By" length="25"/>
+ 		<property name="stateCode" column="state_Code" length="2"/>
+ 		
+ 		<property name="districtCode" column="district_Code" length="4"/>
+ 		
+ 		<property name="blockCode" column="block_Code" length="7"/>
+ 		<many-to-one name="block" class="com.infotech.sgsy.master.block.BlockMasterVO" fetch="select">
+ 			<column name="block_code"/>
+ 		</many-to-one>
+	 	<set name="villageSet" table="mst_village" inverse="true" lazy="true" fetch="select">
+	 		<key column="grampanchayat_code"/>
+ 			<one-to-many class="com.infotech.sgsy.master.village.VillageVO"/>
+	 	</set>
+ 		
+ 	</class>
+ 	
+</hibernate-mapping>

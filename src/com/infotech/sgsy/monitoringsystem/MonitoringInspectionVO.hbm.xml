@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.infotech.sgsy.monitoringsystem.MonitoringInspectionVO"  table="monitoring_inspection" schema="public">
+    
+        <id name="id" column="id">
+			<generator class="sequence">
+        		<param name="sequence">monitoring_inspection_Id_Seq</param>
+    		</generator>
+        </id>
+        <property name="conductedByQAdate"    	 				 type="date"><column name="conductedBy_QA_date" /></property>
+        <property name="conductedBySRLMdate"					 type="date"><column name="conductedBy_SRLM_date" /></property>
+        <property name="conductedByCTSAdate" 					 type="date"><column name="conductedBy_CTSA_date" /></property>
+
+        <property name="remarkstcQa"   	length="1500"      		 type="string"><column name="remarks_TcQa" /></property>
+        <property name="remarkstcSRLM"  length="1500"      	 	 type="string"><column name="remarks_TcSRLM" /></property>
+        <property name="remarkstcCtsa"	length="1500"  			 type="string"><column name="remarks_TcCtsa" /></property>
+        
+        <property name="remarksQa"   	length="1500"      		 type="string"><column name="remarks_Qa" /></property>
+        <property name="remarksSRLM"  	length="1500"      	 	 type="string"><column name="remarks_SRLM" /></property>
+        <property name="remarksCtsa"	length="1500"  			 type="string"><column name="remarks_Ctsa" /></property>
+
+        <property name="advisoryRaisedBySrlm"   				 type="string"><column name="advisoryRaisedBy_Srlm" /></property>
+  		<property name="advisoryRaisedByCtsa"     				 type="string"><column name="advisoryRaisedBy_Ctsa" /></property>
+  		<property name="advisoryClosedByCtsa"    				 type="string"><column name="advisoryClosedBy_Ctsa" /></property>
+  		<property name="advisoryClosedBySrlm"    				 type="string"><column name="advisoryClosedBy_Srlm" /></property>
+  		
+  		<many-to-one name="batchId" class="com.infotech.sgsy.tcSetup.batchCreation.BatchCreationVO" lazy="false" fetch="select" >
+		            <column name="batchId"  />
+		</many-to-one> 
+        
+        <property name="createdBy"            	  type="string"><column name="created_by" /></property>
+        <property name="createdOn"           	  type="date"><column name="created_on" /></property>
+        <property name="updatedBy"         	   	  type="string"><column name="updated_by" /></property>
+        <property name="updatedOn"          	  type="date"><column name="updated_on" /></property>
+               
+        
+  	</class>
+</hibernate-mapping>
+

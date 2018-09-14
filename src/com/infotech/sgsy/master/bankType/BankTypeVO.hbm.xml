@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping> 
+
+	<class name="com.infotech.sgsy.master.bankType.BankTypeVO" table="mst_bank_type"> 
+		
+		
+		<id name="bankTypeCode" column="bankType_Code" length="6">		
+			<generator class="increment"/>
+		</id>	 	
+ 	  	<property name="bankTypeDetail" column="bankType_Detail" length="30"/> 	  	   	
+ 	  	<property name="activeFlag" column="activeFlag" length="1"/>  	  	 		 	
+ 				<property name="createdOn" column="created_On"  type="java.util.Date" length="10" /> 
+ 		<property name="createdBy" column="created_By" length="25"/> 		
+ 		<property name="lastModifiedOn" column="modified_On" type="java.util.Date" length="10" /> 
+ 		<property name="lastModifedBy" column="Modifed_By" length="25"/>
+ 	
+ 	</class>
+</hibernate-mapping>

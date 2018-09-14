@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.infotech.sgsy.tcSetup.batchCreation.BatchCreationVO"  table="batch_creation" schema="public">
+       
+         <id name="id" column="id" >		
+			<generator class="sequence">
+        		<param name="sequence">batch_creation_Id_Seq</param>
+    		</generator>
+		</id>	 	   
+   			 
+  			   	<many-to-one name="tcID" class="com.infotech.sgsy.tcSetup.tcSetupTrade.TcSetupTradeActionVO" lazy="false" fetch="select" >
+        		 	<column name="TC_TRADE_Id"/>
+				</many-to-one>
+  			    <property name="batchID"   		         				  type="string"><column name="batch_ID" /></property>
+  			    
+  			     <!-- <many-to-one name="sector" class="com.infotech.sgsy.masterdata.sectorMaster.SectorMasterVO" lazy="false" fetch="select" >
+        		 	<column name="sector_Id"/>
+				</many-to-one> -->
+  			    
+   			    <!--  <many-to-one name="trade" class="com.infotech.sgsy.masterdata.tradeMaster.TradeMasterVO" lazy="false" fetch="select" >
+        		 <column name="trade_id"/>
+					</many-to-one> -->
+				<property name="ojtStartDate"     					  type="date"><column name="OJT_Start_Date" /></property>   			    
+				<property name="batchDuration"     					  type="string"><column name="batch_Duration" /></property>   			    
+					
+    			<property name="batchStartDate"     					  type="date"><column name="batch_Start_Date" /></property>   			    
+   			    <property name="batchFreezeDate"    					  type="date"><column name="batch_Freeze_Date" /></property>
+    			<property name="batchSize"         						  type="int"><column name="batch_Size" /></property>
+   			   <!--  <property name="batchEndDate"     						  type="date"><column name="batch_End_Date" /></property> -->   
+                <property name="createdBy"             					  type="string"><column name="created_by" /></property>
+                <property name="createdOn"           					  type="date"><column name="created_on" /></property>
+                <property name="updatedBy"           					  type="string"><column name="updated_by" /></property>
+                <property name="updatedOn"             					  type="date"><column name="updated_on" /></property>
+                
+                <property name="batchType"     					          type="string"><column name="batch_Type" /></property>   
+                <property name="resiSize"     					          type="string"><column name="resi_size" /></property>      
+             <!--  <property name="batchCommencedDate"     				  type="date"><column name="batch_Commenced_Date" /></property>  -->  			    
+                <property name="commenced_Sc"         					  type="int"><column name="commenced_Sc" /></property>  			    
+                <property name="commenced_St"         					  type="int"><column name="commenced_St" /></property>  			    
+                <property name="commenced_Others"         				  type="int"><column name="commenced_Others" /></property>  			    
+                <property name="commenced_Women"         				  type="int"><column name="commenced_Women" /></property>  			    
+                <property name="commenced_Minority"         			  type="int"><column name="commenced_Minority" /></property>  			    
+                <property name="commenced_Pwd"         					  type="int"><column name="commenced_Pwd" /></property>  			    
+                <property name="commenced_Total"         				  type="int"><column name="commenced_Total" /></property>
+                
+       
+  	</class>
+</hibernate-mapping>

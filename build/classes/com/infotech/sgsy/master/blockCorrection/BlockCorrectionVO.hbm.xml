@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 12 Jul, 2011 12:34:53 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.infotech.sgsy.master.blockCorrection.BlockCorrectionVO" table="mst_block_modification">
+        <id name="blockCode" type="java.lang.String">
+            <column name="block_code" />
+            <generator class="assigned" />
+        </id>
+        <property name="ruralUrbanArea" type="java.lang.String">
+            <column name="rural_urban_area" />
+        </property>
+        <property name="blockName" type="java.lang.String">
+            <column name="block_name" />
+        </property>
+         <property name="stateCode" type="java.lang.String">
+            <column name="state_code" />
+        </property>
+        <property name="districtCode" type="java.lang.String">
+            <column name="district_code" />
+        </property>
+        <property name="createdOn" type="java.util.Date">
+            <column name="created_on" />
+        </property>
+        <property name="createdBy" type="java.lang.String">
+            <column name="created_by" />
+        </property>
+        <property name="lastModifiedOn" type="java.util.Date">
+            <column name="modified_on" />
+        </property>
+        <property name="lastModifedBy" type="java.lang.String">
+            <column name="modifed_by" />
+        </property>
+        <property name="flag" type="java.lang.String">
+            <column name="flag" />
+        </property>
+        <set name="grampanchayatCorrectionSet" table="mst_grampanchayat_modification" inverse="true" cascade="save-update">
+        	<key>
+        		<column name="block_code"></column>
+        	</key>
+        	<one-to-many class="com.infotech.sgsy.master.grampanchayatCorrection.GrampanchayatCorrectionVO"/>
+        </set>
+        <set name="villageCorrectionSet" table="mst_village_modification" inverse="true" cascade="save-update">
+        	<key column="block_code"></key>
+        	<one-to-many class="com.infotech.sgsy.master.villageCorrection.VillageCorrectionVO"/>
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 12 Jul, 2011 4:47:58 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.infotech.sgsy.master.grampanchayatCorrection.GrampanchayatCorrectionVO" table="mst_grampanchayat_modification">
+        <id name="gramPanchayatCode" column="grampanchayat_code" >		
+			<generator class="assigned">			 		
+			</generator> 
+		</id>		
+ 	 	<property name="ruralUrbanArea" column="rural_urban_area" length="1" /> 
+ 		<property name="gramPanchayatName" column="grampanchayat_name" length="30"/>
+ 		<property name="lastModifiedOn" column="modified_on" type="java.util.Date" length="10" /> 
+ 		<property name="lastModifedBy" column="modifed_by" length="25"/>
+ 		<property name="createdOn" column="created_on"  type="java.util.Date" length="10" /> 
+ 		<property name="createdBy" column="created_by" length="25"/>
+ 		<property name="stateCode" column="state_code" length="2"/> 		
+ 		<property name="districtCode" column="district_Code" length="4"/>
+ 		<property name="blockCode" column="block_Code" length="7"/>
+        <property name="flag" type="java.lang.String">
+            <column name="flag" />
+        </property>
+        <set name="villageCorrectionSet" table="mst_village_modification" inverse="true" cascade="save-update">
+        	<key column="grampanchayat_code"/>
+       		<one-to-many class="com.infotech.sgsy.master.villageCorrection.VillageCorrectionVO"/>
+        </set>
+    </class>
+</hibernate-mapping>

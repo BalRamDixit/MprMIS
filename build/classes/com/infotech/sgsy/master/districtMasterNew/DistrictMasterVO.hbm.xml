@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping> 
+<class name="com.infotech.sgsy.master.districtMasterNew.DistrictMasterVO" table="mst_district" schema="public"> 
+<id name="districtId" column="district_id" >		
+			<generator class="sequence">
+        		<param name="sequence">mst_district_Id_Seq</param>
+    		</generator>
+</id>	
+
+ 
+	<property name="districtCode" column="district_code " length="30" /> 
+	<property name="districtName" column="district_name " length="30" /> 
+	<property name="specialArea" column="special_area" length="30" /> 
+	<!-- <property name="typeOfSpecialArea" column="type_of_Special_Area" length="30" /> -->
+
+<many-to-one name="state" class="com.infotech.sgsy.master.state.StateVO" lazy="false" fetch="select" >
+            <column name="state_id"  />
+</many-to-one>
+<many-to-one name="typeSpecialArea" class="com.infotech.sgsy.master.specialArea.SpecialAreaVo" not-found="ignore" lazy="false" fetch="select" >
+            <column name="special_area_id"  />
+</many-to-one>
+
+      <!--  <set name="hrteam" table="mst_hr_team"  lazy="false"  fetch="select" >
+            <key>
+                <column name="district_id" />
+            </key>
+            <one-to-many class="com.infotech.sgsy.stateSetup.hrTeam.HRTeamVO" />
+        </set>
+ -->
+
+        <property name="createdOn" column="created_on"  type="date" length="10" /> 
+ 		<property name="createdBy" column="created_by" length="25"/> 		
+ 		<property name="updatedOn" column="modified_on" type="date" length="10" /> 
+ 		<property name="updateBy" column="modifed_by" length="25"/>
+</class>
+</hibernate-mapping>

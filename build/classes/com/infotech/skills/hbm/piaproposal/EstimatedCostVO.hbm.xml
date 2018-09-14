@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 17, 2013 1:17:47 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.infotech.skills.hbm.piaproposal.EstimatedCostVO" table="pia_estimated_cost" schema="public">
+        <composite-id  mapped="true" >
+            <key-property name="piaCode" type="string">
+                <column name="pia_code" />
+            </key-property>
+            <key-property name="proposalCode" type="string">
+                <column name="proposal_code" />
+            </key-property>
+        </composite-id>
+        <property name="beneficiariesMobilization" type="string">
+            <column name="beneficiaries _mobilization" />
+        </property>
+        <property name="beneficiariesTraining" type="string">
+            <column name="beneficiaries _training" />
+        </property>
+        <property name="curriculumCost" type="string">
+            <column name="curriculum_cost" />
+        </property>
+         <property name="trainersTraining" type="string">
+            <column name="trainers_training" />
+        </property>
+         <property name="trainingCenterUtilities" type="string">
+            <column name="training_center_utilities" />
+        </property>
+         <property name="trainingInfrastructureCost" type="string">
+            <column name="training_infrastructure_cost" />
+        </property>
+        <property name="equipment" type="string">
+            <column name="equipment" />
+        </property>
+        <property name="teachingAdds" type="string">
+            <column name="teaching_adds" />
+        </property>
+         <property name="rawMaterial" type="string">
+            <column name="raw_material" />
+        </property>
+         <property name="beneficiariesBordingTransportation" type="string">
+            <column name="beneficiaries_bording_transportation" />
+        </property>
+         <property name="assesmentCertification" type="string">
+            <column name="assesment_certification" />
+        </property>
+         <property name="placementLinkage" type="string">
+            <column name="placement_linkage" />
+        </property>
+        <property name="misTrackingMonitering" type="string">
+            <column name="mis_tracking_monitering" />
+        </property>
+        <property name="beneficiaryFinancialSupport" type="string">
+            <column name="beneficiary _post_placement_financial_support" />
+        </property>
+         <property name="postPlacementTrackingCost" type="string">
+            <column name="post_placement_tracking_cost" />
+        </property>
+         <property name="counselingCost" type="string">
+            <column name="counseling_cost" />
+        </property>
+         <property name="marketScansEmpCost" type="string">
+            <column name=" market_scans_emp_cost" />
+        </property>
+         <property name="piaAdminCost" type="string">
+            <column name=" pia_admin_cost" />
+        </property>
+         <property name="totalCostCandidate" type="string">
+            <column name="total_cost_candidate" />
+        </property>
+         <property name="totelCostProject" type="string">
+            <column name="totel_cost_project" />
+        </property>
+        <property name="centralGovFundingShare" type="string">
+            <column name="central_gov_funding_share" />
+        </property>
+        <property name="centralGovFundingRs" type="string">
+            <column name="central_gov_funding_rs" />
+        </property>
+         <property name="stateGovFundingShare" type="string">
+            <column name="state_gov_funding_share" />
+        </property>
+         <property name="stateGovFundingRs" type="string">
+            <column name="state_gov_funding_rs" />
+        </property>
+         <property name="createdOn" type="string">
+            <column name="created_on" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="created_by" />
+        </property>
+        <property name="modifyOn" type="string">
+            <column name="modify_on" />
+        </property>
+        <property name="modifyBy" type="string">
+            <column name="modify_by" />
+        </property>
+    </class>
+</hibernate-mapping>

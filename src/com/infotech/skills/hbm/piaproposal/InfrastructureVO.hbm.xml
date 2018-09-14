@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+                                   
+<hibernate-mapping>
+ <class name="com.infotech.skills.hbm.piaproposal.InfrastructureVO" schema="public" table="pia_infrastructure">
+  <id name="id" unsaved-value="null">
+   <column name="id" />
+   	<generator class="assigned" />
+  </id>
+  <property   name="exsitingCapDistricts" type="string">
+   <column  name="exsiting_cap_districts"/>
+  </property>
+  <property  name="exsitingCapActiveTrainingCenters" type="string">
+   <column  name="exsiting_cap_active_training_centers"/>
+  </property>
+   <property   name="exsitingCapTotalTraingSpace" type="string">
+   <column  name=" exsiting_cap_total_traing_space"/>
+  </property>
+  <property   name="exsitingCapPracticalsLabs" type="string">
+   <column  name="exsiting_cap_practicals_labs"/>
+  </property>
+  <property name="propsedCapDistricts" type="string">
+   <column  name="propsed_cap_districts"/>
+  </property>  
+  <property name="propsedCapActiveTrainingCenters" type="string">
+   <column  name="propsed_cap_active_training_centers"/>
+  </property>
+  <property name="propsedCapTotalTrainingSpace" type="string">
+   <column  name="propsed_cap_total_training_space"/>
+  </property>
+  <property   name="propsedCapPracticalLabs" type="string">
+   <column  name="propsed_cap_practical_labs"/>
+  </property>
+  <property name="createdOn" type="string">
+   <column  name="created_on"/>
+  </property>
+  <property name="createdBy" type="string">
+   <column  name="created_by"/>
+  </property>
+  <property name="modifyOn" type="string">
+   <column  name="modify_on"/>
+  </property>  
+  <property name="modifyBy" type="string">
+   <column  name="modify_by"/>
+  </property>
+ 
+ </class>
+</hibernate-mapping>

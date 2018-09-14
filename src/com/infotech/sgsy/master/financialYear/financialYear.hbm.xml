@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping> 
+
+	<class name="com.infotech.sgsy.master.financialYear.FinancialYearVo" table="mst_fin_year"> 
+		
+		
+		<id name="finYr" column="finYear_Code" length="3">		
+			<generator class="increment"/>
+		</id>	 	
+ 	  	<property name="finYearFr" column="finYearFr" not-null="true" length="10"/> 	  
+ 	  	  	  
+ 	  	<property name="finYrTo" column="finYrTo" not-null="true" length="10"/>	  		   	
+ 	  	<property name="finYearToDisplay" column="finYearToDisplay" not-null="true"  length="10"/>  	  	 		 	
+ 		<property name="createdOn" column="createdOn"   length="10" /> 
+ 		<property name="createdBy" column="createdBy" length="25"/> 		
+ 		<property name="lastModifiedOn" column="lastModifiedOn"  length="10" /> 
+ 		<property name="lastModifedBy" column="lastModifedBy" length="25"/>
+ 		
+ 	
+ 	</class>
+</hibernate-mapping>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.infotech.sgsy.projectSetup.projectDetails.ProjectDetailsVO"  table="project_details" schema="public">
+	
+         <id name="id" column="id" >		
+			<generator class="sequence">
+        		<param name="sequence">project_details_Id_Seq</param>
+    		</generator>
+</id>	
+   	    <property name="fileNumber"      						  type="string"><column name="file_number" /></property>
+  		<!-- <property name="piaPrn"   		          type="string"><column name="piaPrn" /></property>
+  		 -->
+  		 <many-to-one name="piaPrn" class="com.infotech.sgsy.userAccessControlManagement.UserMaster" lazy="false"  fetch="select" >
+            <column name="pia_prn"  />
+       </many-to-one> 
+  		
+   		<!-- <property name="piaName"    									  type="string"><column name="piaName" /></property> -->
+		<property name="projectScheme"         							  type="string"><column name="project_scheme" /></property>
+   	<!-- 	<property name="projectType"     							  type="string"><column name="project_type" /></property> -->
+   	
+   	 <!--   <many-to-one name="projectType" class="com.infotech.sgsy.masterdata.projectTypeMaster.ProjectTypeMasterVO" lazy="false" fetch="select" >
+            <column name="project_type"  />
+       </many-to-one>  -->
+       
+       <many-to-one name="ctsaMaster" class="com.infotech.sgsy.master.ctsaMaster.CtsaMasterVO" not-found="ignore" lazy="false" fetch="select" >
+            <column name="ctsa_type"  />
+       </many-to-one>
+   	
+   		<property name="projectID"   							  type="string"><column name="project_id" /></property>      
+ 
+         <property name="totalProjectCost"   							  type="long"><column name="total_project_cost" /></property>
+         <property name="centralShare"   							  type="long"><column name="central_share" /></property>
+         <property name="stateShare"   							  type="long"><column name="state_share" /></property>
+         <property name="programCost"   							  type="long" ><column name="program_cost" /></property>
+         <property name="welfareCost"   							  type="int"><column name="welfare_cost" /></property>
+        <property name="consortium"   							  type="string"><column name="consortium" /></property> 
+         <!--  <many-to-one name="consortium" class="com.infotech.sgsy.userAccessControlManagement.UserMaster" lazy="false" fetch="select" >
+            <column name="consortium_prn"  />
+       </many-to-one>  -->
+         
+         <!-- <property name="prnOfConsortiumPartner"   							  type="string"><column name="prnOfConsortiumPartner" /></property> -->
+          <many-to-one name="prnOfConsortiumPartner" class="com.infotech.sgsy.userAccessControlManagement.UserMaster" not-found="ignore" lazy="false" fetch="select" >
+            <column name="consortium_prn"  />
+          </many-to-one> 
+          <many-to-one name="state" class="com.infotech.sgsy.master.state.StateVO" not-found="ignore" lazy="false" fetch="select" >
+            <column name="state_id"  />
+          </many-to-one> 
+         
+         
+         <!-- <property name="prnConsortiumPartnerName"   							  type="string"><column name="partner_applicant_pia_same" /></property> -->
+         <property name="partnerApplicantPiaSame"   							  type="string"><column name="partner_applicant_pia_same " /></property>
+         <property name="dateOfEc"   							  type="date"><column name="date_of_ec" /></property>
+         <property name="sanctioned"   							  type="string"><column name="sanctioned" /></property>
+         
+         
+         
+        <!--  <property name="entityCode"             type="string"><column name="entity_code" /></property> -->
+         <property name="createdBy"              type="string"><column name="created_by" /></property>
+         <property name="createdOn"              type="date"><column name="created_on" /></property>
+         <property name="updatedBy"              type="string"><column name="updated_by" /></property>
+         <property name="updatedOn"              type="date"><column name="updated_on" /></property>
+         
+        
+ 
+        
+       
+  	</class>
+</hibernate-mapping>

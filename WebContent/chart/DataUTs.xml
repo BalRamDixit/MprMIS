@@ -1,0 +1,44 @@
+<chart caption="Fund Allocation" XAxisName="UTs Name" YAxisName="Amount in Rs. Lakhs" palette="2" animation="1" showValues="0" decimals="0" formatNumberScale="0" numDivLines="4" labelDisplay="ROTATE" slantLabels="1" >
+<categories>
+	<category label="Andaman and Nicobar" />
+	<category label="Dadar and Nagar" />
+	<category label="Daman and Diu" />
+	<category label="Goa" />
+	<category label="Lakshadeep" />
+	<category label="Pondichery" />
+</categories>
+<dataset seriesName="Central Allocation">
+	<set value="25" />
+	<set value="25" />
+	<set value="25" />
+	<set value="276" />
+	<set value="25" />
+	<set value="275" />
+</dataset>
+<dataset seriesName="State Allocation">
+	<set value="0" />
+	<set value="0" />
+	<set value="0" />
+	<set value="92" />
+	<set value="0" />
+	<set value="0" />
+</dataset>
+<dataset seriesName="Total Allocation">
+	<set value="25" />
+	<set value="25" />
+	<set value="25" />
+	<set value="368" />
+	<set value="25" />
+	<set value="275" />
+</dataset>
+<styles>
+	<definition>
+	<style type="font" name="CaptionFont" color="666666" size="15" />
+	<style type="font" name="SubCaptionFont" bold="0" />
+	</definition>
+<application>
+	<apply toObject="caption" styles="CaptionFont" />
+	<apply toObject="SubCaption" styles="SubCaptionFont" />
+</application>
+</styles>
+</chart>

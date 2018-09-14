@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.infotech.sgsy.stateSanctionDetail.StateSanctionVO"  table="state_sanction_detail" schema="public">       
+       
+        <id name="id" column="id">
+    		<generator class="sequence">
+        		<param name="sequence">state_sanction_detail_id_seq </param>
+    		</generator>
+		</id> 
+        	    
+       
+      <many-to-one name="state" class="com.infotech.sgsy.master.state.StateVO" not-found="ignore" lazy="false" fetch="select" >
+            <column name="state_id"  />
+          </many-to-one> 
+        
+        <property name="targetStartedYear"          type="string"><column name="target_start_year"/></property>
+        <property name="targetEndYear"              type="string"><column name="target_end_year"/></property>
+        <property name="sanctionedTrainingTarget"   type="long"><column name="sanction_training_target"/></property>
+        <property name="fundSanctioned"             type="long"><column name="fund_sanctioned"/></property>
+        <property name="sanctionDate"               type="date"> <column name="sanction_date"/></property>
+       					
+                                           <!-- new added --> 
+        <property name="skillGapAssessment"         type="long"><column name="skill_Gap_Assessment" /></property>
+        <property name="iEC"                        type="long"><column name="iEC"/></property>
+        <property name="alumniSupport"              type="long"><column name="alumni_Support"/></property>
+        <property name="capacityBuilding"           type="long"><column name="capacity_Building"/></property>
+        <property name="monitoringEvaluation"       type="long"><column name="monitoring_Evaluation"/></property>
+        <property name="staffBlockLevelBelow"       type="long"><column name="staff_BlockLevel_Below"/></property>
+        <property name="jobMela"                    type="long"><column name="job_Mela"/></property>
+        <property name="migrationSupportCentre"     type="long"><column name="migration_Support_Centre"/></property>
+        <property name="supportCost"                type="long"><column name="support_Cost"/></property>
+        								
+        <property name="ifscCode"                   type="string"><column name="ifsc_Code"/></property>
+        <property name="bankName"                   type="string"><column name="bank_Name"/></property>
+        <property name="accountNo"                  type="string"><column name="account_No"/></property>
+        <property name="agencyCode"                 type="string"><column name="agency_Code"/></property>
+        <property name="pfms"                       type="string"><column name="pfms"/></property>
+       <!--  <property name="projectName"                type="string"><column name="project_Name"/></property> -->
+            
+                                            <!-- ends here --> 
+              
+        <property name="createdBy"              type="string"><column name="created_by" /></property>
+        <property name="createdOn"              type="date"><column name="created_on" /></property>
+        <property name="updatedBy"              type="string"><column name="updated_by" /></property>
+        <property name="updatedOn"              type="date"><column name="updated_on" /></property>
+         
+	</class>
+</hibernate-mapping>
+

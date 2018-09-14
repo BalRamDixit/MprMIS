@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+
+<!--  AUTHOR: HIMANSHU MEHRA ____DATE: August/2012____ PROGRAM NAME: NATIONAL RURAL LIVELIHOODS MISSION___FOR: MoRD -->
+ 
+<struts-config>
+
+<!-- Collection of all form Beans -->  	
+<form-beans>
+<form-bean name="registrationForm" 			type="com.infotech.skills.registration.pia.RegistrationForm" />
+
+<form-bean name="curriculamForm" 			type="com.infotech.skills.proposal.curriculam.CurriculamForm" />
+<form-bean name="estimatedCostForm" 		type="com.infotech.skills.proposal.estimatedCost.EstimatedCostForm" />
+<form-bean name="geographicalCoverageForm" 	type="com.infotech.skills.proposal.geographicalCoverage.GeographicalCoverageForm" />
+<form-bean name="humanResourceForm" 		type="com.infotech.skills.proposal.humanResource.HumanResourceForm" />
+<form-bean name="infrastructureForm" 		type="com.infotech.skills.proposal.infrastructure.InfrastructureForm" />
+<form-bean name="mobilizationForm" 			type="com.infotech.skills.proposal.mobilization.MobilizationForm" />
+<form-bean name="placementForm" 			type="com.infotech.skills.proposal.placement.PlacementForm" />
+<form-bean name="projectDeliveryForm" 		type="com.infotech.skills.proposal.projectDelivery.ProjectDeliveryForm" />
+<form-bean name="qualityControlForm" 		type="com.infotech.skills.proposal.qualityControl.QualityControlForm" />
+<form-bean name="trainingForm" 				type="com.infotech.skills.proposal.training.TrainingForm" />
+<form-bean name="trainingTargetsForm" 		type="com.infotech.skills.proposal.trainingTargets.TrainingTargetsForm" />	
+<form-bean name="verifyPiaForm" 			type="com.infotech.skills.proposal.verifypia.VerifyPiaForm"/>
+<form-bean name="outerForm"					type="com.infotech.skills.outerReports.outerReportForm"/>
+<form-bean name="modifyPiaForm" 			type="com.infotech.skills.proposal.verifypia.ModifyPiaForm"/>
+<form-bean name="piaReportForm" 			type="com.infotech.skills.skillsReport.piaReport.PiaReportForm"/>
+<form-bean name="piaLogForm" 			    type="com.infotech.skills.skillsReport.piaLog.PiaLogForm"/> <!-- Reporting: PIA Logs -->
+<form-bean name="piaStatusForm" 			type="com.infotech.skills.skillsReport.piaStatus.PiaStatusForm"/> <!-- Reporting: PIA Status -->
+
+<form-bean name="TargetSummaryForm" 		type="com.infotech.skills.skillsReport.piaSummaryReport.TargetSummaryForm"/>
+<form-bean name="TrainingDurationForm" 	    type="com.infotech.skills.skillsReport.piaSummaryReport.TrainingDurationForm"/>
+<form-bean name="SectorSummaryForm" 	    type="com.infotech.skills.skillsReport.piaSummaryReport.SectorSummaryForm"/>
+<form-bean name="TradeSummaryForm" 	    	type="com.infotech.skills.skillsReport.piaSummaryReport.TradeSummaryForm"/>
+<form-bean name="DistrictSummaryForm" 	    type="com.infotech.skills.skillsReport.piaSummaryReport.DistrictSummaryForm"/>
+<form-bean name="ProjectRegistrationForm" 	type="com.infotech.skills.skillsReport.piaSummaryReport.ProjectRegistrationForm"/>
+<form-bean name="TrainingInformationForm" 	type="com.infotech.skills.skillsReport.piaSummaryReport.TrainingInformationForm"/>
+<!-- Sanction Orders -->
+<form-bean name="SanctionOrdersForm" 	type="com.infotech.skills.skillsSanctionOrders.SanctionOrdersForm"/>
+</form-beans>	
+<!-- Form Bean Collection End -->    
+
+
+<!-- ALL Action Mapping of NRLM Start -->      	 
+<action-mappings>
+<!-- PIA Profile start -->
+<action path="/registrationAction" parameter="methodName" scope="session" name="registrationForm" validate="false"
+type="com.infotech.skills.registration.pia.RegistrationAction" >		
+	<forward name="pia_registration" path="pia_registration_page" />
+	<forward name="print_pia_registration" path="print_pia_registration_page" />
+	<forward name="pia_registration_partB" path="pia_registrationPartB_Page" />	
+	<forward name="pia_registration_partB_modify" path="pia_registration_partB_modify" />
+	<forward name="pia_search_page" path="pia_search_page" />			
+	<forward name="pia_complete_registration" path="pia_complete_registration" />	
+</action>
+
+<action path="/login/registrationAction" parameter="methodName" scope="session" name="registrationForm" validate="false" 
+type="com.infotech.skills.registration.pia.RegistrationAction" >		
+	<forward name="pia_registration" path="pia_registration_page" />	
+	<forward name="pia_registration_partB" path="pia_registrationPartB_Page" />
+	<forward name="pia_registration_partB_modify" path="pia_registration_partB_modify" />	
+	<forward name="pia_registration_partA" path="pia_registrationPartA_Page" />	
+	<forward name="print_pia_registration" path="print_pia_registration_page" />
+	<forward name="pia_search_page" path="pia_search_page" />	
+	<forward name="pia_complete_registration" path="pia_complete_registration" />	
+</action>
+<!-- PIA Profile end -->
+
+<!-- PIA Proposal start -->
+<action path="/login/curriculamAction" parameter="methodName" scope="request" name="curriculamForm" validate="false" 
+type="com.infotech.skills.proposal.curriculam.CurriculamAction" >	
+	<forward name="showPage" path="pia_show_curriculam_page"/>
+</action>
+
+<action path="/login/estimatedCostAction" parameter="methodName" scope="request" name="estimatedCostForm" validate="false" 
+type="com.infotech.skills.proposal.estimatedCost.EstimatedCostAction" >				
+	<forward name="showPage" path="pia_show_estimated_cost_page"/>
+</action>
+
+<action path="/login/geographicalCoverageAction" parameter="methodName" scope="request" name="geographicalCoverageForm" validate="false" 
+type="com.infotech.skills.proposal.geographicalCoverage.GeographicalCoverageAction" >			
+	<forward name="showPage" path="pia_show_graphical_coverage_page"/>
+</action>
+
+<action path="/login/humanResourceAction" parameter="methodName" scope="request" name="humanResourceForm" validate="false" 
+type="com.infotech.skills.proposal.humanResource.HumanResourceAction" >
+	<forward name="showPage" path="pia_show_human_resource_page"/>
+	<forward name="pia_human_resource_success" path="pia_human_resource_success" />
+		
+</action>
+
+<action path="/login/infrastructureAction" parameter="methodName" scope="request" name="infrastructureForm" validate="false" 
+type="com.infotech.skills.proposal.infrastructure.InfrastructureAction" >			
+	<forward name="showPage" path="pia_show_infrastructure_page"/>
+</action>
+
+<action path="/login/mobilizationAction" parameter="methodName" scope="request" name="mobilizationForm" validate="false" 
+type="com.infotech.skills.proposal.mobilization.MobilizationAction" >		
+	<forward name="showPage" path="pia_show_mobilization_page"/>
+</action>
+
+<action path="/login/placementAction" parameter="methodName" scope="request" name="placementForm" validate="false" 
+type="com.infotech.skills.proposal.placement.PlacementAction" >		
+	<forward name="PlacementDetailsPage" path="PlacementDetailsPage" />	
+</action>
+
+<action path="/login/projectDeliveryAction" parameter="methodName" scope="request" name="projectDeliveryForm" validate="false" 
+type="com.infotech.skills.proposal.projectDelivery.ProjectDeliveryAction" >		
+	<forward name="ProjectDeliveryPage" path="ProjectDeliveryPage" />	
+</action>
+
+<action path="/login/qualityControlAction" parameter="methodName" scope="request" name="qualityControlForm" validate="false" 
+type="com.infotech.skills.proposal.qualityControl.QualityControlAction" >		
+	<forward name="QualityControlPage" path="QualityControlPage" />	
+</action>
+
+<action path="/login/trainingAction" parameter="methodName" scope="request" name="trainingForm" validate="false" 
+type="com.infotech.skills.proposal.training.TrainingAction" >		
+	<forward name="showPage" path="pia_show_training_page"/>
+</action>
+
+<action path="/login/trainingTargetsAction" parameter="methodName" scope="request" name="trainingTargetsForm" validate="false" 
+type="com.infotech.skills.proposal.trainingTargets.TrainingTargetsAction" >		
+	<forward name="showPage" path="pia_show_training_target_page"/>	
+</action>
+
+<action path="/login/verifyPiaAction" parameter="methodName" scope="request" name="verifyPiaForm" validate="false" 
+type="com.infotech.skills.proposal.verifypia.VerifyPiaAction" >		
+	<forward name="showPage" path="pia_show_pia_verification_page"/>	
+	<forward name="showPageforDocsCheck" path="pia_show_pia_docs_check_page"/>	
+	<forward name="showRejectionPage" path="pia_show_pia_rejection_page"/>
+	<forward name="showCategoryChangePage" path="pia_show_pia_category_change_page"/>
+	<forward name="showIncomplePIARejectionPage" path="pia_show_pia_reject_L1_page"/>
+</action>
+<action path="/login/piaReportAction" parameter="methodName" scope="request" name="piaReportForm" validate="false" 
+type="com.infotech.skills.skillsReport.piaReport.PiaReportAction" >		
+	<forward name="showPage"  path="piaListPage"/>	
+	<forward name="piaListPage"  path="piaListPage"/>
+	<forward name="piaCompleteDetailPage"  path="piaCompleteDetailPage"/>	
+	<forward name="showDownloadPIAsExcelPage" path="downloadPIAExcelPage"/>
+</action>
+<action path="/login/PiaLogAction" parameter="methodName" scope="request" name="piaLogForm" validate="false" 
+type="com.infotech.skills.skillsReport.piaLog.PiaLogAction" >		
+	<forward name="showPiaLog"  path="showPiaLogPage"/>	
+	<forward name="showPiaAllLog"  path="showPiaAllLogPage"/>	
+</action>
+<action path="/login/PiaStatusAction" parameter="methodName" scope="request" name="piaStatusForm" validate="false" 
+type="com.infotech.skills.skillsReport.piaStatus.PiaStatusAction" >		
+	<forward name="showPiaStatus"  path="showPiaStatusPage"/>			
+</action>
+	
+<action path="/outerAction" parameter="methodName" scope="request" name="outerForm" validate="false" 
+type="com.infotech.skills.outerReports.outerAction" >		
+	<forward name="indexPage" path="/login/login.do?methodName=showMainPage" redirect="true"/>	
+	<forward name="piaRegStatusReportPage" path="showPiaRegStatusReportPage"/>	
+	<forward name="aajeevikaPresentaion" path="aajeevikaPresentaionPage"/>
+	<forward name="resourcePage" path="resourcePage"/>
+	<forward name="outerPiaListPage" path="outer_PiaList_Page"/>
+	<forward name="outerPiaCompleteDetailPage" path="outer_PiaCompleteDetail_Page"/>
+	<forward name="SGSYSplPage" path="SGSYSplPage"/>
+    	<forward name="showContactDetail" 	path="showContactDetail" />
+        <forward name="showKnowledgeBank"     path="showKnowledgeBank" />
+	<forward name="projectProposalPending" path="projectProposalPendingPage"/>
+	<forward name="tenders" path="tendersPage"/>
+</action>
+
+<action path="/login/modifyPiaAction" parameter="methodName" scope="request" name="modifyPiaForm" validate="false" 
+type="com.infotech.skills.proposal.verifypia.ModifyPiaDocsAction" >		
+	<forward name="PIA_MODIFICATION_LOGIN" path="PIA_MODIFICATION_LOGINPAGE"/>
+</action>
+<!-- PIA Profile end -->
+
+<!-- PIA Reports Temp -->
+<action path="/targetSummaryAction" parameter="methodName" scope="request" name="TargetSummaryForm" validate="false" 
+type="com.infotech.skills.skillsReport.piaSummaryReport.TargetSummaryAction" >		
+	<forward name="showTargetPage" path="showTargetPAGE"/>
+</action>
+
+<action path="/trainingDurationAction" parameter="methodName" scope="request" name="TrainingDurationForm" validate="false" 
+type="com.infotech.skills.skillsReport.piaSummaryReport.TrainingDurationAction" >		
+	<forward name="showTrainingDurationPage" path="showTrainingDurationPage"/>
+</action>
+
+<action path="/sectorSummaryAction" parameter="methodName" scope="request" name="SectorSummaryForm" validate="false" 
+type="com.infotech.skills.skillsReport.piaSummaryReport.SectorSummaryAction" >		
+	<forward name="showSectorPage" path="showSectorPAGE"/>
+</action>
+
+<action path="/tradeSummaryAction" parameter="methodName" scope="request" name="TradeSummaryForm" validate="false" 
+type="com.infotech.skills.skillsReport.piaSummaryReport.TradeSummaryAction" >		
+	<forward name="showTradePage" path="showTradePAGE"/>
+</action>
+
+<action path="/districtSummaryAction" parameter="methodName" scope="request" name="DistrictSummaryForm" validate="false" 
+type="com.infotech.skills.skillsReport.piaSummaryReport.DistrictSummaryAction" >		
+	<forward name="showDistrictSummaryPage" path="showDistrictSummaryPage"/>  <!--pathname given to jsp page to be shown  -->
+</action>
+
+<action path="/projectRegistrationAction" parameter="methodName" scope="request" name="ProjectRegistrationForm" validate="false" 
+type="com.infotech.skills.skillsReport.piaSummaryReport.ProjectRegistrationAction" >		
+	<forward name="showProjectRegistrationPage" path="showProjectRegistrationPage"/>  <!--pathname given to jsp page to be shown  -->
+</action>
+
+<action path="/traininginformationAction" parameter="methodName" scope="request" name="TrainingInformationForm" validate="false" 
+type="com.infotech.skills.skillsReport.piaSummaryReport.TrainingInformationAction" >		
+	<forward name="showTrainingInformationPage" path="showTrainingInformationPage"/>  <!--pathname given to jsp page to be shown  -->
+</action>
+
+<!-- Sanction Orders -->
+<action path="/login/sanctionOrder" parameter="methodName" scope="request" name="SanctionOrdersForm" validate="false" 
+type="com.infotech.skills.skillsSanctionOrders.SanctionOrdersAction" >		
+	<forward name="showSanctionOrder" path="showSanctionOrderPage"/> 
+	<forward name="modifySanctionOrder" path="showSanctionOrderModifyPage"/> 
+</action>
+<action path="/sanctionOrderReport" parameter="methodName" scope="request" name="SanctionOrdersForm" validate="false" 
+type="com.infotech.skills.skillsSanctionOrders.SanctionOrdersAction" >		
+	<forward name="showSanctionOrderReport" path="showSanctionOrderReportPage"/> 			
+	<forward name="showSanctionOrderReportNew" path="showSanctionOrderReportPageNew"/> 
+</action>
+</action-mappings>	
+<!--  ACTION MAPPING OF ALL NRLM END -->
+
+
+<!--***************************************************** EXTRA  *****************************************************-->		
+<controller contentType="text/html;charset=UTF-8" debug="3" nocache="true" locale="true"  processorClass="com.infotech.sgsy.util.RequestProcessor"/>  
+<message-resources  parameter="ApplicationResources"  null="false"  />		
+	
+<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+	<set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+</plug-in>	
+
+<plug-in className="org.apache.struts.tiles.TilesPlugin">
+	<set-property property="definitions-config" value="/WEB-INF/StrutsMstTiles.xml" />
+	<set-property property="moduleAware" value="true" />
+</plug-in>
+<!--***************************************************** EXTRA END *****************************************************-->
+	
+</struts-config>

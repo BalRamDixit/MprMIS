@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping auto-import="false"> 
+
+	<class name="com.infotech.sgsy.selfHelpGroup.UT.SHGMonthlyDetailVO" table="UT_shg_monthly_report"> 
+		
+		<composite-id mapped="true">
+			<key-property name="shgCode"  column="shg_code" />	
+			<key-property  name="financialYear" column="financial_year" /> 	  
+			<key-property name="entryMonth" column="entry_month" />   
+		</composite-id>
+		 
+		 <property  name="entityCode" type="string">
+   			<column name="entity_code"/>
+  		</property>  		
+  		<property  name="noOfMeetingHeld" type="string">
+   			<column length="1" name="no_of_meeting_held"/>
+  		</property>
+ 	 		
+  		<!-- SAVING -->
+  		<property   name="savingAmountCollected" type="double">
+   			<column name="saving_amount_collected"/>
+  		</property>
+ 		<property name="savingAmountDepositedInBank" type="double">
+   			<column name="saving_amount_deposited_in_bank"/>
+  		</property>
+  		
+  		<!-- INTERNAL LOAN -->
+  		<property name="internalLoanNumber" type="integer">
+   			<column name="internal_loan_number"/>
+  		</property>
+	 	<property name="internalLoanAmount" type="double">
+   			<column name="internal_loan_amount"/>
+  		</property>
+  		<property name="internalLoanOutstandingNo" type="integer">
+   			<column name="internal_loan_outstanding_no"/>
+  		</property>  		
+  		<property name="internalLoanOutstandingAmount" type="double">
+   			<column name="internal_loan_outstanding_amount"/>
+  		</property>
+ 		<property name="internalLoanOutstandingPar" type="double">
+   			<column name="internal_loan_outstanding_par"/>
+  		</property>
+  		
+  		<!-- BANK LOAN -->
+  		<property name="bankLoanAmountOutstandingCCL" type="double">
+   			<column name="bank_loan_amount_outstanding_ccl"/>
+  		</property>
+	 	<property name="bankLoanAmountOutstandingTL" type="double">
+   			<column name="bank_loan_amount_outstanding_tl"/>
+  		</property>
+  		
+  		 <!-- INTEREST SUBSIDY --> 			
+  		<property name="interestSubsidyEligible" type="string">
+   			<column name="interest_subsidy_eligible"/>
+  		</property>  
+  		<property name="interestSubsidyReceiving" type="string">
+   			<column name="interest_subsidy_receiving"/>
+  		</property>
+ 		<property name="interestSubsidyAmountReceived" type="double">
+   			<column name="interest_subsidy_amount_received"/>
+  		</property>
+  		
+  		<!-- CIS CIF -->
+  		<property name="cisCifAmountReceived" type="double">
+   			<column name="cis_cif_amount_received"/>
+  		</property>
+	 	<property name="cisCifAmountRepaid" type="double">
+   			<column name="cis_cif_amount_repaid"/>
+  		</property>
+  		<property name="cisCifLoanAtRisk" type="double">
+   			<column name="cis_cif_loan_at_risk"/>
+  		</property>
+  		
+  		<property   name="createdBy" type="string">
+   			<column name="created_by"/>
+	  	</property>
+	   	<property   name="createdOn" type="string">
+	  	 	<column length="10" name="created_on"/>
+	 	</property>
+	   	<property   name="updatedBy" type="string">
+	   		<column name="updated_by"/>
+	  	</property>
+	   	<property   name="updatedOn" type="string">
+	   		<column length="10" name="updated_on"/>
+	  	</property> 
+  		
+ 	</class>	 
+</hibernate-mapping>

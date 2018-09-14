@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.infotech.sgsy.projectSetup.districtTarget.DistrictTargetVO"  table="project_district_target" schema="public">
+	     <id name="id" type="string">
+           <generator class="sequence">
+        		<param name="sequence">project_district_target_Id_Seq</param>
+    		</generator>
+         </id>
+            
+            <many-to-one name="projectId" class="com.infotech.sgsy.projectSetup.projectDetails.ProjectDetailsVO" lazy="false" fetch="select" >
+            	<column name="project_id"  />
+            </many-to-one>
+            
+        
+               	<property name="district"      						type="string"><column name="district_id" /></property>
+      
+   			    <property name="trainingTargetDist"   		        type="int"><column name="training_target_dist" /></property>
+   			    
+                <property name="createdBy"                          type="string"> <column name="created_by" /></property>
+                <property name="createdOnDate"                      type="date"><column name="created_on" /></property>
+                <property name="updatedBy"                          type="string">  <column name="updated_by" /></property>
+                <property name="updatedOnDate"                      type="date"><column name="updated_on" /></property>
+          
+       
+  	</class>
+</hibernate-mapping>

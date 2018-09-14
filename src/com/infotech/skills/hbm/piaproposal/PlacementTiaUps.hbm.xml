@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 17, 2013 4:31:40 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.infotech.skills.hbm.piaproposal.PlacementTiaUpsVO" table="pia_placement_tia_ups" schema="public"> 
+        <id name="praposalCode" unsaved-value="null">
+		   <column name="praposal_code" />
+		   <generator class="sequence" >
+		            <param name="sequence">pia_proposal_seq</param>
+		   </generator>
+		 </id>
+		 
+		 <property name="piaCode" type="string">
+            <column name="pia_code" />
+        </property>
+        <property name="empName" type="string">
+            <column name="emp_name" />
+        </property>
+        <property name="registrationNo" type="string">
+            <column name="registration_no" />
+        </property>
+        <property name="panNo" type="string">
+            <column name="pan_no" />
+        </property>
+        <property name="tanNo" type="string">
+            <column name="tan_no" />
+        </property>
+        <property name="website" type="string">
+            <column name="website" />
+        </property>
+         <property name="nameContactPerson" type="string">
+            <column name="name_contact_person" />
+        </property>
+         <property name="contactNo" type="string">
+            <column name="contact_no" />
+        </property>
+         <property name="emailId" type="string">
+            <column name="email_id" />
+        </property>
+         <property name="noOfTrainee" type="string">
+            <column name="no_of_trainee" />
+        </property>
+         <property name="confirmationAttached" type="string">
+            <column name="confirmation_attached" />
+        </property>
+       <property name="createdOn" type="string">
+   <column name="created_on" />
+  </property>
+  <property name="createdBy" type="string">
+   <column name="created_by" />
+  </property>
+  <property name="modifyOn" type="string">
+   <column name="modify_on" />
+  </property>
+  <property name="modifyBy" type="string">
+   <column name="modify_by" />
+  </property>
+    </class>
+</hibernate-mapping>

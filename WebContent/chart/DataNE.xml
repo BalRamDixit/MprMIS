@@ -1,0 +1,52 @@
+<chart caption="Fund Allocation" XAxisName="State Name (North Eastern States)" YAxisName="Amount in Rs.lakhs" palette="2" animation="1" showValues="0" decimals="0" formatNumberScale="0" numDivLines="4" labelDisplay="ROTATE" slantLabels="1">
+<categories>
+	<category label="Arunachal Pradesh" />
+	<category label="Assam" />
+	<category label="Manipur" />
+	<category label="Meghalaya" />
+	<category label="Mizoram" />
+	<category label="Nagaland" />
+	<category label="Sikkim" />
+	<category label="Tripura" />
+</categories>
+<dataset seriesName="Central Allocation">
+	<set value="746" />
+	<set value="16865" />
+	<set value="1224" />
+	<set value="1359" />
+	<set value="392" />
+	<set value="963" />
+	<set value="422" />
+	<set value="2129" />
+</dataset>
+<dataset seriesName="State Allocation">
+	<set value="83.89" />
+	<set value="1873.89" />
+	<set value="136" />
+	<set value="151" />
+	<set value="43.56" />
+	<set value="107" />
+	<set value="49.89" />
+	<set value="236.56" />
+</dataset>
+<dataset seriesName="Total Allocation">
+	<set value="828.89" />
+	<set value="18738.89" />
+	<set value="1360.00" />
+	<set value="1510" />
+	<set value="435.56" />
+	<set value="1070" />
+	<set value="468.89" />
+	<set value="2365.56" />
+</dataset>
+<styles>
+	<definition>
+	<style type="font" name="CaptionFont" color="666666" size="15" />
+	<style type="font" name="SubCaptionFont" bold="0" />
+	</definition>
+<application>
+	<apply toObject="caption" styles="CaptionFont" />
+	<apply toObject="SubCaption" styles="SubCaptionFont" />
+</application>
+</styles>
+</chart>

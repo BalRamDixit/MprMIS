@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.infotech.sgsy.state.monitor.MonitorPpwsPlaceVO"  table="monitoring_achievement_placed" schema="public">
+      <id name="id" column="id">
+    	  <generator class="sequence">
+        	<param name="sequence">monitoring_achievement_placed_Id_Seq</param>
+    	  </generator>
+      </id>
+
+                 <property name="tcId"                       type="string"><column name="tc_id" /></property> 
+                <many-to-one name="batchId" class="com.infotech.sgsy.tcSetup.batchCreation.BatchCreationVO" lazy="false" fetch="select" >
+                     <column name="batch_id"  />
+                 </many-to-one> 
+                 
+                <property name="appointed"      			type="int"><column name="appointed" /></property>
+        	   <!--  <property name="year"      			        type="string"><column name="year" /></property>
+  			    <property name="month"   		            type="string"><column name="month" /></property>
+  			     -->
+   			    <property name="commenced_Total"   		    type="int"><column name="commenced_total" /></property>
+   			    <property name="commenced_Sc"      			type="int"><column name="commenced_sc" /></property>       
+               	<property name="commenced_St"               type="int"><column name="commenced_st" /></property>
+               	<property name="commenced_Others"           type="int"><column name="commenced_others" /></property>
+                <property name="commenced_Women"            type="int"><column name="commenced_women" /></property>
+               	<property name="commenced_Minority"      	type="int"><column name="commenced_minority" /></property>
+        	    <property name="commenced_Pwd"      		type="int"><column name="commenced_pwd" /></property>
+        	    
+        	    <property name="candidate_Assessed"   		type="int"><column name="candidate_assessed" /></property>
+   			    <property name="candidate_Certified"   		type="int"><column name="candidate_certified" /></property>
+   			     
+                <property name="createdBy"                  type="string"> <column name="created_by" /></property>
+                <property name="createdOnDate"              type="date"><column name="created_on" /></property>
+                <property name="updatedBy"                  type="string">  <column name="updated_by" /></property>
+                <property name="updatedOnDate"              type="date"><column name="updated_on" /></property>
+               
+       
+  	</class>
+</hibernate-mapping>

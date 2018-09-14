@@ -1,0 +1,82 @@
+.dataTable{
+	border: 1px solid #666;
+	width: 100%;
+	margin: 20px 0 20px 0 !important;
+}
+
+.dataTable th {
+	text-transform: uppercase;
+}
+.dataTable tfoot {
+	text-transform: uppercase;
+}
+
+.dataTable th,.dataTable td {
+	padding: 2px 4px 2px 4px !important;
+	text-align: left;
+	vertical-align: top;
+}
+
+.dataTable thead tr {
+	background-color: #999999;
+}
+
+.dataTable th.sorted {
+	background-color: #CCCCCC;
+}
+
+.dataTable th a,.dataTable th a:visited {
+	color: black;
+}
+
+.dataTable th a:hover {
+	text-decoration: underline;
+	color: black;
+}
+
+.dataTable th.sorted a,.dataTable th.sortable a {
+	background-position: right;
+	display: block;
+	width: 100%;
+}
+
+.dataTable th.sortable a {
+	background-image: url(../images/arrow_off.png);
+    background-repeat: no-repeat;
+}
+
+.dataTable th.order1 a {
+	background-image: url(../images/arrow_down.png);
+    background-repeat: no-repeat;
+}
+
+.dataTable th.order2 a {
+	background-image: url(../images/arrow_up.png);
+    background-repeat: no-repeat;
+}
+
+.dataTable tr.odd {
+	background-color: #fff
+}
+
+.dataTable tr.tableRowEven,tr.even {
+	background-color: #CCCCCC
+}
+
+.dataTable .group-1 {
+    font-weight:bold;
+    padding-bottom:10px;
+    border-top:1px solid black;
+}
+.dataTable .group-2 {
+    font-style:italic;
+    border-top: 1px solid black;
+
+}
+
+.dataTable .grouped-table tr.even {
+    background-color: #fff;
+}
+.dataTable .grouped-table tr.odd {
+    background-color: #fff;
+}

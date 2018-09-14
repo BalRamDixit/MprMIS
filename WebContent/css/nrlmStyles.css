@@ -1,0 +1,363 @@
+
+body { font-family: Arial, Verdana, "Times New Roman"; background-color: gray; margin: 0px; padding: 0px; }
+.pagelayout { margin: auto; padding: 0px 20px 0px 20px; display: block;width:972px; background-color: #fff; }
+.masthead {
+	background-repeat: no-repeat; background-position: left top; height: 80px; background-color: #FFF; 
+	font-family: Arial, Verdana, "Times New Roman"; font-size: 14px; color: #FFFFFF; font-weight: bolder; padding-bottom: 4px;
+	vertical-align: bottom; padding-right: 8px;}
+.normaltext {
+	font-size: 11px; color: #333333; font-family: Arial, Verdana, "Times New Roman";}
+.aboutustext {
+	font-size: 16px; line-height: 25px; color: #333333; font-family: Arial, Verdana, "Times New Roman"; }
+ol {
+	font-family: Arial, Verdana, "Times New Roman"; font-size: 11px; font-weight: normal; text-align: justify; }
+.bglogin {
+	background-image: url(../images/bgloginpanel.jpg); background-position: left bottom; background-repeat: repeat-x;
+	border-left-width: 1px; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: solid;
+	border-left-color: #FFFFFF; padding-right: 20px; margin: 0px; padding-left: 20px; }
+.globalnav {
+	background-color: #18849e; height: 24px; background-repeat: repeat-x; background-position: center top; margin: 0px;
+	padding: 0px; width: 972px; clear: both; float: none; }
+.globalnav ul{
+	font-family: Arial, Verdana, "Times New Roman"; background-repeat: repeat-x; background-position: left top; margin-top: 0px;
+	margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px; height: 20px;}
+.globalnav img{
+	vertical-align: middle; margin-left:0; margin-right:0;}
+.globalnav li{
+	font-family: Arial, Verdana, "Times New Roman"; font-size: 11px; font-weight: bolder; color: #FFFFFF; display: inline;
+	list-style-type: none; }
+.globalnav li a:link, .globalnav li a:visited{
+	font-family: Arial, Verdana, "Times New Roman"; font-size: 11px; font-weight: bolder; color: #FFFFFF; text-decoration: none;
+	padding-left: 6px; margin: 0px; display: block; float: left; height: 20px; padding-top: 3px; padding-right: 6px;
+	border-right-width: 1px; }
+.globalnav li a:hover{
+	background-repeat: repeat-x; background-position: left top; font-family: Arial, Verdana, "Times New Roman"; font-size: 11px;
+	font-weight: bolder; color: #FF0; text-decoration: none; padding-left: 6px; margin: 0px; display: block; float: left;
+	height: 20px; padding-top: 3px; padding-right: 6px; }
+.globalnav li a.current:link,.globalnav li a.current:visited{
+	background-repeat: repeat-x; background-position: left top; font-family: Arial, Verdana, "Times New Roman"; font-size: 11px;
+	font-weight: bolder; color: #FCF0A0; text-decoration: none; padding-left: 6px; margin: 0px; display: block; float: left;
+	height: 20px; padding-top: 3px; padding-right: 6px;}
+.linksdivider{
+	font-family: arial; font-size: 12px; font-weight: normal; color: #FC6; clear: right; float: left; padding-top: 3px;}
+.userlable{
+	font-family: arial; font-size: 12px; font-weight: bold; color: #FFFFFF; padding-left: 4px; }
+.userinfo{
+	font-family: arial; font-size: 12px; font-weight: bold; color: #FCF0A0; padding-left: 2px; }
+.navlabelbold{
+	font-family: arial; font-size: 11px; color: #FFFFFF; display: block; padding-right: 2px; padding-left: 2px; font-weight: bold;
+	height: 20px; float: left; padding-top: 3px; }
+.sublist ul {
+	background-color: #ADD8E6; margin: 0px; }
+.sublist li{
+	font-family: Arial, Verdana, "Times New Roman"; font-size: 11px; font-weight: bolder; border-top-style: none; border-right-style: none;
+	border-bottom-style: solid; border-left-style: none; background-image: url(../images/bgleftpanelili.jpg); background-repeat: repeat-x;
+	background-position: left top; margin: 0px; border-bottom-width: 1px; border-bottom-color: #CECECE; padding-top: 1px; padding-right: 0px;
+	padding-bottom: 1px; padding-left: 0px; }
+.sublist li a:link, .sublist li a:visited{
+	font-family: Arial, Verdana, "Times New Roman"; font-size: 11px; font-weight: bolder; color: #666666; text-decoration: none;
+	padding-left: 12px; padding-top: 2px; padding-bottom: 2px; padding-right: 0px; display: block; border-top-style: none; 
+	border-right-style: none; border-bottom-style: none; border-left-style: none; margin: 0px; }
+.sublist li a:hover{
+	font-family: Arial, Verdana, "Times New Roman"; font-size: 11px; font-weight: bolder; color: #006699; text-decoration: none;
+	padding-left: 12px; padding-top: 2px; padding-bottom: 2px; padding-right: 0px; display: block; border-top-style: none;
+	border-right-style: none; border-bottom-style: none; border-left-style: none; margin: 0px; background-image: url(../images/bgleftpaneliactive.jpg);
+	background-repeat: repeat-x; background-position: left bottom; }
+.sublist li a.active:link,.sublist li a.active:visited{
+	font-family: Arial, Verdana, "Times New Roman"; font-size: 11px; font-weight: bolder; color: #006699; text-decoration: none;
+	padding-left: 12px; padding-top: 2px; padding-bottom: 1px; padding-right: 0px; display: block; border-top-style: none;
+	border-right-style: none; border-bottom-style: none; border-left-style: none; margin: 0px; 
+	background-image: url(../images/bgleftpaneliactive.jpg); background-repeat: repeat-x; background-position: bottom; }
+.mainpane {
+	padding: 0px; margin: 20px; }
+.mainpanebgcolor{
+	background-color: #ffffff; }
+.actionstxt{
+	font-family: Arial, Verdana, "Times New Roman"; font-size: 14px; font-weight: bolder; color: #990000; padding-top: 2px;
+	padding-bottom: 8px; }
+.mainpaneheading{
+	font-family: Arial, Verdana, "Times New Roman"; font-size: 14px; font-weight: bolder; color: #333333; padding-top: 2px;
+	padding-bottom: 8px; }
+.formsubheading{
+	font-family: arial; font-size: 12px; font-weight: bold; padding-right: 0px; padding-top: 14px; padding-bottom: 8px; 
+	color: #873816; padding-left: 4px; vertical-align: top; }
+.mandatory{
+	font-family: arial; font-size: 10pt; color: #990000; }
+.formlabel {
+	font-family: Arial, Verdana, "Times New Roman"; font-size: 12px; padding-top: 4px; padding-bottom: 2px; color: #333333; 
+	border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #E9E9E9; padding-left: 4px; vertical-align: top; }
+.formlabelblue {
+	font-family: Arial, Verdana, "Times New Roman"; font-size: 12px; padding-top: 4px; padding-bottom: 2px; color: #1A50B8;
+	border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #E9E9E9; padding-left: 4px; vertical-align: top; }
+.formlabel a:link{
+	font-family: Arial, Verdana, "Times New Roman"; font-size: 11px; padding-top: 4px; padding-bottom: 2px; color: #a41c2b;
+	padding-left: 4px; vertical-align: top; }
+.formlabelbold{
+	font-family: Arial, Verdana, "Times New Roman"; font-size: 12px; padding-top: 2px;
+	padding-bottom: 2px; color: #3D5E8F; padding-left: 2px; font-weight: bold; }
+.formlabelhighlight {
+	font-family: Arial, Verdana, "Times New Roman"; font-size: 12px; padding-top: 4px; padding-bottom: 2px; color: #333333; 
+	border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #E9E9E9; padding-left: 4px; 
+	vertical-align: top; font-weight: bold; }
+input {
+	font-family: Arial, Verdana, "Times New Roman"; font-size: 12px; }
+textarea {
+	font-family: Arial, Verdana, "Times New Roman"; font-size: 12px; }
+select {
+	font-family: Arial, Verdana, "Times New Roman"; font-size: 12px; }
+.button {
+	background-image: url(../images/bgbtn.jpg); background-repeat: repeat-x; background-position: left top; height: 20px;
+	border: 1px solid #999999; font-family: Arial, Verdana, "Times New Roman"; font-size: 11px; font-weight: bolder;
+	color: #333333; margin-right: 2px; margin-left: 2px; margin-top: 6px; padding: 1px; }
+.rightpanel {
+	background-image: url(../images/bgrtpanel.jpg); background-repeat: repeat-x; background-position: left top; width: 240px;
+	margin-top: 1px; margin-right: 1px; margin-bottom: 0px; margin-left: 1px; font-family: Arial, Verdana, "Times New Roman";
+	font-size: 12px; background-color: #F6F5F3; }
+.rightpanel TR.divider {
+	background-image: url(../images/bgdot.gif); background-repeat: repeat-x; background-position: left top; }
+.title {
+	font-family: Arial, Verdana, "Times New Roman"; font-size: 12px; font-weight: bolder; color: #333333; }
+.loginbox {
+	background-image: url(../images/login_box.jpg); background-repeat: no-repeat; background-position: center top; width: 340px; }
+#datagrid {
+	font-family: Arial, Helvetica, sans-serif; border-top-width: 1px; border-right-width: 1px; border-left-width: 1px;
+	border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid;
+	border-top-color: #84734F; border-right-color: #84734F; border-left-color: #84734F; border-bottom-width: 1px;
+	border-bottom-color: #84734F;}
+#datagrid TH {
+	background-color: #FAE7D3; font-family: arial; font-size: 10px; font-weight: bold; color: #333333; text-align: left;
+	height: 20px; padding-left: 0px; }
+#datagrid TH a:link, #datagrid TH a:visited{
+	font-family: arial; font-size: 10px; font-weight: bold; color: #333333; text-align: left; padding-left: 4px; }
+#datagrid TH a:hover  {
+	font-family: arial; font-size: 10px; font-weight: bold; color: #990000; }
+#datagrid Tr {
+	height: 25px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 8px; margin: 0px; }
+#datagrid td {
+	text-align: left; background-color:#FFFFFF; height: 25px; padding-top: 4px; padding-right: 0px; padding-bottom: 4px; 
+	padding-left: 8px; margin: 0px; }
+.userdetails{
+	font-family: arial; font-size: 12px; font-weight: bold; color: #006699; }
+.footer{
+	width: 960px; background-color: #18849E; }
+.footer li{
+	font-family: Arial, Verdana, "Times New Roman"; font-size: 11px; font-weight: normal; color: #900; list-style-type: none;
+	float: left; padding-right: 6px; padding-left: 6px; }
+.footer ul{
+	font-family: Arial, Verdana, "Times New Roman"; margin-left: 0px; text-align: center; padding: 0px; margin-top: 0px;
+	margin-right: 0px; margin-bottom: 0px; }
+.footer li a:link, .footer li a:visited{
+	font-family: Arial, Verdana, "Times New Roman"; font-size: 11px; font-weight: normal; color: #ffffff; text-decoration: none;
+	padding-left: 6px; padding-right: 17px; border-right-width: 1px; border-right-style: solid; border-right-color: #F6C46F; }
+.footer li a:hover{
+	font-family: Arial, Verdana, "Times New Roman"; font-size: 11px; font-weight: normal; color: #FFF; text-decoration: underline;
+	padding-left: 6px; padding-right: 17px; }
+.footer-message {
+	font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: normal; color:#333; width:960px; float:left;
+	background-image: url(../images/Nic-logo.jpg); background-repeat: no-repeat; background-position: right 12px; 
+	vertical-align: text-top; padding-top: 3px; padding-right: 0px; padding-bottom: 6px; padding-left: 0px; background-color: #FFF; }
+.formtitle {
+	font-family: Arial, Verdana, "Times New Roman"; font-size: 11px; padding-top: 2px; padding-bottom: 2px; color: #333333;
+	font-weight: bold; background-color:#D8E2ED; padding-left: 4px; vertical-align: top; }
+.row1 {
+	background-color: #F8FAFC; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #efefe0; }
+.row2 {
+	background-color: #FFFFFF; }
+.textmaroon {
+	font-family: arial; font-size: 12px; color: #990000; padding-left: 10px; border-bottom-width: 1px; border-bottom-style: solid;
+	border-bottom-color: #EFEFEF; padding-left: 4px; }
+.textbold{
+	font-family: arial; font-size: 12px; color: #333333; padding-left: 4px; font-weight: bold; } 
+.textindent{
+	font-family: arial; font-size: 12px; color: #333333; padding-left: 30px; color: #333333; border-bottom-width: 1px; 
+	border-bottom-style: solid; border-bottom-color: #EFEFEF; }
+.hide{
+	DISPLAY: none; VISIBILITY: hidden; }
+.maroonlink{
+	font-family: arial; font-size: 11px; font-weight: normal; color: #990000; text-decoration: underline; }
+.maroonlink:hover{
+	font-family: arial; font-size: 11px; font-weight: normal; color: #990000; text-decoration: underline; }
+.maroonlink:visited{
+	font-family: arial; font-size: 11px; font-weight: normal; color: #990000; text-decoration: underline; }
+table.informationTable {
+	border-right-color: #B0171F; border-right-style: outset; border-right-width: 2px; letter-spacing: normal; line-height: normal;
+  	font-size: 11px; text-align: center; font-weight: bold; }
+
+/*------------ Accordion Menu Slider Div css --------------------------*/
+
+/* #Accordion_menu{width:219px; height:650px; margin:0px 5px 5px 0; float:left;}
+.menu_list {width: 219px; float:left z-index:-1000;}
+.menu_head {padding:7px 10px 5px 10px; cursor: pointer;position: relative;margin:0px 0 2px 0; font-weight:bold; background:url(../images/sidebox-background-open.gif) no-repeat; width:199px; height:19px; z-index:100;}
+.menu_body {display:none;  z-index:10000}
+.menu_body .top{background: url("../images/sidebox-background_top.gif") no-repeat ;  margin: -6px 0 0 0px; padding: 0px; height: 5px;  width: 219px;}
+.menu_body .contents {background: url("../images/sidebox-background-main.gif") repeat-y; margin: -2px 0 0 0; _margin: -10px 0 0 0; padding: 5px 8px 2px 2px; width: 212px; }
+*:first-child+html .menu_body .contents {padding: 5px 0px 2px 2px; width: 219px; }
+* html .menu_body .contents {padding: 5px 0px 2px 2px; width: 219px; }
+.menu_body .bottom {background: url("../images/sidebox-background-bottom.gif") no-repeat;  margin: 0px; padding: 0px; height: 5px; width:219px;}
+
+#navigation {width:215px;}
+#navigation ul {margin:0px; padding:0px;}
+#navigation li {list-style: none; background: url("../images/bullet1.gif") no-repeat 0.5em 0.6em;padding: 0px 0px 3px 18px; display:block;} 
+ul.top-level {background:none;}
+ul.top-level li { border: 1px #fff dotted; display:block;}
+#navigation a { color: #0091ce; cursor: pointer; display:block; line-height: 20px;  text-decoration:none; width:100%;}
+#navigation a:hover{ color:#b27706; }
+#navigation li:hover { border: 1px #f7c374 dotted;  position: relative; color:#b27706; background-color:#f4f1e7;}
+ul.sub-level {display: none;}
+li:hover .sub-level {background: #999;border: #fff solid;border-width: 1px;display: block;position: absolute;left:195px;top: -2px;  z-index:1000000;}
+*:first-child+html li:hover .sub-level {left:215px; z-index:1000000;}
+ul.sub-level li {float:left; width:150px;}
+Seconda Level
+#navigation .sub-level { background: #fbf9f7; z-index:1000000; *z-index:1000000; _z-index:1000000;  border:1px #ddd3b2 solid;}
+Third Level
+#navigation .sub-level .sub-level { background: #fbf9f7; z-index:1000000; border:1px #ddd3b2 solid;left:100%;}
+
+RESET STYLES
+li:hover .sub-level .sub-level {display:none;}
+.sub-level li:hover .sub-level {display:block;}
+ *//*------------ Tabbed menu Slider Div css --------------------------*/
+
+	#tab_menu{padding: 3px; border-radius: 10px; border: 1px solid rgb(24, 132, 158); box-shadow: 0px 0px 15px rgb(24, 132, 158); background-color: rgb(255, 255, 255);
+	-webkit-border-radius: 10px; -webkit-box-shadow: 0 0 15px rgb(24, 132, 158); -moz-box-shadow: 0 0 15px rgb(24, 132, 158); -moz-border-radius: 10px;
+	
+	margin: 0px 10px 10px 30px; 
+	width:550px; _width:559px; height:250px;  padding:0px;  float: left; }
+	.TabbedPanels {	overflow: hidden;	margin: 0px;	padding: 0px;	clear: none;	width:550px; _width:559px;	/* background-color:#cbc0a9; */ /* IE Hack to force proper layout when preceded by a paragraph. (hasLayout Bug)*/}
+	 *:first-child+html .TabbedPanels {	width:492px;}
+	.TabbedPanelsTabGroup {	margin: 0px;padding: 0px;}
+	.TabbedPanelsTab {position: relative;top: 1px;float: left;padding: 4px 10px;margin: 8px 0px 0px 3px;font:bold 12px/18px Arial, Helvetica, sans-serif; color:#fff;	background-color: #000000; list-style: none;-moz-user-select: none;-khtml-user-select: none;cursor: pointer; font-size:12px; border-left: solid 1px #856933;border-top: solid 1px #856933;border-right: solid 1px #856933;}
+	.TabbedPanelsTabHover {background-color: #856933;color:#eae4c3; }
+	.TabbedPanelsTabSelected {background-color: #fff;color:#000;border-left: solid 1px #999;border-top: solid 1px #999;border-right: solid 1px #999;}
+	.TabbedPanelsTab a {color: #fff;text-decoration: none;}
+	.TabbedPanelsTab:focus {  outline: 0px solid lime;}
+	.TabbedPanelsContentGroup {clear: both;	border-left: solid 1px #CCC;border-bottom: solid 1px #CCC;border-top: solid 1px #999;border-right: solid 1px #ccc;background-color: #fff;}
+	.TabbedPanelsContent {overflow: hidden;padding:4px;height:200px; width:546px;}
+	*:first-child+html .TabbedPanelsContent {overflow: hidden;padding:4px;height:186px; width: 545px;}
+	.TabbedPanelsContentVisible {}
+	.VTabbedPanels {overflow: hidden;zoom: 1;}
+	.VTabbedPanels .TabbedPanelsTabGroup {float: left;width: 10em;height: 20em;background-color: #EEE;position: relative;border-top: solid 1px #999;border-right: solid 1px #999;border-left: solid 1px #CCC;border-bottom: solid 1px #CCC;}
+	.VTabbedPanels .TabbedPanelsTab {float: none;margin: 0px;border-top: none;border-left: none;border-right: none;}
+	.VTabbedPanels .TabbedPanelsTabSelected {background-color: #fff; outline:none; border:none;}
+	.VTabbedPanels .TabbedPanelsContentGroup {clear: none;float: left;padding: 0px;width: 30em;height: 20em;}
+	/* Styles for Printing */
+	@media print {.TabbedPanels {overflow: visible !important;}
+	.TabbedPanelsContentGroup {	display: block !important;	overflow: visible !important;height: auto !important;}
+	.TabbedPanelsContent {overflow: visible !important;	display: block !important;	clear:both !important;}
+	.TabbedPanelsTab { overflow: visible !important; display: block !important; clear:both !important;}}
+	.TabbedPanelsContent  ul{ list-style:none; display:inline-block; margin-top:10px; width:96%;}
+	.TabbedPanelsContent ul li{ list-style:none;  display:block;  margin:0px 0px 0px 2px;  background:url(../menuJquery/vericalMenuImage/bullet_points2.gif) no-repeat 5px 7px ; padding:3px 0 0 20px; width:90%; }
+	.TabbedPanelsContent  ul li a{ font:normal 12px/20px arial; color:#0091ce; text-decoration:none;}
+	.TabbedPanelsContent  ul li a:hover{ color:#b27706;}
+	.TabbedPanelsContent .more a{ font: normal 12px Arial, Helvetica, sans-serif;color:#c98a11; text-decoration:none; float:right; margin:5px 10px 0 0; padding:5px 5px 0 0; }
+	.TabbedPanelsContent .more a:hover{color:#000; text-decoration:underline;}
+	
+/* -----------------------------CSS for Circular menu---------------------------------------- */
+.cyanBorder {
+	padding: 3px; border-radius: 10px; border: 1px solid rgb(24, 132, 158); box-shadow: 0px 0px 15px rgb(24, 132, 158); background-color: rgb(255, 255, 255); float:left;
+	-webkit-border-radius: 10px; -webkit-box-shadow: 0 0 15px rgb(24, 132, 158); -moz-box-shadow: 0 0 15px rgb(24, 132, 158); -moz-border-radius: 10px;
+	
+}
+.heading {color: rgb(41, 73, 81); font-family: Verdana, Verdana, Geneva, sans-serif; font-size: 18px;font-weight: bold; margin-left: 10px;}
+.circulars {width: 170px; height: 200px; text-align: left; font-family: Palatino Linotype, Book Antiqua3, Palatino, serif; font-size: 12px; margin-top: 8px; margin-left: 12px;}
+#ticker {list-style: none; height: 190px; overflow: hidden; margin-left: -40px;}
+#ticker li {margin-bottom: 30px;}
+a.cyanLink:link {/* color: rgb(24, 132, 158); */ color:#0091ce; text-decoration: none;}
+a.cyanLink:visited {color: rgb(30, 115, 68); text-decoration: none;}
+a.cyanLink:hover {color: rgb(191, 75, 6); text-decoration: none;}
+
+#ticker1 { width:180px; height:300px; border:1px solid #aaaaaa; overflow:auto; }
+#ticker1 dt { font:normal 12px Georgia; padding:0 10px 5px 10xp; background-color:#e5e5e5; padding-top:10px; border:1px solid #ffffff; border-bottom:none; border-right:none; position:relative; }
+#ticker1 dd { margin-left:0; font:normal 11px Verdana; padding:0 10px 10px 10px; border-bottom:1px solid #aaaaaa; background-color:#e5e5e5; border-left:1px solid #ffffff; position:relative; }
+#ticker1 dd.last { border-bottom:1px solid #ffffff; }
+#ticker1 div { margin-top:0; }
+
+/*------------ Footer content Slider Div css --------------------------*/
+
+#footer{margin:0 auto; margin-top:10px; width:100%; height:100px; background:url(../images/footer_bg.jpg) repeat-x; clear:both; }
+#footer-container{margin:0 auto; padding: 0; width:972px; height:142px;  } 
+
+#footer_link{ background-color: #18849E; position:relative; height:auto;  font:normal 14px Arial, Helvetica, sans-serif; color:#727976;   margin:0px; text-align:center; padding: 3px 0px 3px 0px;}
+#footer_link p{ position:relative; font:normal 12px Arial, Helvetica, sans-serif; color:#4c5252; padding:5px 0px 0px 0px;}
+#footer_link p a{font:normal 12px Arial, Helvetica, sans-serif; color:#0069d5; text-align:center;}
+#footer_link p span{ font-weight:bold;}
+#footer_link p a:hover{font:normal 12px Arial, Helvetica, sans-serif; color:#4c5252; text-decoration:none;}
+
+#footer_link ul{list-style:none; display:inline; margin:0 auto; }
+#footer_link li{display:inline;  height:13px; text-align:center;}
+#footer_link li a{font:bold 12px Arial, Helvetica, sans-serif; color:#fff;  padding:12px 10px 0px 10px; text-decoration:none;}
+#footer_link li a:hover{/* text-decoration:underline; */ color:#000;}
+#footer-img{ margin:0 auto; padding:0px; text-align:center; width:100%;  }
+#footer-img img{ width:111px; margin:7px 0 0 0; padding:0px; text-align:center;}
+	
+/* --- Main Layout --- */
+	#content-container{margin-top: 20px; width: 932px; height:auto; clear:both; position:relative; }
+	* html #content-container{margin-top: 20px;  width:932px;}
+	#content-container_in{padding:0; margin:0px 0px 15px 0px; width:972px; height:auto; clear:both; position:relative;}
+	#left-content{margin:0; padding:0 10px 0 0; width:726px; height:auto; float:left; position:relative;}
+	#Right-content{margin:0; padding:0; width:234px; height:auto; float:left; position:relative; display:block;}
+/* --- END main layout --- */
+
+#loginbutton img:hover{
+opacity:0.6;
+filter:alpha(opacity=40);} 	
+	
+/*----------- table layout----------------*/
+table.bigTable
+{
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.4em;
+    font-style: normal;
+    width:900px;
+}
+
+table.bigTable th
+{
+    padding:5px;
+    color:#fff;
+    text-shadow:1px 1px 1px #568F23;
+    border:1px solid #666666;
+    border-bottom:3px solid #666666;
+    background-color:#18849e;
+    background:-webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.02, rgb(24,132,158)),
+        color-stop(0.51, rgb(24,132,158)),
+        color-stop(0.87, rgb(24,132,158))
+        );
+    background: -moz-linear-gradient(
+        center bottom,
+        rgb(24,132,158) 2%,
+        rgb(24,132,158) 51%,
+        rgb(24,132,158) 87%
+        );
+    -webkit-border-top-left-radius:5px;
+    -webkit-border-top-right-radius:5px;
+    -moz-border-radius:5px 5px 0px 0px;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+}
+table.bigTable tr.odd{
+  color: #B0171F; font-size: 11px; text-align: left;}
+table.bigTable tr:hover td{
+	background-color: #FFF68F;}
+table.bigTable td{
+    padding:3px; text-align: left; background-color:#E0E0E0; border: 2px solid #E0E0E0; -moz-border-radius:2px; 
+    -webkit-border-radius:2px; border-radius:2px; color:#000000; text-shadow:1px 1px 1px #fff;}
+.headPadding{
+    padding: 0px 25px 0px;}
+.title{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", "Sans-Serif"; font-size: 18px; font-weight: bold;
+    text-align: center; color: #B0171F;}
+
+.lakhs{
+    color: #EE9A00; font-family: arial; font-weight: bold;}
+/*-------------- end table ----------------- */
+
+.pageHeader{
+	margin: 5px 0 10px 0; padding: 10px 0 10px 0;
+	font-family: Arial, Verdana, "Times New Roman"; font-size: 16px; font-weight: bolder; color: #96B566;
+}

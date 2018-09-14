@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping> 
+
+	<class name="com.infotech.sgsy.master.village.VillageVO" table="mst_village"> 
+		
+		<composite-id class="com.infotech.sgsy.master.village.VillageVO" mapped="true">
+			<key-property name="stateCode" column="state_Code"  length="2" />	
+			<key-property  name="districtCode" column="district_Code"    length="4"/> 	  
+			<key-property name="blockCode" column="block_Code"    length="7"/>   
+			<key-property name="gramPanchayatCode" column="gramPanchayat_Code"    length="11"/>   
+			<key-property name="villageCode" column="village_Code"    length="11"/>   
+		</composite-id>		
+		
+		
+ 	 	<property name="ruralUrbanArea" column="rural_urban_area" length="1" /> 
+ 		<property name="villageName" column="village_name" length="30"/>
+ 		 
+ 		<property name="createdOn" column="created_On"  type="java.util.Date" length="10" /> 
+ 		<property name="createdBy" column="created_By" length="25"/> 		
+ 		<property name="lastModifiedOn" column="modified_On" type="java.util.Date" length="10" /> 
+ 		<property name="lastModifedBy" column="Modifed_By" length="25"/>
+ 					
+ 		
+ 		
+ 	</class>
+ 	
+</hibernate-mapping>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 17, 2013 4:31:40 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+ <class name="com.infotech.skills.hbm.piaproposal.Curriculum" table="pia_curriculum">
+  <id name="id" type="sun.security.util.BigInt">
+   <column name="id"/>
+   <generator class="assigned"/>
+  </id>
+  <property name="proposedTrade" type="java.lang.String">
+   <column name="proposed_trade" not-null="true"/>
+ </property>
+  <property name="proposedCourse" type="java.lang.String">
+   <column name="proposed_course" not-null="true"/>
+  </property>
+  <property name="totalTraininDays" type="java.lang.String">
+   <column name="total_training_days_ojt" not-null="true"/>
+  </property>
+  <property name="totalTraininHours" type="java.lang.String">
+   <column name="total_training_hours" not-null="true"/>
+  </property>
+  <property name="ojtDays" type="java.lang.String">
+   <column name="ojt_days" not-null="true"/>
+  </property>
+  <property name="daysExcludRecreation" type="java.lang.String">
+   <column name="days_excluding_recreation_time" not-null="true"/>
+  </property>
+  <property name="softSkillsTraining" type="java.lang.String">
+   <column name="soft_skills_training_hours" not-null="true"/>
+  </property>
+  <property name="computerTraining" type="java.lang.String">
+   <column name="computer_training_hours" not-null="true"/>
+  </property>
+  <property name="practicalTraining" type="java.lang.String">
+   <column name="practical_training_hours" not-null="true"/>
+  </property>
+  <property name="strategyDevelopment" type="java.lang.String">
+   <column name="strategy_module_development" not-null="true"/>
+  </property>
+  <property name="certificationObtained" type="java.lang.String">
+   <column name="certification_obtained" not-null="true"/>
+  </property>
+  <property name="createdOn" type="java.lang.String">
+   <column name="created_on" not-null="true"/>
+  </property>
+  <property name="createdBy" type="java.lang.String">
+   <column name="created_by" not-null="true"/>
+  </property>
+  <property name="modifyOn" type="java.lang.String">
+   <column name="modify_on" not-null="true"/>
+  </property>
+  <property name="modifyBy" type="java.lang.String">
+   <column name="modify_by" not-null="true"/>
+  </property>
+ </class>
+</hibernate-mapping>

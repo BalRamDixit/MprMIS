@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.infotech.sgsy.projectSetup.tradeTarget.TradeTargetVO"  table="project_trade_target" schema="public">
+	
+ 	
+	
+        <id name="id" column="id" >		
+			<generator class="sequence">
+        		<param name="sequence">project_trade_target_Id_Seq</param>
+    		</generator>
+</id>	
+        
+               <!-- 	<property name="projectID"      						  type="string"><column name="projectID" /></property>   -->     
+                <many-to-one name="project" class="com.infotech.sgsy.projectSetup.projectDetails.ProjectDetailsVO" lazy="false" fetch="select" >
+                <column name="project_id"  />
+                 </many-to-one> 
+               
+        	  <!--   <property name="sector"      						  type="string"><column name="sector" /></property>
+  			    <property name="trade"   		          type="string"><column name="trade" /></property> -->
+  			    <many-to-one name="sector" class="com.infotech.sgsy.masterdata.sectorMaster.SectorMasterVO" lazy="false" fetch="select" >
+                <column name="sector"  />
+                 </many-to-one>
+                 <many-to-one name="trade" class="com.infotech.sgsy.masterdata.tradeMaster.TradeMasterVO" lazy="false" fetch="select" >
+                <column name="trade"  />
+                 </many-to-one>
+  			    
+  			    
+  			    
+   			    <property name="otherTrade"    									  type="string"><column name="other_trade" /></property>
+    			<property name="totalTradeDuration"         							  type="string"><column name="total_trade_duration" /></property>
+   			    <property name="ojt"     							  type="string"><column name="ojt" /></property>
+   			    <property name="trainingTarget"   							  type="int"><column name="training_target" /></property>      			    
+   			    <property name="nonResiFull"   							  type="string"><column name="non_resi_full" /></property>  
+   			    <property name="nonResiPart"   							  type="string"><column name="non_resi_part" /></property>  
+   			    <property name="nonResiWeekend"   							  type="string"><column name="non_resi_weekend" /></property>  
+   			    <property name="resiFull"   							  type="string"><column name="resi_full" /></property>    
+   			    <property name="saveFlag"   							  type="integer"><column name="saveFlag" /></property>   
+                <property name="createdBy"              type="string"><column name="created_by" /></property>
+                <property name="createdOn"              type="date"><column name="created_on" /></property>
+                <property name="updatedBy"              type="string"><column name="updated_by" /></property>
+                <property name="updatedOn"              type="date"><column name="updated_on" /></property>
+                 
+       
+  	</class>
+</hibernate-mapping>

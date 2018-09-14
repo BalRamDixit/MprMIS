@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.infotech.sgsy.stateSetup.hrTeam.HRTeamVO"  table="hr_team" schema="public">
+  
+        <id name="id" column="id">
+            <generator class="sequence">
+        		<param name="sequence">hr_team_Id_Seq</param>
+    		</generator>
+        </id>
+      
+        <property name="personName"              type="string"><column name="person_name" /></property>
+        <many-to-one name="designation" class="com.infotech.sgsy.master.designationMaster.DesignationMasterVo" lazy="false" fetch="select" >
+            <column name="designation_id"  />
+       </many-to-one>
+       
+        <property name="location"                type="string"><column name="location" /></property>
+         <many-to-one name="district" class="com.infotech.sgsy.master.districtMasterNew.DistrictMasterVO" not-found="ignore" lazy="false" fetch="select" >
+            <column name="district_id"  />
+       </many-to-one>
+       <many-to-one name="thematic" class="com.infotech.sgsy.masterdata.projectTypeMaster.ProjectTypeMasterVO" not-found="ignore" lazy="false" fetch="select" >
+            <column name="project_type_name"  />
+       </many-to-one>
+        <property name="joiningDate"  type="date"><column name="joining_date" /></property>
+        <property name="email"                   type="string"><column name="email" /></property>
+        <property name="officeNo"                type="string"><column name="office_no" /></property>
+        <property name="mobileNo"                type="string"><column name="mobile_no" /></property>
+        <property name="eSopCertReq"             type="string"><column name="eSop_cert_req" /></property>
+        <property name="eSopCertLevel"           type="string"><column name="eSop_cert_level" /></property>
+         <property name="CertNo"   				 type="string"><column name="eSop_cert_No" /></property>
+        <property name="certificationDate"       type="date"><column name="certification_date" /></property>
+        <property name="isActive"                type="string"><column name="is_active" /></property>
+         <property name="dateOfLeaving"       type="date"><column name="dateOfLeaving" /></property>
+        <many-to-one name="state" class="com.infotech.sgsy.master.state.StateVO"  lazy="false" fetch="select" >
+            <column name="state_id"  />
+       </many-to-one>
+        
+        
+        
+                <property name="createdBy"              type="string"><column name="created_by" /></property>
+                <property name="createdOn"              type="date"><column name="created_on" /></property>
+                <property name="updatedBy"              type="string"><column name="updated_by" /></property>
+                <property name="updatedOn"              type="date"><column name="updated_on" /></property>
+        
+  	</class>
+</hibernate-mapping>
+

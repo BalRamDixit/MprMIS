@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 20, 2013 4:06:15 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+<class name="com.infotech.skills.skillsSanctionOrders.SanctionOrdersVO" table="pia_sanction_orders_detail" schema="public">
+   <composite-id>
+   <key-property name="sanctionOrderNo" column="sanction_order_no"/>
+   <key-property name="piaCode" column="pia_code" />
+    </composite-id>
+      <property name="sanctionOrderDate" type="string">
+            <column name="date_of_sanction_order"/>
+        </property> 
+          <property name="sanctionFileName" type="string">
+            <column name="sanction_file_name"/>
+        </property> 
+         <property name="piaRegistrationNumber" type="string">
+            <column name="pia_reg_no"/>
+        </property> 
+        <property name="modifyBy" type="string">
+            <column name="modify_by"/>
+        </property>
+        <property name="modifyOn" type="string">
+            <column name="modify_on" length="10" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="created_by"/>
+        </property>
+        <property name="createdOn" type="string">
+            <column name="created_on" length="10" />
+        </property>
+         <property name="ipAddress" type="string">
+            <column name="ip_address" />
+        </property>
+           </class>
+</hibernate-mapping>

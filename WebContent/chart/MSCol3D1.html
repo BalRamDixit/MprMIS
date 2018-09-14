@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Multi Series Column 3D Chart</title>
+        <script type="text/javascript" src="jquery.min.js"></script>
+        <script type="text/javascript" src="FusionCharts.js"></script>
+    </head>
+    <body>
+	   <div id="State" align="center">FusionCharts</div>
+	   <script type="text/javascript">
+			 var myChartState = new FusionCharts("MSColumn3D.swf", "ChartId", "900", "400", "0", "0");
+			 myChartState.setDataURL("DataState.xml");
+			 myChartState.render("State");
+	   </script>
+	   <div id="NorthEast" align="center">FusionCharts</div>
+	   <script type="text/javascript">
+			 var myChartNE = new FusionCharts("MSColumn3D.swf", "ChartId", "900", "400", "0", "0");
+			 myChartNE.setDataURL("DataNE.xml");
+			 myChartNE.render("NorthEast");
+	   </script>
+	   <div id="NorthWest" align="center">FusionCharts</div>
+	   <script type="text/javascript">
+			 var myChartNW = new FusionCharts("MSColumn3D.swf", "ChartId", "900", "400", "0", "0");
+			 myChartNW.setDataURL("DataNW.xml");
+			 myChartNW.render("NorthWest");
+	   </script>
+	   <div id="UTs" align="center">FusionCharts</div>
+	   <script type="text/javascript">
+			 var myChartUTs = new FusionCharts("MSColumn3D.swf", "ChartId", "900", "400", "0", "0");
+			 myChartUTs.setDataURL("DataUTs.xml");
+			 myChartUTs.render("UTs");
+	   </script>	
+
+     </body>
+ </html>

@@ -1,0 +1,85 @@
+
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.0//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_0.dtd">
+
+<form-validation>
+   <global>     
+   </global>
+
+<formset>                  
+<form name="bankForm">
+	<field property="bankName" depends="required">
+		<arg0 key="label.bankname" />
+	</field>
+	<field property="bankShortName" depends="required">
+		<arg0 key="label.bankabbreviation" />
+	</field>
+	<field property="bankTypeCode" depends="required">
+		<arg0 key="label.banktype" />
+	</field>
+	<field property="bankLevelCode" depends="required">
+		<arg0 key="label.level" />
+	</field>
+
+</form>
+<!-- ________________	NRLM FORM VALIDATION	____________________ -->
+<!-- *************************************************************** -->
+<!--  ______________	MASTER FORM VALIDATION	_____________________ -->
+<!-- *************************************************************** -->
+<!-- MANAGEMENT UNIT FORM VALIDATION DATE:8-12-2012 -->
+
+<form name="mmuActionForm">
+	<field property="mmuName" depends="required">
+		<msg name="required" key="error.required.mmuName" />
+	</field>
+	<field property="dateOfEstablishment" depends="required">
+		<msg name="required" key="error.required.dateOfEstablishment" />
+	</field>
+	<field property="natureOfOrganization" depends="required">
+		<msg name="required" key="error.required.natureOfOrganization" />
+	</field>
+	<field property="missionDirectorName" depends="required">
+		<msg name="required" key="error.required.missionDirectorName" />
+	</field>
+	<field property="dateOfAppointmentMd" depends="required">
+		<msg name="required" key="error.required.dateOfAppointmentMd" />
+	</field>
+	<field property="natureOfAppointmentMd" depends="required">
+		<msg name="required" key="error.required.natureOfAppointmentMd" />
+	</field>
+	<field property="mmuAddress" depends="required">
+		<msg name="required" key="error.required.mmuAddress" />
+	</field>
+	<field property="mmuOffPhone" depends="required">
+		<msg name="required" key="error.required.mmuOffPhone" />
+	</field>
+	<field property="mmuFax" depends="minlength,required">
+		<msg name="required" key="error.required.mmuFax" />
+	</field>
+	<field property="mmuMobile" depends="minlength,required">
+		<msg name="required" key="error.required.mmuMobile" />
+	</field>
+</form>
+
+<!-- CORE STAFF TEAM VALIDATION DATE:7-1-2013 -->
+
+<form name="coreStaffForm">
+	<field property="memberArea" depends="required">
+		<msg name="required" key="error.required.memberArea" />
+	</field>
+	<field property="memberName" depends="required">
+		<msg name="required" key="error.required.memberName" />
+	</field>
+	<field property="memberEducation" depends="required">
+		<msg name="required" key="error.required.memberEducation" />
+	</field>
+	<field property="memberExperience" depends="required">
+		<msg name="required" key="error.required.memberExperience" />
+	</field>	
+</form>
+      
+   
+</formset>
+
+</form-validation>

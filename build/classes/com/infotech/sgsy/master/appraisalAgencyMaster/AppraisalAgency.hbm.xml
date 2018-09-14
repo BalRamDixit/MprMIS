@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.infotech.sgsy.master.appraisalAgencyMaster.AppraisalAgencyVO"  table="mst_appraisal_agency" schema="public">
+    
+        <id name="id" column="appraisal_id">
+    		<generator class="sequence">
+        		<param name="sequence">mst_appraisal_agency_Id_seq</param>
+    		</generator>
+		</id>
+       
+       
+       
+        <property name="appraisalName"                type="string"><column name="appraisal_name" /></property>
+        <property name="appraisalCode"                type="string"><column name="appraisal_code" /></property>
+               
+        <property name="createdBy"                    type="string"><column name="created_by" /></property>
+        <property name="updatedBy"                    type="string"><column name="modifed_by" /></property>
+        <property name="createdOnDate"                type="date"><column name="created_on" /></property>
+        <property name="updatedOnDate"                type="date"><column name="modified_on" /></property>
+        
+	</class>
+</hibernate-mapping>
+
+ 

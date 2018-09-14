@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 17, 2013 4:31:40 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.infotech.skills.hbm.piaproposal.PlacementVO" table="pia_placements" schema="public"> 
+        <id name="praposalCode" unsaved-value="null">
+		   <column name="praposal_code" />
+		   <generator class="sequence" >
+		            <param name="sequence">pia_proposal_seq</param>
+		   </generator>
+		 </id>
+        
+         <property name="piaCode" type="string">
+            <column name="pia_code" />
+        </property>
+        <property name="captivelyBeneficiaries" type="string">
+            <column name="captively_placed_beneficiaries" />
+        </property>
+        <property name="organizedBeneficiaries" type="string">
+            <column name="organized_sector_placed_beneficiaries" />
+        </property>
+        <property name="involvementAgencies" type="string">
+            <column name="involvement_of_other_agencies" />
+        </property>
+        <property name="facilitationBeneficiaries" type="string">
+            <column name="facilitation_centers_to_support_beneficiaries" />
+        </property>
+        <property name="reemploymentBeneficiaries" type="string">
+            <column name="reemployment_of_beneficiaries" />
+        </property>
+       <property name="createdOn" type="string">
+   <column name="created_on" />
+  </property>
+  <property name="createdBy" type="string">
+   <column name="created_by" />
+  </property>
+  <property name="modifyOn" type="string">
+   <column name="modify_on" />
+  </property>
+  <property name="modifyBy" type="string">
+   <column name="modify_by" />
+  </property>
+    </class>
+</hibernate-mapping>

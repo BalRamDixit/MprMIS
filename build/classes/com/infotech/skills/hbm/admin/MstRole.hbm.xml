@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 17, 2013 3:38:18 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="admin.MstRole" table="mst_role" schema="public">
+        <id name="roleCd" type="string">
+            <column name="role_cd" />
+            <generator class="assigned" />
+        </id>
+        <property name="roleName" type="string">
+            <column name="role_name" />
+        </property>
+        <property name="roleDesc" type="string">
+            <column name="role_desc" />
+        </property>
+        <property name="levelCd" type="string">
+            <column name="level_cd" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="created_by" />
+        </property>
+        <property name="createdOn" type="date">
+            <column name="created_on" length="13" />
+        </property>
+        <property name="lastModifiedBy" type="string">
+            <column name="last_modified_by" />
+        </property>
+        <property name="lastModifiedOn" type="date">
+            <column name="last_modified_on" length="13" />
+        </property>
+        <property name="schemeCode" type="string">
+            <column name="scheme_code" />
+        </property>
+    </class>
+</hibernate-mapping>

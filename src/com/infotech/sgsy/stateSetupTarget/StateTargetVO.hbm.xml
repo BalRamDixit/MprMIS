@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.infotech.sgsy.stateSetupTarget.StateTargetVO"  table="user_state_target" schema="public">
+            
+         <id name="id" column="id">
+    		<generator class="sequence">
+        		<param name="sequence">user_state_target_Id_Seq</param>
+    		</generator>
+		</id>
+             
+        <many-to-one name="state" class="com.infotech.sgsy.master.state.StateVO" not-found="ignore" lazy="false" fetch="select" >
+            <column name="state_id"  />
+          </many-to-one> 
+        <property name="userId"  type="string" ><column name="user_id" /></property>
+       
+        <property name="scheme"              type="string"><column name="scheme" /></property>
+        <property name="annualPlan"          type="date"><column name="ap_date" /></property>
+         <many-to-one name="ctsa" class="com.infotech.sgsy.master.ctsaMaster.CtsaMasterVO" not-found="ignore" lazy="false" not-null="false" fetch="select" >
+            <column name="ctsa"  />
+       </many-to-one>
+        <many-to-one name="appraisalAgency" class="com.infotech.sgsy.master.appraisalAgencyMaster.AppraisalAgencyVO" not-found="ignore" not-null="false" lazy="false" fetch="select">
+            <column name="appraisal_agency"  />
+       </many-to-one>
+         <many-to-one name="tsaName" class="com.infotech.sgsy.master.tsaMaster.TsaMasterVO" not-found="ignore" lazy="false" not-null="false" fetch="select" >
+            <column name="tsa_name"  />
+       </many-to-one>
+        
+       <!--  <property name="tsaName"             type="string"><column name="tsa_name" /></property> -->
+        <property name="stateMis"            type="string"><column name="status" /></property>
+        <property name="applicationName"     type="string"><column name="application_name" /></property>
+        <property name="sopCompliant"        type="string"><column name="sop_compliant" /></property>
+        <property name="centralMis"          type="string"><column name="central_mis" /></property>
+         
+        <property name="createdBy"              type="string"><column name="created_by" /></property>
+        <property name="createdOn"              type="date"><column name="created_on" /></property>
+        <property name="updatedBy"              type="string"><column name="updated_by" /></property>
+        <property name="updatedOn"              type="date"><column name="updated_on" /></property>
+        
+	</class>
+</hibernate-mapping>
+

@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+
+<!--  AUTHOR: HIMANSHU MEHRA ____DATE: 4/SEP/2012____ PROGRAM NAME: NATIONAL RURAL LIVELIHOODS MISSION___FOR: MoRD -->
+ 
+<struts-config>
+ 
+ 
+<!--****************************************************  Collection of all form Beans ****************************************************-->  	
+
+<form-beans>
+<!-- ********** LOCATION MASTER STANDARDIZATION ***************** -->
+<form-bean name="locationMasterStandardization" type="com.infotech.sgsy.master.loactionMasterStandardization.LocationMasterStandardizationForm"></form-bean>
+
+<!--*********** OLD FORM BEAN FROM SGSY START ***********-->	
+
+<form-bean name="monitorFirstInstForm"            			type="com.infotech.sgsy.state.monitor.MonitorFirstInstForm"/> 
+<form-bean name="monitorSecondInstForm"            			type="com.infotech.sgsy.state.monitor.MonitorSecondInstActionForm"/> 
+<form-bean name="monitorThirdInstForm"            			type="com.infotech.sgsy.state.monitor.MonitorThirdInstActionForm"/> 
+<form-bean name="monitorFourthInstForm"            			type="com.infotech.sgsy.state.monitor.MonitorFourthInstActionForm"/> 
+
+<form-bean name="monitorPpwsTrainForm"            			type="com.infotech.sgsy.state.monitor.MonitorPpwsTrainActionForm"/> 
+<form-bean name="monitorPpwsPlaceForm"            			type="com.infotech.sgsy.state.monitor.MonitorPpwsPlaceActionForm"/> 
+<form-bean name="MonitoringInspectionForm" 				type="com.infotech.sgsy.monitoringsystem.MonitoringInspectionForm"/>
+<form-bean name="MonitoringAlertForm" 				    type="com.infotech.sgsy.monitoringalerts.MonitoringAlertForm"/>
+<form-bean name="MonitoringPenaltyForm" 				type="com.infotech.sgsy.monitoringpenalty.MonitoringPenaltyForm"/>
+
+<!--*********** STATE-INDICATORS ***********-->
+
+<form-bean name="physicalAchieveForm" 				type="com.infotech.skills.StateIndicators.PhysicalAchieveForm"/>
+
+
+
+<form-bean name="accessForm"            			type="com.infotech.sgsy.accessControl.AccessActionForm"/> 
+<form-bean name="ProjectDetailsForm" 				type="com.infotech.sgsy.projectSetup.projectDetails.ProjectDetailsForm"/>
+<form-bean name="projectSetupTargetForm" 			type="com.infotech.sgsy.projectSetupTarget.ProjectSetupTargetForm"/>      	              
+<form-bean name="loginForm" 						type="com.infotech.sgsy.login.LoginActionForm"/>           
+<form-bean name="userForm" 							type="com.infotech.sgsy.userManagement.UserForm" />
+<form-bean name="manageRoleForm" 					type="com.infotech.sgsy.manageRole.ManageRoleForm" />
+<form-bean name="languageForm" 						type="com.infotech.sgsy.language.LanguageActionForm"/>
+
+<form-bean name="stFinForm" 						type="com.infotech.sgsy.stateFinance.StateFinanceActionForm"/>
+<form-bean name="ppwsForm" 						    type="com.infotech.sgsy.ppws.PpwsSetupActionForm"/>
+
+<form-bean name="stateHrForm" 						type="com.infotech.sgsy.stateSetup.hrTeam.HRTeamActionForm"/>
+
+
+<form-bean name="proTarForm" 						type="com.infotech.sgsy.projectSetup.projectTarget.ProjectTargetActionForm"/>
+<form-bean name="traTarForm" 						type="com.infotech.sgsy.projectSetup.tradeTarget.TradeTargetActionForm"/>
+<form-bean name="distTarForm" 						type="com.infotech.sgsy.projectSetup.districtTarget.DistrictTargetActionForm"/>
+<form-bean name="sanctionDetailsForm" 				type="com.infotech.sgsy.projectSanctionDetail.SanctionDetailsForm"/>
+
+<form-bean name="tcSetupEntryForm" 					type="com.infotech.sgsy.tcSetup.tcSetupEntry.TcSetupEntryActionForm"/>
+<form-bean name="tcSetupDueForm" 					type="com.infotech.sgsy.tcSetup.tcSetupDue.TcSetupDueActionForm"/>
+<form-bean name="tcSetupTradeForm" 					type="com.infotech.sgsy.tcSetup.tcSetupTrade.TcSetupTradeActionForm"/>
+
+<form-bean name="stateTargetForm"                   type="com.infotech.sgsy.stateSetupTarget.StateTargetForm" /> 
+<form-bean name="bankForm" 							type="com.infotech.sgsy.master.bank.BankActionForm"/>           
+<form-bean name="bankBranchForm" 					type="com.infotech.sgsy.master.bankBranch.BankBranchActionForm"/>           
+<form-bean name="activityForm" 						type="com.infotech.sgsy.master.activity.ActivityForm"/>
+<form-bean name="subSectorForm" 					type="com.infotech.sgsy.master.subSector.SubSectorForm"/>   
+<form-bean name="productForm" 						type="com.infotech.sgsy.master.product.ProductActionForm"/>           
+         
+<form-bean name="sectorForm" 						type="com.infotech.sgsy.master.sector.SectorActionForm"/>              
+<form-bean name="blockForm" 						type="com.infotech.sgsy.master.block.BlockActionForm" />                 
+     
+<form-bean name="designationForm" 					type="com.infotech.sgsy.master.designation.DesignationActionForm" />
+<form-bean name="serviceForm" 						type="com.infotech.sgsy.master.service.ServiceForm" />                      
+<form-bean name="memberForm" 						type="com.infotech.sgsy.transaction.manageMemberDetails.MemberForm"/>     	 	         	   
+<form-bean name="manageOpeningBalanceForm" 			type="com.infotech.sgsy.transaction.manageOpeningBalance.ManageOpeningBalanceForm"/>   	  
+<form-bean name="schemeForm" 						type="com.infotech.sgsy.master.scheme.SchemeForm"/>    	 
+<form-bean name="sanctionClauseForm" 				type="com.infotech.sgsy.master.sanctionClauseMaster.SanctionClauseForm"/>
+<form-bean name="sanctionCopyForm" 					type="com.infotech.sgsy.master.sanctionCopyMaster.SanctionCopyForm"/>			  	      	      	  
+<form-bean name="officerForm" 						type="com.infotech.sgsy.officerDetails.OfficerDetailActionForm"/>   	   
+<form-bean name="logForm" 							type="com.infotech.sgsy.userlog.UserForm"/>     	
+<form-bean name="finYrForm" 						type="com.infotech.sgsy.master.financialYear.FinancialYearForm" />	 	 
+<form-bean name="villageForm"						type="com.infotech.sgsy.master.village.VillageActionForm"/>
+<form-bean name="UploadCircularForm" 				type="com.infotech.sgsy.uploadcircular.UploadCircularForm"/>    
+                           <!-- BY CHARVI FOR KPI FORMS -->
+<form-bean name="kPIIndicatorForm" 				    type="com.infotech.sgsy.indicators.KPIIndicatorForm"/>
+
+<form-bean name="candidateDataForm" 				    type="com.infotech.skills.monitoringProjectCandidate.CandidateDataForm"/>
+
+<form-bean name="stateSanctionDetailForm"           type="com.infotech.sgsy.stateSanctionDetail.StateSanctionForm" />
+
+
+<!-- <form-bean name="kPIIndicatorForm" 				    type="com.infotech.sgsy.indicators.ChampionsEmployesForm"/> -->
+
+                                  <!-- ENDS -->
+<!-- ______________ DISTRICT MPR FORMS ___________  -->
+       
+<!--*********** OLD FORM BEAN FROM SGSY END ***********-->		
+
+<!-- created by Manoj For batch creation on 02-03-2017 -->
+<form-bean name="BatchCreationForm"           type="com.infotech.sgsy.tcSetup.batchCreation.BatchCreationForm" />
+
+<!-- Created by Balram Dixit For User Access Control MAnagement 08-03-2017 -->
+
+<form-bean name="assignRoleMasterBean"            			type="com.infotech.sgsy.userAccessControlManagement.AssignRoleMasterBean"/> 
+<form-bean name="formModuleMasterBean" 				type="com.infotech.sgsy.userAccessControlManagement.FormModuleMasterBean"/>
+<form-bean name="projectMappingBean" 			type="com.infotech.sgsy.userAccessControlManagement.ProjectMappingBean"/>      	              
+<form-bean name="roleMasterBean" 						type="com.infotech.sgsy.userAccessControlManagement.RoleMasterBean"/>           
+<form-bean name="userMasterBean" 							type="com.infotech.sgsy.userAccessControlManagement.UserMasterBean" />
+
+<!-- Kamal 16-03-2017 -->
+<form-bean name="candidateStatForm" 				    type="com.infotech.skills.candidateStatistics.CandidateForm"/>
+
+<!-- KPI REports From Varun and Mukesh -->
+<form-bean name="reportMappingBean" 				    type="com.infotech.sgsy.report.ReportMappingBean"/>
+
+<!--    kamal state master form date:- 27-03-2017    -->
+<form-bean name="stateForm" 				    type="com.infotech.sgsy.master.state.StateForm"/>
+<form-bean name="districtForm" 				    type="com.infotech.sgsy.master.districtMasterNew.DistrictMasterForm"/>
+<form-bean name="specialAreaForm" 				    type="com.infotech.sgsy.master.specialArea.SpecialAreaForm"/>
+<form-bean name="designationMasterForm" 				    type="com.infotech.sgsy.master.designationMaster.DesignationMasterForm"/>
+<!--    Charvi state master form date:- 27-03-2017    -->
+<form-bean name="ctsaMasterBean" 			            type="com.infotech.sgsy.master.ctsaMaster.CtsaMasterBean"/> 
+<form-bean name="tsaMasterBean" 			            type="com.infotech.sgsy.master.tsaMaster.TsaMasterBean"/>    
+<form-bean name="appraisalAgencyBean" 			        type="com.infotech.sgsy.master.appraisalAgencyMaster.AppraisalAgencyBean"/>    
+<form-bean name="assessmentBodyBean" 			        type="com.infotech.sgsy.master.assessmentBodyMaster.AssessmentBodyBean"/>    
+
+
+<!--    Manoj master form date:- 06-04-2017    -->
+<form-bean name="ProjectTypeMasterBean" 	type="com.infotech.sgsy.masterdata.projectTypeMaster.ProjectTypeMasterBean" />
+<form-bean name="SectorMasterBean" 	    type="com.infotech.sgsy.masterdata.sectorMaster.SectorMasterBean" />
+<form-bean name="ConstituencyMasterBean" 	    type="com.infotech.sgsy.masterdata.constituencyMaster.ConstituencyMasterBean" />
+<form-bean name="TradeMasterBean" 	    type="com.infotech.sgsy.masterdata.tradeMaster.TradeMasterBean" />
+
+<!-- Varun Masters form date 07-04-2017 -->
+<form-bean name="sanctionPostForm" 					type="com.infotech.sgsy.master.sanctionPost.SanctionPostForm" />
+<form-bean name="CertifyingAgencyForm" 				type="com.infotech.sgsy.master.certifyingAgency.CertifyingAgencyForm" />
+
+<form-bean name="parliamentaryConstituencyMasterBean" 			            type="com.infotech.sgsy.master.parliamentaryConstituencyMaster.ParliamentaryConstituencyMasterBean"/> 
+<form-bean name="BatchCompletionForm"           type="com.infotech.sgsy.tcSetup.batchCompletion.BatchCompletionForm" />
+
+
+<form-bean name="monitoringProgressReportForm"           type="com.infotech.sgsy.monitoringProgressReport.MonitoringProgressReportForm" />
+<form-bean name="BatchCompletionForm"           type="com.infotech.sgsy.tcSetup.batchCompletion.BatchCompletionForm" />
+
+<form-bean name="Report1Form"           type="com.infotech.sgsy.StateWiseCumYearWiseProgress.FirstReport.StateWiseProgressForm" />
+</form-beans>	
+<!--**************************************************** Form Bean Collection End ****************************************************-->    
+  
+  
+  
+ 
+<!--**************************************************** ALL Action Mapping of NRLM Start ****************************************************-->      	 
+<action-mappings>
+
+<!--*********** ACTION MAPPING OF SGSY START *****************-->	
+
+<!-- LANGUAGE STARTS -->
+<action path="/login/userLog" parameter="method" name="logForm" type="com.infotech.sgsy.userlog.UserLog">
+	  		   <forward name="showReportPage" 									path="showReportUserPage"/>
+</action> 
+<action path="/login/language" parameter="methodName" name="languageForm" type="com.infotech.sgsy.language.LanguageMasterAction">
+    
+   			<forward name="continue" 											path="/WEB-INF/login/pages/main/index.jsp"/>
+    		<!-- <forward name="showAddLanguage" 									path="addLangPack"/> -->
+    		<forward name="showAllLanguage" 									path="addResourcePack"/>
+    		<forward name="success" 											path="sucessCommonJsp"/>
+    		<forward name="showAssign" 											path="showAssign"/>
+</action>
+<!-- LANGUAGE ENDS -->
+<!-- LOGIN ACTION STATRS -->
+<action path="/login/adminChangePassword" parameter="methodName" validate="false" scope="request" type="com.infotech.sgsy.ChangePasswordAdmin.ChangePasswordAdmin" name="userForm">
+			<forward name="modify" 												path="changePasswordAdmin"/>
+			<forward name="success" 											path="changePasswordAdmin"/>
+			<forward name="stnoPage" 											path="stnoPage"/>
+<!-- To activate user account -->
+			<forward name="ACTIVATE_USER" 										path="ACTIVATE_USER_PAGE"/>			
+</action>
+<action path="/login" parameter="methodName" name="loginForm" type="com.infotech.sgsy.login.LoginMasterAction">
+    	<forward name="showLoginPage" 	path="/WEB-INF/login/pages/main/index.jsp"/>
+</action>
+<action path="/login/login" parameter="methodName" name="loginForm" type="com.infotech.sgsy.login.LoginMasterAction">
+    		<exception type="com.infotech.sgsy.exception.UserLockedException"  key="error.user.locked"  path="/WEB-INF/login/pages/main/index.jsp"/>
+       		<exception type="com.infotech.sgsy.exception.UserAlreadyLoggedIn"  key="error.userIn.fail"  path="/WEB-INF/login/pages/main/index.jsp"/>
+    		<exception type="com.infotech.sgsy.exception.PasswordNotValidException"  key="error.password.fail"  path="/WEB-INF/login/pages/main/index.jsp"/>
+	    
+	    <forward name="showLoginPage" 											path="/WEB-INF/login/pages/main/index1.jsp"/>
+	    <forward name="failed" 													path="/WEB-INF/login/pages/main/index1.jsp"/>
+	    <forward name="logoutSuccess" 											path="/WEB-INF/login/pages/main/index1.jsp"/>
+	    <forward name="logoutSuccess" 											path="/WEB-INF/login/pages/main/index1.jsp"/>
+	    <forward name="home" 													path="/WEB-INF/login/pages/main/index1.jsp"/>	
+	    <forward name="success" 												path="blankPage"/>
+		<forward name="changePasswordSuccess"									path="loginPage"/> 
+		<forward name="showChangePasswdPage" 									path="loginPage"/>
+		<forward name="selectRolePageSL" 										path="selectRolePageSL"/>
+		<forward name="selectRolePageDL" 										path="selectRolePageDL"/>
+		<forward name="selectRolePage" 											path="selectRolePage"/>
+		<forward name="selectSchemePage" 										path="selectSchemeLayout"/>
+		<forward name="closePage" 												path="blankPage"/>
+	    <forward name="logoutFailed"											path="logoutFailed"/>
+	    <forward name="showChangePasswordPage" 									path="/WEB-INF/login/pages/main/changePassword.jsp"/>
+	    <forward name="logout" path="/login/login.do?methodName=logOut" redirect="true"></forward>
+</action>
+
+<action path="/login/logOut" parameter="methodName" name="loginForm" type="com.infotech.sgsy.login.LoginMasterAction">     
+		<forward name="logoutSuccess" 											path="/WEB-INF/login/pages/main/index.jsp"/>
+		<forward name="logoutFailed" 											path="logoutFailed"/>
+</action>
+<!-- LOCATION MASTER STANDARDIZATION STARTS -->	
+<action path="/login/locationMasterStandardization" parameter="methodName" name="locationMasterStandardization" 
+					type="com.infotech.sgsy.master.loactionMasterStandardization.LocationMasterStandardizationAction" scope="request" validate="false">
+			
+			<forward name="showPage" 					path="showLocationMasterStandardization"/>
+			<forward name="showAllVillages" 			path="showAllPrisInADistrict"/>
+</action>
+
+<action path="/login/stateFinancialForm" parameter="methodName" name="stFinForm" 
+					type="com.infotech.sgsy.stateFinance.StateFinanceAction" scope="request" validate="false">
+			
+			<forward name="showPage" 					path="showPageStateFinance"/>
+			<forward name="showPageforAdmin" 			path="showPageStateFinanceForAdmin"/>
+			
+</action>
+
+
+<action path="/login/stateTargetFormAction" parameter="methodName" name="stateTargetForm" 
+					type="com.infotech.sgsy.stateSetupTarget.StateTargetFormAction" scope="request" validate="false">
+		<forward name="target" 					 path="state_target"/>		
+</action>
+
+
+<action path="/login/stateHRTeam" parameter="methodName" name="stateHrForm" 
+					type="com.infotech.sgsy.stateSetup.hrTeam.HRTeamAction" scope="request" validate="false">
+			<forward name="showPage" 					path="showPageHRTeam"/>		
+</action>
+
+<action path="/login/projectDetails" parameter="methodName" name="ProjectDetailsForm" 
+					type="com.infotech.sgsy.projectSetup.projectDetails.ProjectDetailsAction" scope="request" validate="false">
+			<forward name="showPage" 					path="showPageProjectdetails"/>	
+			<forward name="editPage" 					path="editPageProjectdetails"/>	
+			<forward name="addPage" 					path="addPageProjectdetails"/>	
+			<forward name="successPage" 				path="successPageProjectdetails"/>	
+				
+</action>
+
+
+
+<action path="/login/stateSanctionAction" parameter="methodName" name="stateSanctionDetailForm" 
+					type="com.infotech.sgsy.stateSanctionDetail.StateSanctionAction" scope="request" validate="false">
+		<forward name="target_sanction" 					 path="state_target_sanction"/>		
+</action>
+
+
+<action path="/login/ppwsSetup" parameter="methodName" name="ppwsForm" 
+					type="com.infotech.sgsy.ppws.PpwsSetupAction" scope="request" validate="false">
+			<forward name="showPage" 					path="showPagePpwsSetup"/>	
+			<forward name="addpage" 					path="addPagePpwsSetup"/>	
+			<forward name="editpage" 					path="editPagePpwsSetup"/>	
+</action>
+
+ 
+<action path="/login/tradeTarget" parameter="methodName" name="traTarForm" 
+					type="com.infotech.sgsy.projectSetup.tradeTarget.TradeTargetAction" scope="request" validate="false">
+			<forward name="showPage" 					path="showPageTradeTarget"/>
+			<forward name="editPage" 					path="editPageTradeTarget"/>	
+		    <forward name="addDetail" 					path="addTradeTarget"/>	
+			<forward name="Page" 					    path="showPagesuccess"/>	
+			
+				
+</action>
+<action path="/login/districtTarget" parameter="methodName" name="distTarForm" 
+					type="com.infotech.sgsy.projectSetup.districtTarget.DistrictTargetAction" scope="request" validate="false">
+			<forward name="showPage" 					path="showPageDistrictTarget"/>		
+			<forward name="addDetail" 					path="addDistrictTarget" />		
+			<forward name="editPage" 					path="editPageDistrictTarget"/>		
+			<forward name="success" 					path="successDistrictTarget"/>		
+			
+			<forward name="updateDetail" 				path="/login/districtTarget.do?methodName=show" redirect="true"/>
+</action>
+
+<action path="/login/projectTargetAction" parameter="methodName" name="projectSetupTargetForm" 
+					type="com.infotech.sgsy.projectSetupTarget.ProjectTargetAction" scope="request" validate="false">
+		<forward name="projectTarget" 			 path="project_new_Target"/>		
+</action>
+
+
+<action path="/login/tcSetupEntry" parameter="methodName" name="tcSetupEntryForm" 
+					type="com.infotech.sgsy.tcSetup.tcSetupEntry.TcSetupEntryAction" scope="request" validate="false">
+			<forward name="showPage" 					path="showPageTcSetupEntry"/>	
+			<forward name="addDetail" 					path="addPageTcSetupEntry"/>	
+			<forward name="editPage" 					path="editPageTcSetupEntry"/>			
+			<forward name="success" 					path="successTcSetupEntry"/>	
+			
+			
+			
+			
+				
+</action>
+<!-- due deligence code -->
+<action path="/login/tcSetupDue" parameter="methodName" name="tcSetupDueForm" 
+					type="com.infotech.sgsy.tcSetup.tcSetupDue.TcSetupDueAction" scope="request" validate="false">
+			<forward name="showPage" 					path="showPageTcSetupDue"/>		
+			<forward name="editPage" 					path="editPageTcSetupDue"/>	
+			<forward name="addDetail" 					path="addTcSetupDue"/>	
+</action>
+
+<!-- due deligence end  code -->
+
+
+<action path="/login/tcSetupTrade" parameter="methodName" name="tcSetupTradeForm" 
+					type="com.infotech.sgsy.tcSetup.tcSetupTrade.TcSetupTradeAction" scope="request" validate="false">
+			<forward name="showPage" 					path="showPageTcSetupTrade"/>		
+			<forward name="addDetail" 					path="addPageTcSetupTrade"/>		
+			<forward name="editPage" 					path="editPageTcSetupTrade"/>		
+</action>
+
+
+
+
+ <action path="/login/projectSanctionAction" parameter="methodName" name="sanctionDetailsForm" 
+					type="com.infotech.sgsy.projectSanctionDetail.ProjectSanctionAction" scope="request" validate="false">
+	
+		   <forward name="sanction" 					path="sanction_details"/>		
+			<forward name="editPage" 					path="editPageSanction"/>	
+			<forward name="addDetail" 					path="addTcSanction"/>	
+</action>  
+                          <!-- BY CHARVI FOR KPI FORMS -->
+<action path="/login/kpiFormAction" parameter="methodName" name="kPIIndicatorForm" 
+					type="com.infotech.sgsy.indicators.KpiFormAction" scope="request" validate="false">
+	<forward name="indicator" 					 path="indicator_details"/>		
+</action>
+  
+ <!-- <action path="/login/championsAction" parameter="methodName" name="kPIIndicatorForm" 
+					type="com.infotech.sgsy.indicators.ChampionsAction" scope="request" validate="false">
+	<forward name="indicator" 					 path="indicator_details"/>		
+</action> -->
+
+<action path="/login/projectCandidateDataAction" parameter="methodName" name="candidateDataForm" 
+					type="com.infotech.skills.monitoringProjectCandidate.ProjectCandidateDataAction" scope="request" validate="false">
+	<forward name="monitoring" 					 path="monitoring_project"/>		
+</action>
+                               <!-- ENDS -->
+                                 
+
+                           
+<!-- Monitoring -->
+
+
+<action path="/login/ppwsAchieveTrain" parameter="methodName" name="monitorPpwsTrainForm" 
+					type="com.infotech.sgsy.state.monitor.MonitorPpwsTrainAction" scope="request" validate="false">
+			<forward name="showPage" 					path="showPagePpwsTrain"/>		
+</action>
+
+<action path="/login/ppwsAchievePlace" parameter="methodName" name="monitorPpwsPlaceForm" 
+					type="com.infotech.sgsy.state.monitor.MonitorPpwsPlaceAction" scope="request" validate="false">
+			<forward name="showPage" 					path="showPagePpwsPlace"/>		
+</action>
+
+
+
+<action path="/login/monitorFirstInstallment" parameter="methodName" name="monitorFirstInstForm" type="com.infotech.sgsy.state.monitor.MonitorFirstInstAction" scope="request" validate="false">
+	  <forward name="showPage1" path="showPageFirstInst" /> 
+	  <forward name="redirectTofirst" path="/login/monitorFirstInstallment.do?methodName=show" redirect="true" /> 
+	  <forward name="showPage2" path="showPageSecondInst" /> 
+	  <forward name="redirectToSecond" path="/login/monitorFirstInstallment.do?methodName=show2" redirect="true" /> 
+	  <forward name="showPage3" path="showPageThirdInst" /> 
+	  <forward name="redirectToThird" path="/login/monitorFirstInstallment.do?methodName=show3" redirect="true" /> 
+	  <forward name="showPage4" path="showPageFourthInst" /> 
+	  <forward name="redirectToFourth" path="/login/monitorFirstInstallment.do?methodName=show4" redirect="true" /> 
+  </action>
+
+
+
+
+<action path="/login/monitoringInspection" parameter="methodName" name="MonitoringInspectionForm" 
+					type="com.infotech.sgsy.monitoringsystem.MonitoringInspectionAction" scope="request" validate="false">
+			<forward name="showMonitoringInspection" 					path="showMonitoringInspection"/>
+			<forward name="MonitoringInspection" 					path="MonitoringInspection"/>		
+</action>
+
+
+
+
+<action path="/login/projectAlerts" parameter="methodName" name="MonitoringAlertForm" 
+					type="com.infotech.sgsy.monitoringalerts.MonitoringAlertAction" scope="request" validate="false">
+			<forward name="showPage" 					path="showMonitoringAlert"/>		
+			<forward name="addDetail" 					path="addMonitoringAlert"/>		
+			<forward name="editPage" 					path="editMonitoringAlert"/>		
+</action>
+
+
+<action path="/login/projectPenalty" parameter="methodName" name="MonitoringPenaltyForm" 
+					type="com.infotech.sgsy.monitoringpenalty.MonitoringPenaltyAction" scope="request" validate="false">
+			<forward name="showPage" 					path="showMonitoringPenalty"/>
+			<forward name="addDetail" 					path="addMonitoringPenalty"/>
+			<forward name="editPage" 					path="editMonitoringPenalty"/>
+
+</action>
+
+
+
+<!--*********** STATE-INDICATORS ***********-->
+ <action path="/login/physicalAchieve" parameter="methodName" name="physicalAchieveForm" 
+					type="com.infotech.skills.StateIndicators.PhysicalAchieveAction" scope="request" validate="false">
+			
+			<forward name="showPage" 					path="showPage"/>
+			 
+</action>
+
+
+
+
+
+
+
+<!-- LOCATION MASTER STANDARDIZATION ENS -->
+<!-- LOGIN ACTION ENDS -->
+
+
+<!-- ACCESS CONTROL STARTS -->
+<action path="/login/access" parameter="methodName" name="accessForm" type="com.infotech.sgsy.accessControl.AccessMasterAction" validate ="false">
+ 
+		    <forward name="addRole" 											path="showAddRolePage"/>
+			<forward name="save" 												path="showAddRolePage"/>
+			<forward name="updateRole" 											path="showUpdateRolePage"/>
+			<forward name="modify" 												path="showUpdateRolePage"/>
+			<forward name="deleteRole" 											path="showDeleteRolePage"/>
+			<forward name="delete"												path="showDeleteRolePage"/>
+			<forward name="viewRole" 											path="showViewRolePage"/>
+</action>	
+<action path="/login/accessValidateAdd" parameter="methodName" name="accessForm" type="com.infotech.sgsy.accessControl.AccessMasterAction" validate ="true" input="showAddRolePage">
+    
+		    <forward name="addRole" 										    path="showAddRolePage"/>
+			<forward name="save" 												path="showAddRolePage"/>
+</action>	
+<action path="/login/accessValidateUpdate" parameter="methodName" name="accessForm" type="com.infotech.sgsy.accessControl.AccessMasterAction" validate ="true" input="showUpdateRolePage">
+		    <forward name="updateRole" 										    path="showUpdateRolePage"/>
+			<forward name="modify" 												path="showUpdateRolePage"/>
+</action>	
+<action path="/login/accessValidateDelete" parameter="methodName" name="accessForm" type="com.infotech.sgsy.accessControl.AccessMasterAction" validate ="true" input="showDeleteRolePage">
+		    <forward name="deleteRole" 											path="showDeleteRolePage"/>
+			<forward name="delete" 												path="showDeleteRolePage"/>
+</action>			
+<!-- ACCESS CONTROL ENDS -->
+
+
+<!-- BANK ACTIONS STARTS -->	
+<action path="/login/bankBranch" parameter="methodName" name="bankBranchForm" validate="false" 
+				     input="showAddBankBranchPage" type="com.infotech.sgsy.master.bankBranch.BankBranchAction">
+    		<forward name="showAddPage" 									path="showAddBankBranchPage"/>	
+    		<forward name="showViewPage" 									path="showViewBankBranchPage"/>	
+    		<forward name="showModifyPage" 									path="showModifyBankBranchPage"/>
+    		<forward name="showDeletePage" 									path="showDeleteBankBranchPage"/>		 
+</action>
+<action path="/login/bank" parameter="methodName" name="bankForm" validate="false" 
+    				 input="showAddBankPage" type="com.infotech.sgsy.master.bank.BankAction" scope="request">    		
+    		<forward name="showAddPage"										path="showAddBankPage"/>
+    		<forward name="showUpdatePage" 									path="showUpdateBankPage"/>	
+    		<forward name="showViewPage" 									path="showViewBankPage"/>	
+    		<forward name="showDeletePage" 									path="showDeleteBankPage"/>
+    		<forward name="bankViewForState" 								path="bankViewForState"/>   
+    		<forward name="bankViewForMord" 								path="bankViewForMord"/>     
+			<forward name="showViewBank" 									path="showViewBank"/>			  
+</action>
+<action path="/login/bankAccountAction"  name="bankForm" parameter="methodName" validate="false"
+    				 type="com.infotech.sgsy.master.bankAccountDetails.BankAccountAction"  >
+			<forward name="showAddPage" 									path="addBankAccount" />
+			<forward name="showUpdatePage" 									path="modifyBankAccount" />
+			<forward name="showViewPage"	 								path="viewBankAccount" />			
+			<forward name="success" 										path="sucessCommonJsp"/>					
+</action>	
+<action path="/login/bankAccount"  name="bankForm" parameter="methodName" validate="true" input="addBankAccount"
+    				 type="com.infotech.sgsy.master.bankAccountDetails.BankAccountAction">
+			<forward name="showAddPage" 									path="addBankAccount" />			
+			<forward name="success" 										path="sucessCommonJsp"/>					
+</action>
+<action path="/login/bankAccountModify"  name="bankForm" parameter="methodName" validate="true" input="modifyBankAccount"
+   	 				 type="com.infotech.sgsy.master.bankAccountDetails.BankAccountAction">			
+			<forward name="showUpdatePage" 									path="modifyBankAccount" />
+			<forward name="success"	 										path="sucessCommonJsp"/>					
+</action>		
+<!-- BANK ACTIONS ENDS  -->	
+    
+<!-- USER MANAGEMENT STARTS -->
+<action path="/login/userAction" name="userForm" parameter="methodName" validate ="false"
+    				 type="com.infotech.sgsy.userManagement.UserAction">
+			<forward name="showPage" 							path="addUser"/>
+			<forward name="showPageState" 						path="addUserState" />
+			<forward name="showPageDistrict" 					path="addUserDistrict"/>			
+			<forward name="save" 								path="addUser"/>
+			<forward name="saveState" 							path="addUserState" />
+			<forward name="saveDistrict" 						path="addUserDistrict"/>
+			<forward name="modify" 								path="modifyUser"/>
+			<forward name="modifyPageState" 					path="modifyUserState"/>
+			<forward name="modifyPageDistrict"					path="modifyUserDistrict"/>				
+			<forward name="view" 								path="viewUser"/>							
+</action> 	
+
+
+<action path="/login/userAction1" name="userForm" parameter="methodName" validate ="false"
+     				 type="com.infotech.sgsy.userManagement.UserAction">
+			<forward name="showPage" 							path="addUser"/>
+			<forward name="showPageState" 						path="addUserState" />
+			<forward name="showPageDistrict" 					path="addUserDistrict"/>			
+			<forward name="save" 								path="addUser"/>
+			<forward name="saveState" 							path="addUserState" />
+			<forward name="saveDistrict" 						path="addUserDistrict"/>
+			<forward name="modify" 								path="modifyUser"/>
+			<forward name="modifyPageState" 					path="modifyUserState"/>
+			<forward name="modifyPageDistrict" 					path="modifyUserDistrict"/>				
+			<forward name="view" 								path="reportviewUser"/>
+			<forward name="viewUserList" 						path="viewUserList"/>	
+			<forward name="showUserList" 						path="showUserList"/>					
+			<forward name="showStateList" 						path="showStateList"/>		
+			<forward name="showStateForUserList" 				path="showDistrictList"/>		
+			<forward name="showDistrictForUserList" 			path="showBlockList"/>							
+</action>	
+<action path="/login/user" name="userForm" parameter="methodName" validate ="true" input="addUser"
+    				 type="com.infotech.sgsy.userManagement.UserAction">
+			<forward name="showPage" 							path="addUser"/>
+			<forward name="showPageState" 						path="addUserState" />
+			<forward name="showPageDistrict" 					path="addUserDistrict"/>			
+			<forward name="save" 								path="addUser"/>
+			<forward name="saveState" 							path="addUserState" />
+			<forward name="saveDistrict" 						path="addUserDistrict"/>
+			<forward name="modify" 								path="modifyUser"/>
+			<forward name="modifyPageState" 					path="modifyUserState"/>
+			<forward name="modifyPageDistrict" 					path="modifyUserDistrict"/>					
+</action> 	
+
+
+<action path="/login/mpr"  parameter="methodName"  
+    				 type="com.infotech.skills.mpr.MPRAction">
+			<forward name="addMprPage" 							path="addMprPage"/>				
+</action> 	
+
+<action path="/login/userState" name="userForm" parameter="methodName" validate ="true" input="addUserState"
+     				 type="com.infotech.sgsy.userManagement.UserAction">			
+			<forward name="showPageState" 						path="addUserState" />
+			<forward name="saveState"					 		path="addUserState" />			
+			<forward name="modifyPageState" 					path="modifyUserState"/>							
+</action> 
+<action path="/login/userDistrict" name="userForm" parameter="methodName" validate ="true" input="addUserDistrict"
+     				 type="com.infotech.sgsy.userManagement.UserAction">			
+			<forward name="showPageDistrict" 					path="addUserDistrict"/>
+			<forward name="saveDistrict" 						path="addUserDistrict"/>			
+			<forward name="modifyPageDistrict"		 			path="modifyUserDistrict"/>								
+</action> 
+<!-- USER MANAGEMENT ENDS -->
+
+<!-- MANAGE ROLE STARTS -->
+<action path="/login/manageRoleAction"  name="manageRoleForm" type="com.infotech.sgsy.manageRole.ManageRoleAction"  parameter="methodName" scope="request">
+		<forward name="showPage" 						    path="assignRole" />
+		<forward name="save" 								path="assignRole" />
+		<forward name="showPageState" 						path="assignRoleState" />			
+		<forward name="saveState" 							path="assignRoleState" />			
+		<forward name="showPageDistrict" 					path="assignRoleDistrict"/>			
+		<forward name="saveDistrict" 						path="assignRoleDistrict"/>
+		<forward name="searchAssignRole" 					path="searchAssignRole"/>
+		<forward name="showUpdateAssignRole" 				path="showUpdateAssignRole"/>
+		<forward name="searchAssignRoleState" 				path="searchAssignRoleState"/>
+		<forward name="showUpdateAssignRoleState"	 		path="showUpdateAssignRoleState"/>
+		<forward name="searchAssignRoleDistrict" 			path="searchAssignRoleDistrict"/>
+		<forward name="showUpdateAssignRoleDistrict" 		path="showUpdateAssignRoleDistrict"/>
+		<forward name="success" 							path="sucessCommonJsp"/>									
+</action>
+<!-- MANAGE ROLE ENDS -->
+       	
+
+<!--  MEMBER STARTS -->
+<action path="/login/manageMember"  name="memberForm" parameter="methodName" 
+	 			 type="com.infotech.sgsy.transaction.manageMemberDetails.MemberAction" input="showAddMember" scope="request">
+		<forward name="showAdd" 				path="showAddMember" />	
+		<forward name="showAddM" 				path="showAddMMember" />	
+		<forward name="showModify" 				path="showModifyMember" />					
+		<forward name="showView" 				path="showViewMember" />	
+		<forward name="showAddBPL" 				path="showAddMemberBPL" />						
+</action>	
+<action path="/login/showMember"  name="memberForm" parameter="methodName" 
+	 			type="com.infotech.sgsy.transaction.manageMemberDetails.MemberAction" validate="false" input="showAddMember" scope="request">
+		<forward name="showAdd" 				path="showAddMember" />
+		<forward name="showView" 				path="showViewMember" />				
+</action>	
+<!--  MEMBERS ENDS -->	
+
+
+<action path="/login/village"  name="villageForm" parameter="methodName" 
+	 				 type="com.infotech.sgsy.master.village.VillageAction" validate="false"  scope="request">
+			
+		<forward name="showVillage" 				path="showVillage" />
+		<forward name="showVillageForState"	 		path="showVillageForState" />
+		<forward name="showVillageForDistrict" 		path="showVillageForDistrict" />
+		<!-- <forward name="showVillageList"	 			path="showVillageList" />	 -->								 			
+</action>		
+
+<action path="/login/block" parameter="methodName" name="blockForm" validate="false" 
+    									 input="showViewBlockPage" type="com.infotech.sgsy.master.block.BlockAction">
+    	<forward name="showViewPage" 				path="showViewBlockPage"/>		
+    	<forward name="selectRolePage" 				path="selectRolePage"/>	
+    	<!-- <forward name="blockForState" 				path="blockForState"/>  -->            
+    	<forward name="showView" 					path="showView"/>                     
+    	<forward name="districtForState" 			path="districtForState"/>
+    	<forward name="showUpdateBlockStatusPage"   path="updateBlockStatus"/> <!-- Used to Identify the Block -->		  		  					 		  					 
+</action>       
+<!-- <action path="/login/designation" parameter="methodName" name="designationForm" validate="false" 
+    									 input="showViewBlockPage" type="com.infotech.sgsy.master.designation.DesignationAction">
+    	<forward name="showViewPage"				path="showViewDesignationPage"/>			 		  					 
+</action> -->	
+<action path="/login/sector" parameter="methodName" name="sectorForm" validate="false" 
+    									 input="showViewSectorPage" type="com.infotech.sgsy.master.sector.SectorAction">
+    	<forward name="showViewPage" 				path="showViewSectorPage"/>			 
+</action>
+<action  path="/login/manageOfficerDetails"  parameter="methodName" name="officerForm" validate="false" 
+     									 input="addOfficerDetails" scope="request" type="com.infotech.sgsy.officerDetails.OfficerDetailAction">    	
+    	<forward name="showAddPage" 				path="showAddOfficerDtlPage"/>
+   		<forward name="showModifyPage" 				path="showModifyOfficerDtlPage"/>
+   		<forward name="showModifyDetail" 			path="showModifyOfficerDetail"/>
+    	<forward name="showViewPage" 				path="showViewOfficerDtlPage" />	
+    	<forward name="showDeletePage" 				path="showDeleteOfficerDtlPage"/>     				
+</action>   		
+<action  path="/login/applicationLevelException"  parameter="methodName"  validate="false" 
+	       								 scope="request" type="com.infotech.sgsy.exception.ApplicationLevelExceptionAction">
+	    <forward name="applicationLevelException" 	path="applicationLevelException"/>
+</action> 
+<!-- Upload circular action -->
+<action path="/login/uploadCircular" parameter="method" name="UploadCircularForm" type="com.infotech.sgsy.uploadcircular.UploadCircular">
+  		 <forward name="showUploadCircularPage"   	path="showCircularPage" />
+  		 <forward name="showAddPage"             	path="showCircularPage" />
+  		 <forward name="showViewPage"             	path="viewCircularPage" />
+  		 <forward name="close"                    	path="blankPage"/>
+		 <forward name="showModifyPage"           	path="modifyCircularPage"/>
+</action>
+<action path="/uploadCircular" parameter="method" name="UploadCircularForm" type="com.infotech.sgsy.uploadcircular.UploadCircular">
+  		 <forward name="showUploadCircularPage" 	path="showCircularPage" />
+  		 <forward name="showViewPage" 				path="viewCircularPage" />
+		 <forward name="showViewNRLM" 				path="viewCircularPageNRLM" />
+  		 <forward name="close" 						path="blankPage"/>
+</action>
+
+
+<!--  Upload circular action End -->
+
+<!--*********** ACTION MAPPING OF SGSY END *****************-->	
+
+<action path="/login/batchCreation" parameter="methodName" name="BatchCreationForm" 
+					type="com.infotech.sgsy.tcSetup.batchCreation.BatchCreationAction" scope="request" validate="false">
+			<forward name="showPage" 					path="showBatchCreation"/>	
+			<forward name="addPage" 					path="addBatchCreation"/>			 
+			<forward name="editPage" 					path="editBatchCreation"/>
+</action>
+
+
+<!-- Action entry for User Access Control created by Balram Dixit 07-03-2017 start-->
+
+	<action  path="/login/batchAction"  parameter="methodName" name="batchCreationBean" validate="false" 
+	     									 input="addOfficerDetails" scope="request" type="com.infotech.sgsy.tcSetup.tcbatchcreation.TcBatchCreationForm">    	
+	    	    				
+	</action>
+	<!-- 
+	
+	<form-bean name="assignRoleMasterBean"            			type="com.infotech.sgsy.userAccessControlManagement.AssignRoleMasterBean"/> 
+<form-bean name="formModuleMasterBean" 				type="com.infotech.sgsy.userAccessControlManagement.FormModuleMasterBean"/>
+<form-bean name="projectMappingBean" 			type="com.infotech.sgsy.userAccessControlManagement.ProjectMappingBean"/>      	              
+<form-bean name="roleMasterBean" 						type="com.infotech.sgsy.userAccessControlManagement.RoleMasterBean"/>           
+<form-bean name="userMasterBean" 							type="com.infotech.sgsy.userAccessControlManagement.UserMasterBean" />
+	
+	 -->
+	 <action path="/login/asignRole" parameter="methodName" name="roleMasterBean" type="com.infotech.sgsy.userAccessControlManagement.RoleMasterAction" validate ="false">
+ 
+		    <forward name="addRole" 											path="addRole"/>
+		    <forward name="saveRole" 											path="/login/asignRole.do?methodName=addRole" redirect="true"/>
+		    <forward name="updateRole" 											path="/login/asignRole.do?methodName=addRole" redirect="true"/>
+			<forward name="editRole" 											path="addRole"/>
+	</action>
+	<action path="/login/formModule" parameter="methodName" name="formModuleMasterBean" type="com.infotech.sgsy.userAccessControlManagement.FormModuleMasterAction" validate ="false">
+ 
+		    <forward name="addModule" 											path="addModule"/>
+		    <forward name="saveModule" 											path="/login/formModule.do?methodName=addModule" redirect="true"/>
+		    <forward name="updateModule" 										path="/login/formModule.do?methodName=addModule" redirect="true"/>
+			<forward name="editModule" 											path="addModule"/>
+	</action>
+	<action path="/login/userMaster" parameter="methodName" name="userMasterBean" type="com.infotech.sgsy.userAccessControlManagement.UserMasterAction" validate ="false">
+ 
+		    <forward name="addUserMaster" 											path="addUserMaster"/>
+		    <forward name="saveUserMaster" 											path="/login/userMaster.do?methodName=addUserMaster" redirect="true"/>
+		    <forward name="updateUserMaster" 										path="/login/userMaster.do?methodName=addUserMaster" redirect="true"/>
+			<forward name="editUserMaster" 											path="addUserMaster"/>
+			<forward name="editUserPassword" 										path="editUserPassword"/>
+			<forward name="updateUserPassword" 										path="/login/userMaster.do?methodName=addUserMaster" redirect="true"/>
+	</action>
+	<action path="/login/assignRoleMaster" parameter="methodName" name="assignRoleMasterBean" type="com.infotech.sgsy.userAccessControlManagement.AssignRoleMasterAction" validate ="false">
+ 
+		    <forward name="addAssignRole" 											path="assignRoleMaster"/>
+		    <forward name="saveAssignRole" 											path="/login/assignRoleMaster.do?methodName=addAssignRoleMaster" redirect="true"/>
+		    <forward name="updateAssignRole" 										path="/login/assignRoleMaster.do?methodName=addAssignRoleMaster" redirect="true"/>
+			<forward name="editAssignRole" 											path="assignRoleMaster"/>
+	</action>
+	<action path="/login/projectMapping" parameter="methodName" name="projectMappingBean" type="com.infotech.sgsy.userAccessControlManagement.ProjectMappingAction" validate ="false">
+ 
+		    <forward name="addProjectMapping" 											path="projectMapping"/>
+		    <forward name="saveProjectMapping" 											path="/login/projectMapping.do?methodName=addProjectMapping" redirect="true"/>
+		    <forward name="updateProjectMapping" 										path="/login/projectMapping.do?methodName=addProjectMapping" redirect="true"/>
+			<forward name="editProjectMapping" 											path="projectMapping"/>
+	</action>
+
+<!-- Action entry for User Access Control created by Balram Dixit 07-03-2017 end-->
+
+<!-- Kamal 16-03-2017 -->
+<action path="/login/candidateAction" parameter="methodName" name="candidateStatForm" 
+					type="com.infotech.skills.candidateStatistics.CandidateAction" scope="request" validate="false">
+			<forward name="showPage" 					path="showCandidateStat"/>
+			<forward name="redirectToShow" 					path="/login/candidateAction.do?methodName=show" redirect="true"/>
+			
+
+</action>
+<!-- KPI Reports from Mukesh and Varun -->
+<action path="/login/report" parameter="methodName" name="reportMappingBean" type="com.infotech.sgsy.report.ReportMappingAction"  scope="request" validate ="false">
+		
+   		    <forward name="overallIndicators" 											path="showoverallIndicators"/>
+   		    <forward name="appraisals" 													path="showappraisals"/>
+		    <forward name="financialAchievement" 										path="showfinancialAchievement"/>
+		    <forward name="physicalAchievement" 										path="showphysicalAchievement"/>
+		    <forward name="installmentStatus" 											path="showinstallmentStatus"/>
+		    <forward name="exceptionsState" 											path="showexceptionsState"/>
+		    <forward name="exceptionsNational" 											path="showexceptionsNational"/>
+			<forward name="championEmployer" 											path="showchampionEmployer"/>
+			<forward name="dashboard" 													path="showdashboard"/>  
+			 
+</action>
+
+   <!--kamal state master form date:- 27-03-2017-->
+<action path="/login/stateMaster" parameter="methodName" name="stateForm" type="com.infotech.sgsy.master.state.StateAction" scope="request">
+  		 <forward name="stateMastershowPage" 	path="showStateMaster" />
+  		 
+</action>
+
+<action path="/login/districtMaster" parameter="methodName" name="districtForm" type="com.infotech.sgsy.master.districtMasterNew.DistrictMaterAction" scope="request">
+  		 <forward name="districtMastershowPage" 	path="showdistrictMaster" />
+  		 
+</action>
+<action path="/login/specialAreaMaster" parameter="methodName" name="specialAreaForm" type="com.infotech.sgsy.master.specialArea.SpecialAreaAction" scope="request">
+  		 <forward name="specialAreaMastershowPage" 	path="showspecialAreaMaster" />
+  		 
+</action>
+<action path="/login/designatioMaster" parameter="methodName" name="designationMasterForm" type="com.infotech.sgsy.master.designationMaster.DesignationMasterAction" scope="request">
+  		 <forward name="designationMastershowPage" 	path="showdesignationMaster" />
+  		 
+</action>
+<!-- //....new added by CHARVI for ctsa master.... -->
+
+<action path="/login/ctsaMaster" parameter="methodName" name="ctsaMasterBean" type="com.infotech.sgsy.master.ctsaMaster.CtsaMasterAction" validate ="false">
+        <forward name="addCtsaMaster" 										path="addCtsaMaster_to_follow"/>
+        <forward name="saveCtsa" 											path="/login/ctsaMaster.do?methodName=addCtsaMaster" redirect="true"/>
+        <forward name="updateCtsa" 											path="/login/ctsaMaster.do?methodName=addCtsaMaster" redirect="true"/>
+        <forward name="editCtsa" 											path="addCtsaMaster_to_follow"/>
+</action>
+
+<action path="/login/tsaMaster" parameter="methodName" name="tsaMasterBean" type="com.infotech.sgsy.master.tsaMaster.TsaMasterAction" validate ="false">
+        <forward name="addTsaMaster" 										path="addTsaMaster_pathTo_follow"/>
+        <forward name="saveTsa" 											path="/login/tsaMaster.do?methodName=addTsaMaster" redirect="true"/>
+        <forward name="updateTsa" 											path="/login/tsaMaster.do?methodName=addTsaMaster" redirect="true"/>
+        <forward name="editTsa" 											path="addTsaMaster_pathTo_follow"/>
+               
+</action>
+
+<action path="/login/appraisalAgencyMaster" parameter="methodName" name="appraisalAgencyBean" type="com.infotech.sgsy.master.appraisalAgencyMaster.AppraisalAgencyAction" validate ="false">
+        <forward name="addAppraisalAgency" 											path="addAppraisalAgency_to_follow"/>
+        <forward name="saveAppraisalAgency" 											path="/login/appraisalAgencyMaster.do?methodName=addAppraisalAgency" redirect="true"/>
+        <forward name="updateAppraisalAgency" 											path="/login/appraisalAgencyMaster.do?methodName=addAppraisalAgency" redirect="true"/>
+        <forward name="editAppraisalAgency" 											path="addAppraisalAgency_to_follow"/>
+</action>
+
+<action path="/login/assessmentBodyMaster" parameter="methodName" name="assessmentBodyBean" type="com.infotech.sgsy.master.assessmentBodyMaster.AssessmentBodyMasterAction" validate ="false">
+        <forward name="addAssessmentBodyMaster" 							path="addAssessmentBodyMaster_pathTo_follow"/>
+        <forward name="saveAssessmentBody" 											path="/login/assessmentBodyMaster.do?methodName=addAssessmentBodyMaster" redirect="true"/>
+        <forward name="updateAssessmentBody" 											path="/login/assessmentBodyMaster.do?methodName=addAssessmentBodyMaster" redirect="true"/>
+        <forward name="editAssessmentBody" 											path="addAssessmentBodyMaster_pathTo_follow"/>
+</action>
+
+<!-- Added By Manoj for Master forms -->
+
+<action path="/login/projectType" parameter="methodName" name="ProjectTypeMasterBean" type="com.infotech.sgsy.masterdata.projectTypeMaster.ProjectTypeMasterAction" validate ="false"> 
+		    <forward name="projectType" 											path="projectType"/>		    
+		    <forward name="editRole" 										    	path="projectType"/>
+		    <forward name="updateRole" 										        path="projectType"/>
+</action>
+<action path="/login/sector" parameter="methodName" name="SectorMasterBean" type="com.infotech.sgsy.masterdata.sectorMaster.SectorMasterAction" validate ="false"> 
+		    <forward name="showSector" 											   path="showSector"/>		    
+		    <forward name="editSector" 										       path="showSector"/>
+		    <forward name="updateSector" 										   path="showSector"/>
+</action>
+<action path="/login/constituency" parameter="methodName" name="ConstituencyMasterBean" type="com.infotech.sgsy.masterdata.constituencyMaster.ConstituencyMasterAction" scope="request" validate ="false"> 
+		    <forward name="showConstituency" 											   path="showConstituency"/>		    
+		    <forward name="editConstituency" 										       path="showConstituency"/>
+		    <forward name="updateConstituency" 										       path="showConstituency"/>
+</action>
+<action path="/login/trade" parameter="methodName" name="TradeMasterBean" type="com.infotech.sgsy.masterdata.tradeMaster.TradeMasterAction" validate ="false"> 
+		    <forward name="showTrade" 											          path="showTrade"/>		    
+		    <forward name="editTrade" 										              path="showTrade"/>
+		    <forward name="updateTrade" 										          path="showTrade"/>
+</action>
+<!-- //......ends here............. -->
+
+<!-- Varun Sanction Post -->
+
+<action path="/login/sanctionPost" parameter="methodName" name="sanctionPostForm" type="com.infotech.sgsy.master.sanctionPost.SanctionPostAction" scope="request" validate="false">
+			<forward name="showPage" 					path="showSanctionPost"/>	
+</action>
+<!--Varun  Certifying Agency  -->
+<action path="/login/certifyingAgency" parameter="methodName" name="CertifyingAgencyForm" type="com.infotech.sgsy.master.certifyingAgency.CertifyingAgencyAction" scope="request" validate="false">
+			<forward name="showPage" 					path="showCertifyingAgency"/>	
+			<forward name="saveRole" 					path="/login/certifyingAgency.do?methodName=addCertifyingAgency" redirect="true"/>
+			<forward name="editRole" 					path="showCertifyingAgency"/>
+	        <forward name="updateRole" 					path="/login/certifyingAgency.do?methodName=addCertifyingAgency" redirect="true"/>
+</action>
+
+<action path="/login/parliamentaryConstituencyMaster" parameter="methodName" name="parliamentaryConstituencyMasterBean" type="com.infotech.sgsy.master.parliamentaryConstituencyMaster.ParliamentaryConstituencyMasterAction" validate ="false">
+        <forward name="addParliamentaryConstituencyMaster" 												path="addParliamentaryConstituencyMaster_to_follow"/>
+        <forward name="saveParliamentaryConstituencyMaster" 											path="/login/parliamentaryConstituencyMaster.do?methodName=addParliamentaryConstituencyMaster" redirect="true"/>
+        <forward name="updateParliamentaryConstituencyMaster" 											path="/login/parliamentaryConstituencyMaster.do?methodName=addParliamentaryConstituencyMaster" redirect="true"/>
+        <forward name="editParliamentaryConstituencyMaster" 											path="addParliamentaryConstituencyMaster_to_follow"/>
+</action>
+
+<action path="/login/batchCompletion" parameter="methodName" name="BatchCompletionForm" 
+					type="com.infotech.sgsy.tcSetup.batchCompletion.BatchCompletionAction" scope="request" validate="false">
+			<forward name="showPage" 					path="showBatchCompletion"/>	
+			<forward name="addPage" 					path="addBatchCompletion"/>			 
+			<forward name="editPage" 					path="editBatchCompletion"/>
+</action>
+
+<action path="/login/monitoringProgressReport" parameter="methodName" name="monitoringProgressReportForm" 
+					type="com.infotech.sgsy.monitoringProgressReport.MonitoringProgressReportAction" scope="request" validate="false">
+			<forward name="showPage" 					path="monitoringProgressReport"/>	
+
+</action>
+<action path="/login/yearWiseProgressReport" parameter="methodName" name="Report1Form" 
+		type="com.infotech.sgsy.StateWiseCumYearWiseProgress.FirstReport.StateWiseProgressAction" scope="request" validate="false">
+		<forward name="showReport" 		path="showProgressReport"/>	
+		<forward name="showReport2" 	path="showProgressReport2"/>
+		<forward name="showReport3" 	path="showProgressReport3"/>
+		<forward name="showReport4" 	path="showProgressReport4"/>
+		<forward name="showReport7" 	path="showProgressReport7"/>
+</action>
+</action-mappings>	
+<!--****************************************************  ACTION MAPPING OF ALL NRLM END ****************************************************-->
+
+
+<!--***************************************************** EXTRA  *****************************************************-->		
+<controller contentType="text/html;charset=UTF-8" debug="3" nocache="true" locale="true"  processorClass="com.infotech.sgsy.util.RequestProcessor"/>  
+<message-resources  parameter="ApplicationResources"  null="false"  />		
+	
+<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+	<set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+</plug-in>	
+
+<plug-in className="org.apache.struts.tiles.TilesPlugin">
+	<set-property property="definitions-config" value="/WEB-INF/StrutsMstTiles.xml" />
+	<set-property property="moduleAware" value="true" />
+</plug-in>
+<!--***************************************************** EXTRA END *****************************************************-->
+	
+</struts-config>

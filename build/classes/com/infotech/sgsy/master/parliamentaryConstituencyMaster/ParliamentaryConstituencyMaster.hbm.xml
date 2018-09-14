@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.infotech.sgsy.master.parliamentaryConstituencyMaster.ParliamentaryConstituencyMasterVO"  table="mst_ParliamentaryConstituency" schema="public">
+    
+        <id name="id" column="id">
+    		<generator class="sequence">
+        		<param name="sequence">mst_ParliamentaryConstituency_id_seq</param>
+    		</generator>
+		</id>
+       
+       
+       
+        <property name="name"                type="string"><column name="name" /></property>
+        <property name="code"                type="string"><column name="code" /></property>
+        <property name="isdDeleted"              type="boolean"><column name="is_deleted" /></property>
+   
+        
+        <property name="createdBy"               type="string"><column name="created_by" /></property>
+        <property name="updatedBy"               type="string"><column name="last_modified_by" /></property>
+        <property name="createdOnDate"           type="date"><column name="created_on" /></property>
+        <property name="updatedOnDate"           type="date"><column name="last_modified_on" /></property>
+        
+	</class>
+</hibernate-mapping>
+

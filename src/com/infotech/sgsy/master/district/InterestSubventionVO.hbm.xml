@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class name="com.infotech.sgsy.master.district.InterestSubventionVO"
+		table="mst_interestsubventionrates">
+		<id name="entityCode" column="district_code">
+			<generator class="assigned">
+			</generator>
+		</id>
+
+		<property name="interestSubventionRate" column="interest_subvention_rates" />
+		<property name="createdOn" column="created_On" type="timestamp" />
+		<property name="createdBy" column="created_By" length="25" />
+		<property name="lastModifiedOn" column="modified_On" type="timestamp" />
+		<property name="lastModifedBy" column="Modifed_By" length="25" />
+
+	</class>
+
+</hibernate-mapping>

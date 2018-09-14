@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 3, 2013 10:55:05 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.infotech.skills.hbm.ContactDetail" table="mst_contacts" schema="public">
+        <id name="contactId" type="string">
+            <column name="contact_id" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="officerName" type="string">
+            <column name="officer_name" length="50" />
+        </property>
+        <property name="phOffice" type="string">
+            <column name="ph_office" length="30" />
+        </property>
+        <property name="faxOffice" type="string">
+            <column name="fax_office" length="15" />
+        </property>
+        <property name="phResidence" type="string">
+            <column name="ph_residence" length="30" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="30" />
+        </property>
+        <property name="designation" type="string">
+            <column name="designation" length="30" />
+        </property>
+        <property name="entityCode" type="string">
+            <column name="entity_code" length="7" />
+        </property>
+        <property name="order" type="string">
+            <column name="order" length="1" />
+        </property>
+        <property name="stateName"  formula="(SELECT coalesce(s.state_name, null) FROM mst_state s WHERE s.state_code = entity_code)"/>
+    </class>
+</hibernate-mapping>

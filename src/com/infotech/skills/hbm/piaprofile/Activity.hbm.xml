@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 17, 2013 1:17:47 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.infotech.skills.hbm.piaprofile.ActivityVO" table="pia_activity" schema="public">
+        <id name="activityId" type="string">
+            <column name="activity_id" />
+            <generator class="sequence">
+				<param name="sequence">activity_id_seq</param>
+			</generator>
+        </id>
+        <property name="activityName" type="string">
+            <column name="activity_name" not-null="true" />
+        </property>
+        <property name="activityShortName" type="string">
+            <column name="activity_short_name" />
+        </property>
+        <property name="createdOn" type="string">
+            <column name="created_on" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="created_by" />
+        </property>
+        <property name="modifyOn" type="string">
+            <column name="modify_on" />
+        </property>
+        <property name="modifyBy" type="string">
+            <column name="modify_by" />
+        </property>
+    </class>
+</hibernate-mapping>

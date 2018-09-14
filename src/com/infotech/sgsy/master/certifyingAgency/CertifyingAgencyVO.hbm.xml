@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19 Jul, 2011 10:04:55 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.infotech.sgsy.master.certifyingAgency.CertifyingAgencyVO" table="mst_certifying_agency">
+        <id name="certifyingAgencyId" column="certifying_agency_id">
+    		<generator class="sequence">
+        		<param name="sequence">mst_certifying_agency_Id_Seq</param>
+    		</generator>
+		</id>
+   
+        <property name="certifyingAgencyCode"   type="string"> <column name="certifying_agency_code" />  </property>
+        <property name="certifyingAgencyName"   type="string"> <column name="certifying_agency_name" /></property>
+        
+        <property name="createdBy"       		type="string"> <column name="created_by" /></property>
+        <property name="createdDate"   		type="date"><column name="created_on" /></property>
+        <property name="updatedBy"       		type="string">  <column name="last_modified_by" /></property>
+        <property name="updatedDate"   		type="date"><column name="last_modified_on" /></property>
+        
+        
+    </class>
+</hibernate-mapping>

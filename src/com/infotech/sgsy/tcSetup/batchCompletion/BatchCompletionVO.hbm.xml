@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.infotech.sgsy.tcSetup.batchCompletion.BatchCompletionVO"  table="batch_completion" schema="public">
+       
+         <id name="id" column="id" >		
+			<generator class="sequence">
+        		<param name="sequence">batch_completion_Id_Seq</param>
+    		</generator>
+		</id>	 	   
+				 <many-to-one name="batchID" class="com.infotech.sgsy.tcSetup.batchCreation.BatchCreationVO" lazy="false" fetch="select" >
+        		 	<column name="batch_ID"/>
+				</many-to-one>
+				<property name="batchEndDate"     						  type="date"><column name="batch_End_Date" /></property> 
+                <property name="complet_Sc"         					  type="int"><column name="complet_Sc" /></property>  			    
+                <property name="complet_St"         					  type="int"><column name="complet_St" /></property>  			    
+                <property name="complet_Others"         				  type="int"><column name="complet_Others" /></property>  			    
+                <property name="complet_Women"         				  type="int"><column name="complet_Women" /></property>  			    
+                <property name="complet_Minority"         			  type="int"><column name="complet_Minority" /></property>  			    
+                <property name="complet_Pwd"         					  type="int"><column name="complet_Pwd" /></property>  
+                <property name="complet_Total"         					  type="int"><column name="complet_Total" /></property>    
+                <property name="createdBy"             					  type="string"><column name="created_by" /></property>
+                <property name="batchStatus"             					  type="string"><column name="batch_status" /></property>
+                <property name="createdOn"           					  type="date"><column name="created_on" /></property>
+                <property name="updatedBy"           					  type="string"><column name="updated_by" /></property>
+                <property name="updatedOn"             					  type="date"><column name="updated_on" /></property> 
+  	</class>
+</hibernate-mapping>

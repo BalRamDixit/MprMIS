@@ -1,0 +1,40 @@
+<chart caption="Fund Allocation" XAxisName="State Name (North West States)" YAxisName="Amount in Rs. Lakhs" palette="2" animation="1" showValues="0" decimals="0" formatNumberScale="0" numDivLines="4" labelDisplay="ROTATE" slantLabels="1">
+<categories>
+	<category label="Haryana" />
+	<category label="Himachal Pradesh" />
+	<category label="Jammu And Kashmir" />
+	<category label="Punjab" />
+	<category label="Uttarakhand" />
+</categories>
+<dataset seriesName="Central Allocation">
+	<set value="1347" />
+	<set value="625" />
+	<set value="750" />
+	<set value="706" />
+	<set value="1117" />
+</dataset>
+<dataset seriesName="State Allocation">
+	<set value="449" />
+	<set value="208.33" />
+	<set value="250" />
+	<set value="235.33" />
+	<set value="372.33" />
+</dataset>
+<dataset seriesName="Total Allocation">
+	<set value="1796" />
+	<set value="833.33" />
+	<set value="1000" />
+	<set value="941.33" />
+	<set value="1489.33" />
+</dataset>
+<styles>
+	<definition>
+	<style type="font" name="CaptionFont" color="666666" size="15" />
+	<style type="font" name="SubCaptionFont" bold="0" />
+	</definition>
+<application>
+	<apply toObject="caption" styles="CaptionFont" />
+	<apply toObject="SubCaption" styles="SubCaptionFont" />
+</application>
+</styles>
+</chart>

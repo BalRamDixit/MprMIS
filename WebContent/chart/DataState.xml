@@ -1,0 +1,76 @@
+<chart caption="Fund Allocation" XAxisName="State Name" YAxisName="Amount in Rs. Lakhs" palette="2" animation="1" showValues="0" decimals="0" formatNumberScale="0" numDivLines="4" labelDisplay="ROTATE" slantLabels="1"   >
+<categories>
+	<category label="Andhra Padesh" />
+	<category label="Bihar" />
+	<category label="Chattisgarh" />
+	<category label="Gujarat" />
+	<category label="Jharkhand" />
+	<category label="Karnataka" />
+	<category label="Kerala" />
+	<category label="Madhya Pradesh" />
+	<category label="Maharashtra" />
+	<category label="Orissa" />
+	<category label="Rajasthan" />
+	<category label="Tamil Nadu" />
+	<category label="Uttar Pradesh" />
+	<category label="West Bangal" />
+</categories>
+<dataset seriesName="Central Allocation">
+	<set value="5731" />
+	<set value="13495" />
+	<set value="3075" />
+	<set value="2220" />
+	<set value="5150" />
+	<set value="4352" />
+	<set value="2007" />
+	<set value="6473" />
+	<set value="8505" />
+	<set value="6540" />
+	<set value="3328" />
+	<set value="5079" />
+	<set value="19392" />
+	<set value="7257" />
+</dataset>
+<dataset seriesName="State Allocation">
+	<set value="1910.33" />
+	<set value="4498.33" />
+	<set value="1025" />
+	<set value="740" />
+	<set value="1716.67" />
+	<set value="1450.67" />
+	<set value="669" />
+	<set value="2157.67" />
+	<set value="2835" />
+	<set value="2180" />
+	<set value="1109.33" />
+	<set value="1693" />
+	<set value="6464" />
+	<set value="2419" />
+</dataset>
+<dataset seriesName="Total Allocation">
+	<set value="7641.33" />
+	<set value="17993.33" />
+	<set value="4100" />
+	<set value="2960" />
+	<set value="6866.67" />
+	<set value="5802.67" />
+	<set value="2676" />
+	<set value="8630.67" />
+	<set value="11340" />
+	<set value="8720" />
+	<set value="4437.33" />
+	<set value="6772" />
+	<set value="25856" />
+	<set value="9676" />
+</dataset>
+<styles>
+	<definition>
+	<style type="font" name="CaptionFont" color="666666" size="15" />
+	<style type="font" name="SubCaptionFont" bold="0" />
+	</definition>
+<application>
+	<apply toObject="caption" styles="CaptionFont" />
+	<apply toObject="SubCaption" styles="SubCaptionFont" />
+</application>
+</styles>
+</chart>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+		<class name="com.infotech.sgsy.masterdata.projectTypeMaster.ProjectTypeMasterVO"  table="project_type_master" schema="public">
+	    
+         <id name="projectTypeId" column="project_type_id">
+    		<generator class="sequence">
+        		<param name="sequence">project_type_master_id_seq</param>
+    		</generator>
+		</id> 
+        	   
+   			    <property name="projectTypCode"   						  type="string"><column name="project_type_code" /></property>      
+   			    <property name="projectTypeName"      					  type="string"><column name="project_type_name" /></property>    			     
+   			    <property name="createdBy"             					  type="string"><column name="created_by" /></property>
+                <property name="createdOn"           					  type="date"><column name="created_on" /></property>
+                <property name="updatedBy"           					  type="string"><column name="last_modified_by" /></property>
+                <property name="updatedOn"             					  type="date"><column name="last_modified_on" /></property>
+                
+       
+  	</class>
+</hibernate-mapping>

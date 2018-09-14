@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping auto-import="false"> 
+
+	<class name="com.infotech.sgsy.selfHelpGroup.GO.ShgMemberDetails" table="GO_SHG_member"> 
+		
+		<id name="shgMemberCode" unsaved-value="null">
+  		 <column name="shg_member_code" length="20"/>
+   			<generator class="sequence" >
+            	<param name="sequence">GO_shg_member_seq</param>
+   			</generator>
+  		</id>
+		<property   name="shgCode" type="string">
+   			<column length="17" name="shg_code"/>
+  		</property>
+  		<property   name="entityCode" type="string">
+   			<column length="13" name="entity_code"/>
+  		</property>
+  		<property   name="memberName" type="string">
+   			<column length="50" name="member_name"/>
+  		</property>
+  		<property   name="belongingName" type="string">
+   			<column length="50" name="belonging_name"/>
+  		</property>
+  		<property   name="gender" type="string">
+   			<column length="1" name="gender"/>
+  		</property>
+  		<property   name="socialCategory" type="string">
+   			<column length="5" name="social_category"/>
+  		</property>
+  		<property   name="disability" type="string">
+   			<column name="disability"/>
+  		</property>
+  		<property   name="religion" type="string">
+   			<column name="religion"/>
+  		</property>
+  		<property   name="aplbpl" type="string">
+   			<column length="3" name="aplbpl"/>
+  		</property>
+ 		<property   name="pipCategory" type="string">
+   			<column length="4" name="pip_category"/>
+  		</property>
+  		<property   name="leader" type="string">
+   			<column length="7" name="leader"/>
+  		</property>
+	 	<property   name="aadhaar" type="string">
+   			<column length="12" name="aadhaar"/>
+  		</property>
+  		<property   name="seccNo" type="string">
+   			<column length="17" name="secc_no"/>
+  		</property>
+  		<property   name="mobile" type="string">
+   			<column length="10" name="mobile_number"/>
+  		</property>
+  		<property   name="createdBy" type="string">
+   			<column name="created_by"/>
+	  	</property>
+	   	<property   name="createdOn" type="string">
+	  	 	<column length="10" name="created_on"/>
+	 	</property>
+	   	<property   name="updatedBy" type="string">
+	   		<column name="updated_by"/>
+	  	</property>
+	   	<property   name="updatedOn" type="string">
+	   		<column length="10" name="updated_on"/>
+	  	</property>
+ 	</class>
+	 
+</hibernate-mapping>

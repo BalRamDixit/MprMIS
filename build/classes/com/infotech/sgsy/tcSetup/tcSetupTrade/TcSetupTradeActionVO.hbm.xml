@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.infotech.sgsy.tcSetup.tcSetupTrade.TcSetupTradeActionVO"  table="training_center_trade" schema="public">
+	
+ 	
+	  <id name="id" column="id" >		
+			<generator class="sequence">
+        		<param name="sequence">training_center_trade_Id_Seq</param>
+    		</generator>
+</id>	
+	
+         
+        
+             <!--   	<property name="projectID"      						  type="string"><column name="projectId" /></property>   
+        	    <property name="tcId"      						  type="string"><column name="tc_id" /></property> -->   
+  			   <!--  <property name="sectorCode"   		          type="string"><column name="sector_code" /></property>
+   			    <property name="tradeCode"    									  type="string"><column name="trade_code" /></property> -->
+   			    <many-to-one name="trainningCenter" class="com.infotech.sgsy.tcSetup.tcSetupEntry.TcSetupVO" lazy="false" fetch="select" >
+                <column name="tc_id"  />
+                 </many-to-one>
+   			    
+   			    <many-to-one name="sector" class="com.infotech.sgsy.masterdata.sectorMaster.SectorMasterVO" lazy="false" fetch="select" >
+                <column name="sector_code"  />
+                 </many-to-one>
+                 <many-to-one name="trade" class="com.infotech.sgsy.masterdata.tradeMaster.TradeMasterVO" lazy="false" fetch="select" >
+                <column name="trade_code"  />
+                 </many-to-one>
+   			    
+    			<property name="appTradeCapacity"         							  type="integer"><column name="app_trade_capacity" /></property>
+    			
+    			 <property name="createdBy"              type="string"><column name="created_by" /></property>
+                <property name="createdOn"              type="date"><column name="created_on" /></property>
+                <property name="updatedBy"              type="string"><column name="updated_by" /></property>
+                <property name="updatedOn"              type="date"><column name="updated_on" /></property>
+       
+  	</class>
+</hibernate-mapping>

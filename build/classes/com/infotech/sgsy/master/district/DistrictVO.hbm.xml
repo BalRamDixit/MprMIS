@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping> 
+
+	<class name="com.infotech.sgsy.master.district.DistrictVO" table="mst_district_old"> 
+		<id name="districtCode" column="district_code" >		
+			<generator class="increment">			 	
+			</generator> 
+		</id>			
+		
+ 		 	  
+ 		<property name="districtName" column="district_name"  length="30" />  		
+ 			<property name="createdOn" column="created_On"  type="java.util.Date" length="10" /> 
+ 		<property name="createdBy" column="created_By" length="25"/> 		
+ 		<property name="lastModifiedOn" column="modified_On" type="java.util.Date" length="10" /> 
+ 		<property name="lastModifedBy" column="Modifed_By" length="25"/>	
+ 		<property name="stateCode" column="state_code" />
+ 		 		
+ 	</class>
+ 	
+</hibernate-mapping>

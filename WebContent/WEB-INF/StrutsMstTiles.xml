@@ -1,0 +1,1273 @@
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+                                   "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+<!--****************************** 
+	This is a Tiles definition file, 
+	which provides tiles definition for all the masters 
+**************************-->
+
+<tiles-definitions> 
+
+<!-- ************************ REPORT LAYOUT BY SUMIT ************************ -->
+<definition name="tableSearchLayout" path="/WEB-INF/login/pages/main/tableSearchLayout.jsp">
+	<put name="title" 			value="Reports Skills"/>
+	<put name="footer" 			value="/WEB-INF/login/pages/main/homeFooter.jsp"/>
+</definition>
+
+<!--******* ALL LAYOUTS ********-->
+<definition name="homeLayoutSmall" path="/WEB-INF/login/pages/main/homeReportLayout.jsp">
+  	 <put name="title" 			value="Reports NRLM "/>
+ 	 <put name="body" 			value="/WEB-INF/login/pages/manageSelfHelpGroup/add/addGrading.jsp"/>
+   	 <put name="footer" 		value="/WEB-INF/login/pages/main/homeFooter.jsp"/>
+</definition>
+<definition name="outerLayoutWithoutHeader" path="/WEB-INF/login/pages/main/outerLayoutWithoutHeader.jsp">
+  	 <put name="title" 			value="Reports NRLM "/>
+ 	 <put name="body" 			value="/WEB-INF/login/pages/manageSelfHelpGroup/add/addGrading.jsp"/>
+   	 <put name="footer" 		value="/WEB-INF/login/pages/main/outerFooter.jsp"/>
+</definition>
+<definition name="homeLayoutLarge" path="/WEB-INF/login/pages/main/layout.jsp">
+  	 <put name="title" 			value="Reports NRLM"/>
+ 	 <put name="body" 			value="/WEB-INF/login/pages/manageSelfHelpGroup/add/addGrading.jsp"/>
+   	 <put name="footer" 		value="/WEB-INF/login/pages/main/homeFooter.jsp"/>
+</definition> 
+<definition name="showLayout" path="/WEB-INF/login/pages/main/layout.jsp">
+  	 <put name="title" 			value="ManageSHG "/>
+ 	 <put name="body" 			value="/WEB-INF/login/pages/manageSelfHelpGroup/add/addGrading.jsp"/>
+   	 <put name="footer" 		value="/WEB-INF/login/pages/main/footer.jsp"/>
+</definition> 
+<definition name="siteLayout" path="/WEB-INF/login/pages/main/siteLayout.jsp">
+     <put name="title" 			value="Login "/>
+     <put name="header" 		value="/WEB-INF/login/pages/main/header1.jsp" />
+     <put name="menu" 			value="/WEB-INF/login/pages/main/menu.jsp"/>  
+     <put name="body" 			value="/WEB-INF/login/pages/qualificationMaster/addQualification.jsp"/>
+<!--      <put name="footer" 		value="/WEB-INF/login/pages/main/footer.jsp"/> -->
+</definition>  
+
+<definition name="selectRoleLayout" path="/WEB-INF/login/pages/main/loginSelectRoleLayout.jsp">
+  	 <put name="title" 			value="Login "/>
+  	 <put name="header" 		value="/WEB-INF/login/pages/main/loginHeader.jsp" />
+   	 <put name="body" 			value="/WEB-INF/login/pages/login/selectRolePage.jsp"/>
+   	 <put name="footer" 		value="/WEB-INF/login/pages/main/footer.jsp"/>
+</definition> 
+<definition name="selectSchemeLayout" path="/WEB-INF/login/pages/main/selectRoleLayout.jsp">
+  	 <put name="title" 			value="Change Scheme "/>
+  	 <put name="header" 		value="/WEB-INF/login/pages/main/header1.jsp" />
+   	 <put name="body" 			value="/WEB-INF/login/pages/login/selectSchemePage.jsp"/>
+   	 <put name="footer" 		value="/WEB-INF/login/pages/main/footer.jsp"/>
+</definition>
+<definition name="selectRolePage" extends ="selectRoleLayout">
+  	 <put name="title" 			value="Select Role Page"/>    
+     <put name="body" 			value="/WEB-INF/login/pages/login/selectRolePage.jsp"/>    
+</definition> 
+<!--******* END LAYOUT *******-->
+
+  	 		
+<!-- MULTIPLE ROLE SELECTION STARTS -->
+<definition name="selectRolePageSL" extends ="selectRoleLayout">
+  <put name="title" value="Select Role Page"/>    
+  <put name="body" value="/WEB-INF/login/pages/login/selectRolePageSL.jsp"/>  
+</definition> 
+<definition name="selectRolePageDL" extends ="selectRoleLayout">
+  <put name="title" value="Select Role Page"/>    
+  <put name="body" value="/WEB-INF/login/pages/login/selectRolePageDL.jsp"/>  
+ </definition> 
+<!-- MULTIPLE ROLE SELECTION ENDS -->
+ 
+
+<!-- ********LOGIN TILES START******** -->
+
+<!-- LOCATION MASTER STANDARDIZTION -->
+<definition name="showLocationMasterStandardization" extends="siteLayout">
+	<put name="title" 			value="Alter Details"/>
+	<put name="body" 			value="/WEB-INF/login/pages/masters/locationMasterStandardization/alterLocationMasterStandardization.jsp"/>
+</definition>
+<definition name="showAllPrisInADistrict" extends="siteLayout">
+	<put name="title" value="Alter Details"/>
+	<put name="body" value="/WEB-INF/login/pages/masters/locationMasterStandardization/showAllPrisInADistrict.jsp"/>
+</definition>
+<!-- ********LOGIN Tiles ENDS******** -->
+<definition name="showReportUserPage" extends ="siteLayout">
+	<put name="title" 			value="User Log Report"/>    
+	<put name="body"			value="/WEB-INF/login/pages/userManagement/userLog.jsp"/>  
+</definition>
+<definition name="logoutFailed" extends ="siteLayout">
+	<put name="title" 		value="Welcome"/>    
+	<put name="body" 		value="/WEB-INF/login/pages/common/applicationLevelException.jsp"/>  
+</definition> 
+<definition name="loginPage" extends ="siteLayout">
+	<put name="title" 		value="Change password"/>    
+	<put name="body" 		value="/WEB-INF/login/pages/login/changePasswd.jsp"/>  
+</definition>
+
+<definition name="changePasswordAdmin" extends="siteLayout">
+	<put name="title" 		value="Reset Password" />
+	<put name="body" 		value="/WEB-INF/login/pages/ChangePasswordAdmin/changePasswordAdmin.jsp" />
+</definition>
+<definition name="stnoPage" extends="siteLayout">
+  <put name="title" 		value="Reset Password by State Nodal Officer" />
+  <put name="body" 			value="/WEB-INF/login/pages/ChangePasswordAdmin/ChangePasswordStNO.jsp" />
+</definition>
+<definition name="ACTIVATE_USER_PAGE" extends="siteLayout">
+  <put name="title" 		value="ACTIVATE USER ACCOUNT" />
+  <put name="body" 			value="/WEB-INF/login/pages/ChangePasswordAdmin/UserLoginActivate.jsp" />
+</definition>
+
+
+<!-- ********LOGIN TILES ENDS ******** -->
+
+<!-- ************ BANK TILES ************ -->
+<definition name="masterForBankDetails" extends="showLayout">
+  <put name="title" 		value="Master For Bank Details" />
+  <put name="body" 			value="/WEB-INF/login/pages/reports/newReport/masterForBankDetails.jsp" />
+</definition>
+<definition name="batchDetails" extends="showLayout">
+  <put name="title" 		value="Placement Details" />
+  <put name="body"			value="/WEB-INF/login/pages/reports/newReport/batchDetails.jsp" />
+</definition>
+<definition name="bankViewForState" extends ="siteLayout">
+  	<put name="title" 		value="Add Bank"/>    
+  	<put name="body" 		value="/WEB-INF/login/pages/reports/bank/bankViewForState.jsp"/>  
+</definition>
+<definition name="bankViewForMord" extends ="siteLayout">
+  	<put name="title" 		value="Add Bank"/>    
+  	<put name="body" 		value="/WEB-INF/login/pages/reports/bank/bankViewForMord.jsp"/>  
+</definition>  
+<definition name="showViewBank" extends ="siteLayout">
+  	<put name="title" 		value="Add Bank"/>    
+  	<put name="body" 		value="/WEB-INF/login/pages/reports/bank/showViewBank.jsp"/>  
+</definition>
+<definition name="showViewBankPage" extends ="siteLayout">
+  	<put name="title" 		value="Add Bank"/>    
+  	<put name="body" 		value="/WEB-INF/login/pages/masters/bank/bankView.jsp"/>  
+</definition>  
+<definition name="showAddBankBranchPage" extends ="siteLayout">
+  	<put name="title" 		value="Add Bank Branch"/>    
+  	<put name="body" 		value="/WEB-INF/login/pages/masters/bankBranch/bankBranch.jsp"/>  
+</definition> 
+<definition name="showModifyBankBranchPage" extends ="siteLayout">
+  	<put name="title" 		value="Modify Bank Branch"/>    
+  	<put name="body" 		value="/WEB-INF/login/pages/masters/bankBranch/bankBranchModify.jsp"/>  
+</definition>
+<definition name="showViewBankBranchPage" extends ="siteLayout">
+  	<put name="title" 		value="View Bank Branch"/>    
+  	<put name="body" 		value="/WEB-INF/login/pages/masters/bankBranch/bankBranchView.jsp"/>  
+</definition>
+<definition name="showAddBankPage" extends ="siteLayout">
+  	<put name="title" 		value="Add Bank"/>    
+  	<put name="body" 		value="/WEB-INF/login/pages/masters/bank/bankAdd.jsp"/>  
+</definition>    
+<definition name="showUpdateBankPage" extends ="siteLayout">
+  	<put name="title" 		value="Modify Bank"/>    
+  	<put name="body" 		value="/WEB-INF/login/pages/masters/bank/bankModify.jsp"/>  
+</definition> 
+<definition name="addBankAccount" extends ="siteLayout">
+  <put name="title" 		value="Add Bank Account Details"/>    
+  <put name="body" 			value="/WEB-INF/login/pages/bankAccountDetails/addBankAccount.jsp"/>  
+</definition>
+<definition name="modifyBankAccount" extends ="siteLayout">
+  <put name="title" 		value="Modify Bank Account Details"/>    
+  <put name="body" 			value="/WEB-INF/login/pages/bankAccountDetails/modifyBankAccount.jsp"/>  
+</definition>
+<definition name="viewBankAccount" extends ="siteLayout">
+  <put name="title" 		value="View Bank Account Details"/>    
+  <put name="body" 			value="/WEB-INF/login/pages/bankAccountDetails/viewBankAccount.jsp"/>  
+</definition> 
+<definition name="showDeleteBankPage" extends ="siteLayout">
+  	<put name="title" 		value="Delete Bank Details"/>    
+  	<put name="body"		value="/WEB-INF/login/pages/masters/bank/bankDelete.jsp"/>  
+</definition> 
+<definition name="showDeleteBankBranchPage" extends ="siteLayout">
+  	<put name="title" 		value="Delete Bank Details"/>    
+  	<put name="body" 		value="/WEB-INF/login/pages/masters/bankBranch/bankBranchDelete.jsp"/>  
+</definition> 
+   
+<!-- ********** BANK TILES END ********** -->
+
+<!--  MANAGE USER TILES STARTS -->
+<definition name="addUser" extends ="siteLayout">
+  <put name="title"				value="Add User"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/userManagement/addUser.jsp"/>  
+</definition>
+<definition name="viewUser" extends ="siteLayout">
+  <put name="title" 			value="View User"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/userManagement/viewUser.jsp"/>  
+</definition> 
+<definition name="reportviewUser" extends ="siteLayout">
+  <put name="title" 			value="View User"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/reports/userReport/reportviewUser.jsp"/>  
+</definition> 
+<definition name="viewUserList" extends ="siteLayout">
+  <put name="title" 			value="View User List"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/reports/userReport/totalUserList.jsp"/>  
+</definition> 
+<definition name="showUserList" extends ="siteLayout">
+  <put name="title" 			value="Show User List"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/reports/userReport/showUserList.jsp"/>  
+</definition>
+<definition name="showStateList" extends ="siteLayout">
+  <put name="title" 			value="Show State User List"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/reports/userReport/showStateList.jsp"/>  
+</definition> 
+<definition name="showDistrictList" extends ="siteLayout">
+  <put name="title" 			value="Show District User List"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/reports/userReport/showDistrictList.jsp"/>  
+</definition>
+<definition name="showBlockList" extends ="siteLayout">
+  <put name="title"	 			value="Show Block User List"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/reports/userReport/showBlockList.jsp"/>  
+</definition>
+<definition name="addUserState" extends ="siteLayout">
+  <put name="title" 			value="Add User"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/userManagement/addUserState.jsp"/>  
+ </definition>
+<definition name="addUserDistrict" extends ="siteLayout">
+  <put name="title" 			value="Add User"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/userManagement/addUserDistrict.jsp"/>  
+</definition> 
+<definition name="modifyUser" extends ="siteLayout">
+  <put name="title" 			value="Modify User"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/userManagement/modifyUser.jsp"/>  
+</definition>
+<definition name="modifyUserState" extends ="siteLayout">
+  <put name="title" 			value="Modify User"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/userManagement/modifyUserState.jsp"/>  
+</definition>
+<definition name="modifyUserDistrict" extends ="siteLayout">
+  <put name="title" 			value="Modify User"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/userManagement/modifyUserDistrict.jsp"/>  
+</definition>
+<!--  MANAGE USER ENDS -->
+
+<!--  MANAGE ROLE START -->
+<definition name="showAddRolePage" extends ="siteLayout">
+  <put name="title" 			value="Add Role"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/accessControl/addRole.jsp"/>  
+</definition> 
+<definition name="showUpdateRolePage" extends ="siteLayout">
+  <put name="title" 			value="Update Role"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/accessControl/updateRole.jsp"/>  
+</definition> 
+<definition name="showDeleteRolePage" extends ="siteLayout">
+  <put name="title" 			value="Delete Role"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/accessControl/deleteRole.jsp"/>  
+</definition> 
+<definition name="showViewRolePage" extends ="siteLayout">
+  <put name="title" 			value="View Role"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/accessControl/viewRole.jsp"/>  
+</definition> 
+<definition name="assignRole" extends ="siteLayout">
+  <put name="title" 			value="Assign Role"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/manageRole/assignRole.jsp"/>  
+</definition>
+<definition name="assignRoleState" extends ="siteLayout">
+  <put name="title" 			value="Assign Role"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/manageRole/assignRoleState.jsp"/>  
+</definition>
+<definition name="assignRoleDistrict" extends ="siteLayout">
+  <put name="title" 			value="Assign Role"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/manageRole/assignRoleDistrict.jsp"/>  
+</definition>
+<definition name="searchAssignRole" extends ="siteLayout">
+  <put name="title" 			value="Search Assign Role"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/manageRole/searchAssignRole.jsp"/>  
+</definition>
+<definition name="showUpdateAssignRole" extends ="siteLayout">
+  <put name="title" 			value="Update Assign Role"/>    
+  <put name="body"	 			value="/WEB-INF/login/pages/manageRole/updateAssignRole.jsp"/>  
+</definition> 
+<definition name="searchAssignRoleState" extends ="siteLayout">
+  <put name="title" 			value="Search Assign Role"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/manageRole/searchAssignRoleState.jsp"/>  
+</definition> 
+<definition name="showUpdateAssignRoleState" extends ="siteLayout">
+  <put name="title" 			value="Search Assign Role"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/manageRole/updateAssignRoleState.jsp"/>  
+</definition>
+<definition name="searchAssignRoleDistrict" extends ="siteLayout">
+  <put name="title" 			value="Search Assign Role"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/manageRole/searchAssignRoleDistrict.jsp"/>  
+</definition>
+<definition name="showUpdateAssignRoleDistrict" extends ="siteLayout">
+  <put name="title" 			value="Search Assign Role"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/manageRole/updateAssignRoleDistrict.jsp"/>  
+</definition>
+<!-- MANAGE ROLE ENDS --> 
+<!-- Upload Circular Start -->
+<definition name="showCircularPage" extends ="siteLayout">
+	<put name="title" 			value="Upload Circular Files"/>    
+	<put name="body" 			value="/WEB-INF/login/pages/uploadcircular/uploadCircular.jsp"/>  
+</definition>
+<definition name="modifyCircularPage" extends="siteLayout">
+	<put name="title" 			value="Modify Circular Details"/>
+	<put name="body" 			value="/WEB-INF/login/pages/uploadcircular/modifyCircular.jsp"/>
+</definition>
+<definition name="viewCircularPage" extends ="homeLayoutSmall">
+	 <put name="title" 			value="Upload Circular Files"/>    
+	 <put name="body" 			value="/WEB-INF/login/pages/uploadcircular/viewCircular.jsp"/>  
+</definition>
+<!-- Upload Circular Enter -->
+
+<!--*********** STATE-INDICATORS ***********-->
+  
+<definition name="showPage" extends="siteLayout">
+  <put name="title" 			value="PHYSICAL ACHIEVEMENT" />
+  <put name="body" 				value="/WEB-INF/login/pages/stateIndicators/physicalAchieve.jsp" />
+</definition>
+
+
+
+
+
+
+<!-- ******	SHG PART START ******* -->
+<!-- ****** SHG REGISTRATION PAGES START ****** -->
+<!-- <definition name="AddSHGRegistration" extends ="siteLayout">
+  <put name="title" 			value="Add Self Help Group"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/manageSelfHelpGroup/add/addShg.jsp"/>  
+</definition> 
+<definition name="ModifySHGRegistration" extends ="siteLayout">
+  <put name="title" 			value="Show Self Help Group"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/manageSelfHelpGroup/update/modifyShg.jsp"/>  
+</definition> 
+<definition name="ViewSHGRegistration" extends ="siteLayout">
+  <put name="title" 			value="View Self Help Group"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/manageSelfHelpGroup/view/showSHG.jsp"/>  
+</definition>   --> 
+<!-- ****** SHG REGISTRATION PAGES END ****** -->
+<!-- SHG MONTHLY REPORT PAGES START -->
+<!-- <definition name="AddShgMonthlyRPT" extends ="siteLayout">
+  <put name="title" 			value="ADD SHG MONTHLY DETAILS"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/TransitoryPages/SHGPages/shgMonthlyReportAdd.jsp"/>  
+</definition>  
+<definition name="ModifyShgMonthlyRPT" extends ="siteLayout">
+  <put name="title" 			value="MODIFY SHG MONTHLY DETAILS"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/TransitoryPages/SHGPages/shgMonthlyReportModify.jsp"/>  
+</definition>  
+<definition name="ViewShgMonthlyRPT" extends ="siteLayout">
+  <put name="title" 			value="VIEW SHG MONTHLY DETAILS"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/TransitoryPages/SHGPages/shgMonthlyReportView.jsp"/>  
+</definition>    --> 
+<!-- SHG MONTHLY REPORT PAGES END -->
+
+<!-- SHG BANK LINKAGE PAGES START -->
+<!-- <definition name="ShowSHGBankLinkage" extends ="siteLayout">
+  <put name="title" 			value="SHG BANK LINKAGE"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/manageSelfHelpGroup/add/SHGBankLinkage.jsp"/>  
+</definition>  
+<definition name="MonthlyBankLinkage" extends ="siteLayout">
+  <put name="title" 			value="SHG Monthly Bank Linkage"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/reports/SHGBankLinkage/monthlySHGLoanDetail.jsp"/>  
+</definition>   -->
+<!-- SHG BANK LINKAGE PAGES END -->
+
+<!-- SHG PART START -->
+
+
+
+
+<definition name="state_target" extends="siteLayout">
+	<put name="title" 			value="State Target" />   
+  	<put name="body" 			value="/WEB-INF/login/pages/state/target/stateTarget.jsp"/>
+ </definition>
+
+
+
+
+
+<!-- MANAGE MEMBER START -->
+<definition name="showAddMember" extends ="showLayout">
+  <put name="title" 			value="Show Apl/Bpl Member"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/transaction/manageMemberDetails/addMembers.jsp"/>  
+ </definition> 
+ 
+ <definition name="showAddMMember" extends ="siteLayout">
+  <put name="title" 			value="Show Apl/Bpl Member"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/transaction/manageMemberDetails/addMMembers.jsp"/>  
+ </definition> 
+ 
+ <definition name="showModifyMember" extends ="siteLayout">
+  <put name="title" 			value="Modify Apl/Bpl Member"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/transaction/manageMemberDetails/modifyMembers.jsp"/>  
+ </definition> 
+ 
+ <definition name="showViewMember" extends ="siteLayout">
+  <put name="title" 			value="View Apl/Bpl Member"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/transaction/manageMemberDetails/viewMembers.jsp"/>  
+  </definition> 
+ <!-- MANAGE MEMBER END -->
+ 
+ <definition name="addMprPage" extends ="siteLayout">
+  <put name="title" 			value="addMprPage"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/mpr/addMprPage.jsp"/>  
+  </definition> 
+	
+<!--******** EXTRA PAGE TILES ********-->
+<definition name="showUnderConstruction" extends="showLayout">
+  <put name="title" 			value="Under Construction Page" />
+  <put name="body" 				value="/WEB-INF/login/pages/main/underConstruction.jsp" />
+</definition>
+<definition name="showAboutUs" extends="homeLayoutSmall">
+  <put name="title" 			value="AboutUs Page" />
+  <put name="body" 				value="/WEB-INF/login/pages/main/AboutUs.jsp" />
+</definition>
+
+
+<!-- *******************	NEW WORK 13SEP2012 ************************-->
+<definition name="showMoreNewsPage" extends="homeLayoutSmall">
+  <put name="title" 			value="Contact Details Page" />
+  <put name="body" 				value="/WEB-INF/login/pages/main/moreNewsPage.jsp" />
+</definition>
+<definition name="showContactDetail" extends="homeLayoutSmall">
+  <put name="title" 			value="Contact Details Page" />
+  <put name="body" 				value="/WEB-INF/login/pages/main/contactDtl.jsp" />
+</definition>
+<definition name="showKnowledgeBank" extends="homeLayoutSmall">
+  <put name="title"                   value="Knowledge Bank " />
+  <put name="body"                 value="/WEB-INF/login/pages/reports/outerReports/knowledgeBank.jsp" />
+</definition>
+<definition name="sitemap" extends="homeLayoutSmall">
+  <put name="title" 			value="Site Map Page" />
+  <put name="body" 				value="/WEB-INF/login/pages/common/sitemap.jsp" />
+</definition>
+<definition name="disclaimer" extends="homeLayoutSmall">
+  <put name="title" 			value="Disclaimer Page" />
+  <put name="body" 				value="/WEB-INF/login/pages/common/disclaimer.jsp" />
+</definition>
+<definition name="privacypolicy" extends="homeLayoutSmall">
+  <put name="title" 			value="Privacy Policy Page" />
+  <put name="body" 				value="/WEB-INF/login/pages/common/privacypolicy.jsp" />
+</definition>
+<!--********************	 END WORK  ******************************-->
+
+
+
+<definition name="addResourcePack" extends ="siteLayout">
+  <put name="title" 			value="Add Resources"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/language/resourceAdd.jsp"/>  
+</definition> 
+<definition name="showAssign" extends ="siteLayout">
+  <put name="title" 			value="Assign Language Pack"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/language/languagePackAssign.jsp"/>  
+</definition>
+<definition name="sucessCommonJsp" extends ="siteLayout">
+  <put name="title" 			value="Sucess Page"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/common/success.jsp"/>  
+</definition>
+<definition name="blankPage" extends ="siteLayout">
+  <put name="title" 			value="Welcome"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/main/blank.jsp"/>    
+</definition> 
+
+<!--******** EXTRA PAGE TILES END ********-->
+
+<!-- ******************************* NRLM REPORT PAGAES STARTS ******************************** -->
+
+<!-- ******************************** NRLM REPORT PAGAES ENDS ******************************** -->
+
+<definition name="showVillage" extends ="siteLayout">
+  	<put name="title"			value="Show Village"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/masters/village/showVillage.jsp"/>  
+</definition>  
+<definition name="showVillageForState" extends ="siteLayout">
+  	<put name="title" 			value="Show Village"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/masters/village/showVillageForState.jsp"/>  
+</definition>  
+<definition name="showVillageForDistrict" extends ="siteLayout">
+  	<put name="title" 			value="Show Village"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/masters/village/showVillageForDistrict.jsp"/>  
+</definition>  
+
+<definition name="districtForState" extends ="siteLayout">
+  	<put name="title" 			value="View Blockslist"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/masters/districtslist/districtForState.jsp"/>  
+</definition>  
+<definition name="showView" extends ="siteLayout">
+  	<put name="title" 			value="View Blockslist"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/masters/blockslist/showBlocklist.jsp"/>  
+</definition> 
+
+<definition name="showPageStateFinance" extends ="siteLayout">
+  	<put name="title" 			value="State Finance"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/finance/add.jsp"/>  
+</definition> 
+
+
+<definition name="showPagePpwsSetup" extends ="siteLayout">
+  	<put name="title" 			value="PPWS"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/ppws/add.jsp"/>  
+</definition> 
+<definition name="addPagePpwsSetup" extends ="siteLayout">
+  	<put name="title" 			value="PPWS"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/ppws/addppwsdetail.jsp"/>  
+</definition> 
+<definition name="editPagePpwsSetup" extends ="siteLayout">
+  	<put name="title" 			value="PPWS"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/ppws/editppwsdetail.jsp"/>  
+</definition>
+
+
+ 
+<definition name="showPageTradeTarget" extends ="siteLayout">
+  	<put name="title" 			value="Project Setup"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/projectSetup/tradeTarget.jsp"/>  
+</definition> 
+
+
+
+<definition name="editPageTradeTarget" extends ="siteLayout">
+  	<put name="title" 			value="Edit Project Setup"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/projectSetup/editTradeTarget.jsp"/>  
+</definition> 
+
+
+<definition name="addTradeTarget" extends ="siteLayout">
+  	<put name="title" 			value="Add Project Setup"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/projectSetup/addTradeTarget.jsp"/>  
+</definition> 
+
+
+<definition name="showPagesuccess" extends ="siteLayout">
+  	<put name="title" 			value="Add Project Setup"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/projectSetup/successTradeTarget.jsp"/>  
+</definition> 
+
+
+
+
+<definition name="showPageDistrictTarget" extends ="siteLayout">
+  	<put name="title" 			value="DISTRICT TARGET"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/projectSetup/districtTarget.jsp"/>  
+</definition> 
+
+
+<definition name="addDistrictTarget" extends ="siteLayout">
+  	<put name="title" 			value="DISTRICT TARGET"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/projectSetup/adddistrictTarget.jsp"/>  
+</definition> 
+
+
+
+<definition name="editPageDistrictTarget" extends ="siteLayout">
+  	<put name="title" 			value="DISTRICT TARGET"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/projectSetup/editdistrictTarget.jsp"/>  
+</definition> 
+
+
+<definition name="successDistrictTarget" extends ="siteLayout">
+  	<put name="title" 			value="DISTRICT TARGET"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/projectSetup/successdistrictTarget.jsp"/>  
+</definition> 
+
+
+
+
+
+
+<definition name="showPageTcSetupEntry" extends ="siteLayout">
+  	<put name="title" 			value="Training Center Detail"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/tcSetup/tcSetupEntry.jsp"/>  
+</definition> 
+
+<definition name="addPageTcSetupEntry" extends ="siteLayout">
+  	<put name="title" 			value="Training Center Detail"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/tcSetup/addtcSetupEntry.jsp"/>  
+</definition> 
+
+<definition name="editPageTcSetupEntry" extends ="siteLayout">
+  	<put name="title" 			value="Training Center Detail"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/tcSetup/edittcSetupEntry.jsp"/>  
+</definition> 
+
+<definition name="successTcSetupEntry" extends ="siteLayout">
+  	<put name="title" 			value="Training Center Detail"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/tcSetup/successtcSetupEntry.jsp"/>  
+</definition> 
+
+
+
+
+
+<!-- due deligence code start here  -->
+
+
+<definition name="showPageTcSetupDue" extends ="siteLayout">
+  	<put name="title" 			value="TRAINING CENTER-DUE DILIGENCE"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/tcSetup/tcSetupDue.jsp"/>  
+</definition> 
+
+<definition name="editPageTcSetupDue" extends ="siteLayout">
+  	<put name="title" 			value="TRAINING CENTER-DUE DILIGENCE"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/tcSetup/editTcSetupDue.jsp"/>  
+</definition> 
+
+<definition name="addTcSetupDue" extends ="siteLayout">
+  	<put name="title" 			value="TRAINING CENTER-DUE DILIGENCE"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/tcSetup/addTcSetupDue.jsp"/>  
+</definition> 
+
+<!-- due deligence code ends here  --> 
+
+<definition name="showPageTcSetupTrade" extends ="siteLayout">
+  	<put name="title" 			value="Training Center-Trade Target"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/tcSetup/tcSetupTrade.jsp"/>  
+</definition> 
+<definition name="addPageTcSetupTrade" extends ="siteLayout">
+  	<put name="title" 			value="Training Center-Trade Target"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/tcSetup/addtcSetupTrade.jsp"/>  
+</definition> 
+<definition name="editPageTcSetupTrade" extends ="siteLayout">
+  	<put name="title" 			value="Training Center-Trade Target"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/tcSetup/edittcSetupTrade.jsp"/>  
+</definition> 
+
+<definition name="showPageHRTeam" extends ="siteLayout">
+  	<put name="title" 			value="HR Team"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/hrTeam/add.jsp"/>  
+</definition> 
+
+
+<definition name="showViewMain" extends ="siteLayout">
+  	<put name="title" 			value="Modify Manage Federation Details"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/transaction/manageFederationDetails/showViewFederationState.jsp"/>  
+</definition>
+<definition name="showManageFederationMeetingDetailsForState" extends ="siteLayout">
+  	<put name="title" 			value="View Manage Federation Meeting Details"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/transaction/manageFederationMeetingDetails/showManageFederationMeetingDetailsForState.jsp"/>  
+</definition> 
+
+<definition name="showViewBlockPage" extends ="siteLayout">
+  	<put name="title" 			value="View Blockslist"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/masters/blockslist/blockView.jsp"/>  
+</definition>  
+  <definition name="showAddBranchServiceAreaPage" extends ="siteLayout">
+  	<put name="title" 			value="Add Bank Branch Service Area"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/masters/bankBranchServiceArea/serviceAreaAdd.jsp"/>  
+</definition> 
+<definition name="showModifyBranchServiceAreaPage" extends ="siteLayout">
+  	<put name="title" 			value="Modify Bank Branch Service Area"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/masters/bankBranchServiceArea/serviceAreaModify.jsp"/>  
+</definition> 
+<!-- End -->
+
+
+<!-- PIA PAGES-->
+<definition name="pia_registration_page" extends="outerLayoutWithoutHeader">
+	<put name="title" 			value="PIA Registration"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/registration/registration.jsp"/>
+</definition>
+<definition name="print_pia_registration_page" extends="outerLayoutWithoutHeader">
+	<put name="title" 			value="view PIA Registration"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/registration/registrationPrint.jsp"/>
+</definition>
+<definition name="pia_registrationPartB_Page" extends="outerLayoutWithoutHeader">
+	<put name="title" 			value="PIA Registration"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/registration/registrationNextPage.jsp"/>
+</definition>
+<definition name="pia_registrationPartA_Page" extends="outerLayoutWithoutHeader">
+	<put name="title" 			value="PIA Registration"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/registration/registrationModify.jsp"/>
+</definition>
+<definition name="pia_registration_partB_modify" extends="outerLayoutWithoutHeader">
+	<put name="title" 			value="PIA Registration"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/registration/registrationNextPageModify.jsp"/>
+</definition>
+<definition name="pia_search_page" extends="outerLayoutWithoutHeader">
+	<put name="title" 			value="PIA"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/registration/PIAFiltrationPage.jsp"/>
+</definition>
+<definition name="pia_complete_registration" extends="outerLayoutWithoutHeader">
+	<put name="title" 			value="PIA"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/registration/completeRegistrationPIAPage.jsp"/>
+</definition>
+<definition name="pia_show_human_resource_page" extends="siteLayout">
+	<put name="title" 			value="Human Resource"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/proposal/humanResource.jsp"/>
+</definition>
+<definition name="pia_show_infrastructure_page" extends="siteLayout">
+	<put name="title" 			value="Human Resource"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/proposal/infrastructure.jsp"/>
+</definition>
+<definition name="pia_show_mobilization_page" extends="siteLayout">
+	<put name="title" 			value="Human Resource"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/proposal/mobilization.jsp"/>
+</definition>
+<definition name="PlacementDetailsPage" extends="outerLayoutWithoutHeader">
+	<put name="title" 			value="Placement Details Page"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/proposal/placement.jsp"/>
+</definition>
+
+<definition name="ProjectDeliveryPage" extends="outerLayoutWithoutHeader">
+	<put name="title" 			value="Project delivery Page"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/proposal/projectDeliveryPage.jsp"/>
+</definition>
+
+<definition name="QualityControlPage" extends="outerLayoutWithoutHeader">
+	<put name="title" 			value="Quality Control Page"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/proposal/qualityControl.jsp"/>
+</definition>
+<definition name="pia_show_training_page" extends="siteLayout">
+	<put name="title" 			value="Human Resource"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/proposal/trainingPage.jsp"/>
+</definition>
+<definition name="pia_show_training_target_page" extends="siteLayout">
+	<put name="title" 			value="TrainingTargets"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/proposal/training Targets.jsp"/>
+</definition>
+<definition name="pia_show_estimated_cost_page" extends="siteLayout">
+	<put name="title" 			value="Human Resource"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/proposal/estimatedCost.jsp"/>
+</definition>
+<definition name="pia_show_curriculam_page" extends="siteLayout">
+	<put name="title" 			value="Human Resource"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/proposal/curriculum.jsp"/>
+</definition>
+<definition name="pia_show_graphical_coverage_page" extends="siteLayout">
+	<put name="title" 			value="Human Resource"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/proposal/geographicalCoverage.jsp"/>
+</definition>
+<definition name="pia_show_pia_verification_page" extends="siteLayout">
+	<put name="title" 			value="Verify PIA"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/management/piaVerification.jsp"/>
+</definition>
+<definition name="pia_show_pia_rejection_page" extends="siteLayout">
+	<put name="title" 			value="Reject Verified PIA"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/management/piaRejection.jsp"/>
+</definition>
+<definition name="pia_show_pia_category_change_page" extends="siteLayout">
+	<put name="title" 			value="Category Change of PIA"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/management/categoryChangePage.jsp"/>
+</definition>
+<definition name="pia_show_pia_reject_L1_page" extends="siteLayout">
+	<put name="title" 			value="Peject Incomplete PIA"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/management/incompletePIARejectionAtL1.jsp"/>
+</definition>
+<definition name="pia_show_pia_docs_check_page" extends="siteLayout">
+	<put name="title" 			value="Check Documents of PIA"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/management/piaDocsCheck.jsp"/>
+</definition>
+<definition name="showPiaRegStatusReportPage" extends="homeLayoutSmall">
+	<put name="title" 			value="PIA Application Status Page"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/reports/outerReports/piaRegStatusReport.jsp"/>
+</definition>
+<definition name="aajeevikaPresentaionPage" extends="homeLayoutSmall">
+	<put name="title" 			value="Aajeevika Skills Presentation"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/reports/outerReports/aajeevikaSkillsPresentation.jsp"/>
+</definition>
+ <definition name="resourcePage" extends="homeLayoutSmall">
+	<put name="title" 			value="Resource"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/reports/outerReports/resourcePage.jsp"/>
+</definition> 
+<definition name="SGSYSplPage" extends="homeLayoutSmall">
+	<put name="title" 			value="Resource"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/reports/outerReports/SGSYSplProjectPage.jsp"/>
+</definition>
+<definition name="showContactDetail" extends="homeLayoutSmall">
+  <put name="title" 			value="Contact Details Page" />
+  <put name="body" 				value="/WEB-INF/login/pages/reports/outerReports/contactDtl.jsp" />
+</definition>
+<definition name="projectProposalPendingPage" extends="homeLayoutSmall">
+	<put name="title" 			value="Project Proposal Pending"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/reports/outerReports/projectProposalsPending.jsp"/>
+</definition>
+
+<definition name="piaListPage" extends="siteLayout">
+  	<put name="title" 			value="PIA Details"/>   	
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/piaLoginReport/piaRegDetail.jsp"/>    	
+</definition>
+<definition name="piaCompleteDetailPage" extends="siteLayout">
+  	<put name="title" 			value="Complete PIA Details"/>   	
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/piaLoginReport/piaCompleteDetail.jsp"/>    	
+</definition>
+<definition name="PIA_MODIFICATION_LOGINPAGE" extends="siteLayout">
+	<put name="title" 			value="PIA Documents Modification"/>
+	<put name="body"			value="/WEB-INF/login/pages/pia/management/modifyPageForPIA.jsp"/>
+</definition>
+<definition name="outer_PiaList_Page" extends="homeLayoutSmall">
+  	<put name="title" 			value="Outer PIA Details"/>   	
+  	<put name="body" 			value="/WEB-INF/login/pages/reports/outerReports/outerPiaRegDetail.jsp"/>    	
+</definition>
+<definition name="outer_PiaCompleteDetail_Page" extends="homeLayoutSmall">
+  	<put name="title" 			value="Outer Complete PIA Details"/>   	
+  	<put name="body" 			value="/WEB-INF/login/pages/reports/outerReports/outerPiaCompleteDetail.jsp"/>    	
+</definition>
+
+<!-- Download PIA List in zip format with documents data: 4 April 2014 -->
+<definition name="downloadPIAExcelPage" extends="siteLayout">
+	<put name="title" 			value="PIA Excel Download"/>
+	<put name="body"			value="/WEB-INF/login/pages/pia/piaLoginReport/downloadPIAExcel.jsp"/>
+</definition>
+
+<!-- PIA Reports -->
+<definition name="showTargetPAGE" extends="homeLayoutSmall">
+  	<put name="title" 			value="Target Summary"/>   	
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/piaSummaryReport/targetSummary.jsp"/>    	
+</definition>
+
+<definition name="showTrainingDurationPage" extends="homeLayoutSmall">
+  	<put name="title" 			value="Training Duration"/>   	
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/piaSummaryReport/trainingDuration.jsp"/>    	
+</definition>
+
+
+
+<!-- changes in sanction project -->
+
+ 
+ <definition name="sanction_details" extends ="siteLayout">
+  	<put name="title" 			value="Project Sanction Details"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/project/sanction.jsp"/>  
+</definition> 
+
+<definition name="editPageSanction" extends ="siteLayout">
+  	<put name="title" 			value="Project Sanction Details"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/project/editSanction.jsp"/>  
+</definition> 
+
+<definition name="addTcSanction" extends ="siteLayout">
+  	<put name="title" 			value="Project Sanction Details"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/project/addSanction.jsp"/>  
+</definition> 
+ 
+<!-- end --> 
+ 
+ 
+ 
+ <definition name="showPageProjectdetails" extends ="siteLayout">
+  	<put name="title" 			value="Project Details"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/projectSetup/projectDetails.jsp"/>  
+</definition> 
+
+
+
+
+ <definition name="editPageProjectdetails" extends ="siteLayout">
+  	<put name="title" 			value="Project Details"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/projectSetup/editprojectDetails.jsp"/>  
+</definition> 
+
+
+
+ <definition name="addPageProjectdetails" extends ="siteLayout">
+  	<put name="title" 			value="Project Details"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/projectSetup/addprojectDetails.jsp"/>  
+</definition> 
+
+
+ <definition name="successPageProjectdetails" extends ="siteLayout">
+  	<put name="title" 			value="Project Details"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/projectSetup/successprojectDetails.jsp"/>  
+</definition> 
+
+
+<definition name="project_new_Target"  extends="siteLayout">
+	<put name="title" 			value="Project Setup Target" />   
+  	<put name="body" 			value="/WEB-INF/login/pages/project/setupTarget.jsp"/>
+  	
+ </definition>
+ 
+ 
+ <definition name="state_target_sanction" extends="siteLayout">
+	<put name="title" 			value="State Sanction Detail " />   
+  	<put name="body" 			value="/WEB-INF\login\pages\state\sanction\stateSanctionDetail.jsp"/>
+ </definition>
+ 
+ 
+ 
+ 
+                  <!-- BY CHARVI FOR KPI FORMS -->
+                  
+<definition name="indicator_details"  extends="siteLayout">
+	<put name="title" 			value="OverAll Indicators" />   
+  	<put name="body" 			value="/WEB-INF/login/pages/indicators/overallIndicator.jsp"/>
+ </definition>
+ 
+ 
+ <definition name="monitoring_project"  extends="siteLayout">
+	<put name="title" 			value="Project Candidate Data" />   
+  	<put name="body" 			value="/WEB-INF/login/pages/monitoringsystem/projectCandidateData.jsp"/>
+ </definition>
+                      <!-- ENDS -->
+<!-- MONITORING -->
+
+<definition name="showPagePpwsTrain" extends ="siteLayout">
+  	<put name="title" 			value="PPWS Achievement"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/monitoring/ppwsTrain.jsp"/>  
+</definition> 
+
+<definition name="showPagePpwsPlace" extends ="siteLayout">
+  	<put name="title" 			value="PPWS Achievement"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/monitoring/ppwsPlace.jsp"/>  
+</definition> 
+
+
+ <definition name="showPageFirstInst" extends ="siteLayout">
+  	<put name="title" 			value="Fund Installments"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/monitoring/firstInst.jsp"/>  
+</definition> 
+
+ <definition name="showPageSecondInst" extends ="siteLayout">
+  	<put name="title" 			value="Fund Installments"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/monitoring/secondInst.jsp"/>  
+</definition> 
+
+ <definition name="showPageThirdInst" extends ="siteLayout">
+  	<put name="title" 			value="Fund Installments"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/monitoring/thirdInst.jsp"/>  
+</definition> 
+
+ <definition name="showPageFourthInst" extends ="siteLayout">
+  	<put name="title" 			value="Fund Installments"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/monitoring/fourthInst.jsp"/>  
+</definition> 
+
+
+<definition name="showMonitoringInspection" extends="siteLayout">
+  <put name="title" 		value="MONITORING INSPECTION" />
+  <put name="body" 			value="/WEB-INF/login/pages/monitoringsystem/monitoringinspection.jsp" />
+</definition>
+<definition name="MonitoringInspection" extends="siteLayout">
+  <put name="title" 		value="MONITORING INSPECTION" />
+  <put name="body" 			value="/WEB-INF/login/pages/monitoringsystem/showMonitoringInspection.jsp" />
+</definition>
+
+
+<definition name="showMonitoringAlert" extends="siteLayout">
+  <put name="title" 		value="MONITORING ALERTS" />
+  <put name="body" 			value="/WEB-INF/login/pages/monitoringsystem/projectAlert.jsp" />
+</definition>
+
+
+<definition name="addMonitoringAlert" extends="siteLayout">
+  <put name="title" 		value="ADD MONITORING ALERTS" />
+  <put name="body" 			value="/WEB-INF/login/pages/monitoringsystem/addprojectAlert.jsp" />
+</definition>
+
+<definition name="editMonitoringAlert" extends="siteLayout">
+  <put name="title" 		value="EDIT MONITORING ALERTS" />
+  <put name="body" 			value="/WEB-INF/login/pages/monitoringsystem/editprojectAlert.jsp" />
+</definition>
+
+
+
+<definition name="showMonitoringPenalty" extends="siteLayout">
+  <put name="title" 		value="MONITORING PENALTY" />
+  <put name="body" 			value="/WEB-INF/login/pages/monitoringsystem/projectPenalty.jsp" />
+</definition>
+<definition name="addMonitoringPenalty" extends="siteLayout">
+  <put name="title" 		value="MONITORING PENALTY" />
+  <put name="body" 			value="/WEB-INF/login/pages/monitoringsystem/addprojectPenalty.jsp" />
+</definition>
+<definition name="editMonitoringPenalty" extends="siteLayout">
+  <put name="title" 		value="MONITORING PENALTY" />
+  <put name="body" 			value="/WEB-INF/login/pages/monitoringsystem/editprojectPenalty.jsp" />
+</definition>
+
+
+
+
+
+
+
+
+<!-- -->
+
+
+
+
+
+
+
+<definition name="showSectorPAGE" extends="homeLayoutSmall">
+  	<put name="title" 			value="Sector Summary"/>   	
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/piaSummaryReport/sectorSummary.jsp"/>    	
+</definition>
+
+<definition name="showTradePAGE" extends="homeLayoutSmall">
+  	<put name="title" 			value="Training Summary"/>   	
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/piaSummaryReport/tradeSummary.jsp"/>    	
+</definition>
+
+<definition name="showDistrictSummaryPage" extends="homeLayoutSmall">
+  	<put name="title" 			value="District Summary"/>   	
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/piaSummaryReport/districtSummary.jsp"/>    	
+</definition>
+
+<definition name="showProjectRegistrationPage" extends="homeLayoutSmall">
+  	<put name="title" 			value="Project information"/>   	
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/piaSummaryReport/projectRegistration.jsp"/>    	
+</definition>
+
+<definition name="showTrainingInformationPage" extends="homeLayoutSmall">
+  	<put name="title" 			value="Training information"/>   	
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/piaSummaryReport/trainingInformation.jsp"/>    	
+</definition>
+
+<!-- Sanction Orders -->
+<definition name="showSanctionOrderPage" extends="siteLayout">
+	<put name="title" 			value="Sanction Order Upload"/>
+	<put name="body"			value="/WEB-INF/login/pages/sanctionOrders/sanctionOrder.jsp"/>
+</definition>
+
+<definition name="showSanctionOrderModifyPage" extends="siteLayout">
+	<put name="title" 			value="Sanction Order Modify"/>
+	<put name="body"			value="/WEB-INF/login/pages/sanctionOrders/modifySanctionOrder.jsp"/>
+</definition>
+<definition name="showSanctionOrderReportPage" extends="tableSearchLayout">
+	<put name="title" 			value="Sanction Order Report"/>
+	<put name="body"			value="/WEB-INF/login/pages/sanctionOrders/sanctionOrderReport.jsp"/>
+</definition>
+
+<definition name="showSanctionOrderReportPageNew" extends="tableSearchLayout">
+	<put name="title" 			value="Sanction Order Report"/>
+	<put name="body"			value="/WEB-INF/login/pages/sanctionOrders/sanctionOrderReportNew.jsp"/>
+</definition>
+
+<!-- <definition name="showSanctionOrderReportPage" extends="homeLayoutSmall">
+	<put name="title" 			value="Sanction Order Report"/>
+	<put name="body"			value="/WEB-INF/login/pages/sanctionOrders/sanctionOrderReport.jsp"/>
+</definition> -->
+
+<definition name="tendersPage" extends="homeLayoutSmall">
+	<put name="title" 			value="Tenders"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/reports/outerReports/tenders.jsp"/>
+</definition>
+
+<definition name="showPiaLogPage" extends="siteLayout">
+	<put name="title" 			value="PIA Status History"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/piaLoginReport/piaLogs.jsp"/>
+</definition>
+
+<definition name="showPiaAllLogPage" extends="siteLayout">
+	<put name="title" 			value="PIA Status History"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/piaLoginReport/piaAllLogs.jsp"/>
+</definition>
+
+<definition name="showPiaStatusPage" extends="siteLayout">
+	<put name="title" 			value="PIA Status"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/pia/piaLoginReport/piaStatusReport.jsp"/>
+</definition>
+<!--  ***** Outer Reports End******  -->
+
+  <definition name="showBatchCreation" extends="siteLayout">
+	<put name="title" 			value="Batch Creation " />   
+  	<put name="body" 			value="/WEB-INF/login/pages/state/tcSetup/batchCreation.jsp"/>
+ </definition>
+ 
+ 
+ <definition name="addBatchCreation" extends="siteLayout">
+	<put name="title" 			value="Batch Creation " />   
+  	<put name="body" 			value="/WEB-INF/login/pages/state/tcSetup/addbatchCreation.jsp"/>
+ </definition>
+ 
+ <definition name="editBatchCreation" extends="siteLayout">
+	<put name="title" 			value="Batch Creation " />   
+  	<put name="body" 			value="/WEB-INF/login/pages/state/tcSetup/editbatchCreation.jsp"/>
+ </definition>
+
+<!-- Updated By Balram Dixit for User Access Control on 08-03-2017 start-->
+
+<definition name="addRole" extends ="siteLayout">
+  <put name="title" 			value="Add Role"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/userManagementControl/addRole.jsp"/>  
+</definition> 
+<definition name="addModule" extends ="siteLayout">
+  <put name="title" 			value="Add Module"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/userManagementControl/addModule.jsp"/>   
+</definition> 
+<definition name="addUserMaster" extends ="siteLayout">
+  <put name="title" 			value="Add User"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/userManagementControl/addUserMaster.jsp"/>  
+</definition> 
+<definition name="editUserPassword" extends ="siteLayout">
+  <put name="title" 			value="Add User"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/userManagementControl/editUserPassword.jsp"/>  
+</definition>
+<definition name="assignRoleMaster" extends ="siteLayout">
+  <put name="title" 			value="Assign Role"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/userManagementControl/assignRoleMaster.jsp"/>  
+</definition>
+<definition name="projectMapping" extends ="siteLayout">
+  <put name="title" 			value="Assign Project"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/userManagementControl/projectMapping.jsp"/>  
+</definition>
+<!-- Updated By Balram Dixit for User Access Control on 08-03-2017 end-->
+<!-- Kamal 16-03-2017 -->
+<definition name="showCandidateStat" extends="siteLayout">
+  <put name="title" 		value="MONITORING PENALTY" />
+  <put name="body" 			value="/WEB-INF/login/pages/candidateStatics/candidateStaticsPage.jsp" />
+</definition>
+
+
+
+
+
+<!-- KPI Reports from Varun And Mukesh -->
+<definition name="showappraisals" extends="siteLayout">
+  <put name="title" 		value="Appraisals" />
+  <put name="body" 			value="/WEB-INF/login/pages/reports/kpiReports/appraisals.jsp" />
+</definition>
+<definition name="showchampionEmployer" extends="siteLayout">
+  <put name="title" 		value="Champion Employer" />
+  <put name="body" 			value="/WEB-INF/login/pages/reports/kpiReports/championEmployer.jsp" />
+</definition>
+<definition name="showexceptionsNational" extends="siteLayout">
+  <put name="title" 		value="Exceptions National" />
+  <put name="body" 			value="/WEB-INF/login/pages/reports/kpiReports/exceptionsNational.jsp" />
+</definition>
+<definition name="showexceptionsState" extends="siteLayout">
+  <put name="title" 		value="Exceptions State" />
+  <put name="body" 			value="/WEB-INF/login/pages/reports/kpiReports/exceptionsState.jsp" />
+</definition>
+<definition name="showfinancialAchievement" extends="siteLayout">
+  <put name="title" 		value="Financial Achievement" />
+  <put name="body" 			value="/WEB-INF/login/pages/reports/kpiReports/financialAchievement.jsp" />
+</definition>
+<definition name="showinstallmentStatus" extends="siteLayout">
+  <put name="title" 		value="Installment Status"/>
+  <put name="body" 			value="/WEB-INF/login/pages/reports/kpiReports/installmentStatus.jsp" />
+</definition>
+<definition name="showoverallIndicators" extends="siteLayout">
+  <put name="title" 		value="Overall Indicators" />
+  <put name="body" 			value="/WEB-INF/login/pages/reports/kpiReports/overallIndicators.jsp" />
+</definition>
+<definition name="showphysicalAchievement" extends="siteLayout">
+  <put name="title" 		value="Physical Achievement" />
+  <put name="body" 			value="/WEB-INF/login/pages/reports/kpiReports/physicalAchievement.jsp" />
+</definition>
+
+<!--kamal state master form date:- 27-03-2017-->
+ <definition name="showStateMaster" extends="siteLayout">
+	<put name="title" 			value="State Master"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/masters/stateMaster/stateMaster.jsp"/>
+</definition>
+
+<definition name="showdistrictMaster" extends="siteLayout">
+	<put name="title" 			value="District Master"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/masters/districtMaster/districtMaster.jsp"/>
+</definition>
+<definition name="showspecialAreaMaster" extends="siteLayout">
+	<put name="title" 			value="Special Area Master"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/masters/specialArea/specialAreaMaster.jsp"/>
+</definition>
+<definition name="showdesignationMaster" extends="siteLayout">
+	<put name="title" 			value="Designation Master"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/masters/designationMaster/designationMaster.jsp"/>
+</definition>
+<!-- new added by CHARVI for ctsa master -->
+
+<definition name="addCtsaMaster_to_follow" extends ="siteLayout">
+  <put name="title" 			value="Ctsa Master"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/masters/ctsaMaster/ctsaMaster.jsp"/>  
+</definition>
+
+<definition name="addTsaMaster_pathTo_follow" extends ="siteLayout">
+  <put name="title" 			value="Tsa Master"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/masters/tsaMaster/tsaMaster.jsp"/>  
+</definition>
+
+
+<definition name="addAppraisalAgency_to_follow" extends ="siteLayout">
+  <put name="title" 			value="Appraisal Agency Master"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/masters/appraisalAgency/addAppraisalAgency.jsp"/>  
+</definition>
+
+<definition name="addAssessmentBodyMaster_pathTo_follow" extends ="siteLayout">
+  <put name="title" 			value="Assessment Body Master"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/masters/assessmentBodyMaster/addAssessmentBodyMaster.jsp"/>  
+</definition>
+
+<!-- new added by Manoj for  master -->
+<definition name="projectType" extends="siteLayout">
+  <put name="title" 		value="Project Type Master" />
+  <put name="body" 			value="/WEB-INF/login/pages/masterData/projectType.jsp" />
+</definition>
+
+<definition name="showSector" extends="siteLayout">
+  <put name="title" 		value="Sector Master" />
+  <put name="body" 			value="/WEB-INF/login/pages/masterData/sectorMaster.jsp" />
+</definition>
+<definition name="showConstituency" extends="siteLayout">
+  <put name="title" 		value="Constituency Master" />
+  <put name="body" 			value="/WEB-INF/login/pages/masterData/ConstituencyMaster.jsp" />
+</definition>
+
+<definition name="showTrade" extends="siteLayout">
+  <put name="title" 		value="Trade Master" />
+  <put name="body" 			value="/WEB-INF/login/pages/masterData/tradeMaster.jsp" />
+</definition>
+
+<!-- end here -->
+
+<!-- Varun Tiles for Sanction Post -->
+<definition name="showSanctionPost" extends="siteLayout">
+  <put name="title" 		value="Sanction Post" />
+  <put name="body" 			value="/WEB-INF/login/pages/masters/sanctionPost/addsanctionPost.jsp" />
+</definition>
+<!--Varun for Certifying Agency  -->
+<definition name="showCertifyingAgency" extends="siteLayout">
+  <put name="title" 		value="CERTIFYING AGENCY" />
+  <put name="body" 			value="/WEB-INF/login/pages/masters/certifyingAgency/addCertifyingAgency.jsp" />
+</definition>
+
+<definition name="showPageStateFinanceForAdmin" extends ="siteLayout">
+  	<put name="title" 			value="State Finance"/>    
+  	<put name="body" 			value="/WEB-INF/login/pages/state/finance/statefinanceAdmin.jsp"/>  
+</definition>
+
+<definition name="addParliamentaryConstituencyMaster_to_follow" extends ="siteLayout">
+  <put name="title" 			value="Parliamentary Constituency"/>    
+  <put name="body" 				value="/WEB-INF/login/pages/masters/parliamentaryConstituencyMaster/parliamentaryConstituencyMaster.jsp"/>  
+</definition>
+
+ <definition name="showBatchCompletion" extends="siteLayout">
+	<put name="title" 			value="Batch Completion " />   
+  	<put name="body" 			value="/WEB-INF/login/pages/state/tcSetup/batchCompletion.jsp"/>
+ </definition>
+
+ <definition name="addBatchCompletion" extends="siteLayout">
+	<put name="title" 			value="Batch Completion " />   
+  	<put name="body" 			value="/WEB-INF/login/pages/state/tcSetup/addbatchCompletion.jsp"/>
+ </definition>
+ <definition name="editBatchCompletion" extends="siteLayout">
+	<put name="title" 			value="Batch Completion " />   
+  	<put name="body" 			value="/WEB-INF/login/pages/state/tcSetup/editbatchCompletion.jsp"/>
+	
+ </definition>
+ 
+  <definition name="monitoringProgressReport" extends="siteLayout">
+	<put name="title" 			value="Monitoring ProgressReport" />   
+  	<put name="body" 			value="/WEB-INF/login/pages/reports/monitoringProgressReport.jsp"/>
+	
+ </definition>
+  <definition name="showProgressReport" extends="siteLayout">
+	<put name="title" 			value="Progress Report " />   
+  	<put name="body" 			value="/WEB-INF/login/pages/progressReport/ProgressReport1.jsp"/>
+
+ </definition> 
+ 
+<definition name="showProgressReport2" extends="siteLayout">
+	<put name="title" 			value="Progress Report " />   
+  	<put name="body" 			value="/WEB-INF/login/pages/progressReport/ProgressReport2.jsp"/>
+
+</definition>  
+
+<definition name="showProgressReport3" extends="siteLayout">
+	<put name="title" 			value="Progress Report " />   
+  	<put name="body" 			value="/WEB-INF/login/pages/progressReport/ProgressReport3.jsp"/>
+
+</definition>
+
+<definition name="showProgressReport4" extends="siteLayout">
+	<put name="title" 			value="Progress Report " />   
+  	<put name="body" 			value="/WEB-INF/login/pages/progressReport/ProgressReport4.jsp"/>
+</definition>
+
+<definition name="showProgressReport7" extends="siteLayout">
+	<put name="title" 			value="Progress Report " />   
+  	<put name="body" 			value="/WEB-INF/login/pages/progressReport/ProgressReport7.jsp"/>
+</definition> 
+
+<definition name="showdashboard" extends="siteLayout">
+  <put name="title" 		value="Dashboard" />
+  <put name="body" 			value="/WEB-INF/login/pages/reports/kpiReports/dashboard.jsp" />
+</definition>
+</tiles-definitions>

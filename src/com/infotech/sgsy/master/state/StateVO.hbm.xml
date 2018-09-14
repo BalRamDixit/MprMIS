@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping> 
+
+	<class name="com.infotech.sgsy.master.state.StateVO" table="mst_state" schema="public"> 
+		<id name="stateId" column="state_id" >		
+			<generator class="sequence">
+        		<param name="sequence">mst_state_Id_Seq</param>
+    		</generator>
+		</id>			
+		<property name="stateCode" column="state_code" length="30" />  
+ 		<property name="stateName" column="state_name" length="30" /> 
+ 		<property name="stateShortName" column="state_short_name"  length="5" />
+ 		<property name="centerShare"   type="integer"   column="Center_Share" length="3"></property>  
+ 		<property name="stateShare"   type="integer"  column="State_Share" length="3"></property>  
+ 		<property name="sc_st"   type="integer" column="scst_percentage" length="3"></property>  
+ 		<property name="miniority"   type="integer" column="minority_percentage" length="3"></property>  
+ 		<property name="women"   type="integer" column="women_percentage" length="3" ></property>  
+ 		
+ 		 <!--  <set name="district" table="district_master_table" lazy="false"  fetch="select" >
+            <key>
+                <column name="state_id" not-null="true"/>
+            </key>
+            <one-to-many class="com.infotech.sgsy.master.districtMasterNew.DistrictMasterVO" />
+        </set> 
+ 		 -->
+ 		
+ 		
+ 			
+ 		<property name="createdOn" column="created_on"  type="date" length="10" /> 
+ 		<property name="createdBy" column="created_by" length="25"/> 		
+ 		<property name="updatedOn" column="modified_on" type="date" length="10" /> 
+ 		<property name="updateBy" column="modifed_by" length="25"/>
+ 		
+ 	</class>
+ 	
+</hibernate-mapping>
+
+
+<!-- <many-to-one name="stock" class="com.mkyong.stock.Stock" fetch="select">
+            <column name="STOCK_ID" not-null="true" />
+        </many-to-one> -->

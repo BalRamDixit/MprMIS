@@ -1,0 +1,12 @@
+package com.infotech.sgsy.selfHelpGroup.MG;
+
+
+
+import java.io.Serializable;
+
+import com.infotech.sgsy.selfHelpGroup.MasterShgVO;
+
+public class SHGVO extends MasterShgVO implements Serializable{
+
+	
+}

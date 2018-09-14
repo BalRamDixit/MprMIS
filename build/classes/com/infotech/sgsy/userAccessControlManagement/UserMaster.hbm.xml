@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 19, 2013 5:52:12 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.infotech.sgsy.userAccessControlManagement.UserMaster" table="user_master" schema="public">
+        <id name="id" column="id">
+    		<generator class="sequence">
+        		<param name="sequence">user_master_Id_Seq</param>
+    		</generator>
+		</id>
+        <property name="createdBy" type="string">
+            <column name="created_by" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="created_on" />
+        </property>
+        <property name="updatedBy" type="string">
+            <column name="last_modified_by" />
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="last_modified_on" />
+        </property>
+        
+        <property name="userName" type="string">
+            <column name="user_name" />
+        </property>
+        <property name="loginId" type="string">
+            <column name="login_id" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" />
+        </property>
+        <property name="emailId" type="string">
+            <column name="email_id" />
+        </property>
+        <property name="loginStatus" type="string">
+            <column name="login_status" />
+        </property>
+        <property name="loginAttempt" type="integer">
+            <column name="login_attempt" />
+        </property>
+        <property name="mobileNo" type="string">
+            <column name="mobile_no" />
+        </property>
+        <property name="activeFlag" type="string">
+            <column name="active_flag" />
+        </property>
+        <property name="roleId" type="string">
+            <column name="role_id" />
+        </property>
+        <many-to-one name="stateId" class="com.infotech.sgsy.master.state.StateVO" not-found="ignore" not-null="false" lazy="false"  fetch="select" >
+            <column name="state_id"  />
+       </many-to-one> 
+       <many-to-one name="ctsaId" class="com.infotech.sgsy.master.ctsaMaster.CtsaMasterVO" not-found="ignore" not-null="false" lazy="false"  fetch="select" >
+            <column name="ctsa_id"  />
+       </many-to-one> 
+    </class>
+</hibernate-mapping>

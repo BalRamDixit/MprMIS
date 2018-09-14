@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+                                   
+<hibernate-mapping>
+ <class name="com.infotech.skills.hbm.piaproposal.TrainingTargetsVO"  table="pia_training_targets">
+  <composite-id  mapped="true" >
+           <key-property name="piaCode" type="string">
+                <column name="pia_code" />
+            </key-property>
+            <key-property name="proposalCode" type="string">
+                <column name="proposal_code" />
+            </key-property>
+        </composite-id>
+  <property   name="year" type="string">
+   <column  name="year"/>
+  </property>
+  <property  name="month" type="string">
+   <column  name="month"/>
+  </property>
+   <property   name="batch" type="string">
+   <column  name=" batch"/>
+  </property>
+  <property   name="trade" type="string">
+   <column  name="trade"/>
+  </property>
+  <property name="noOfCandidates" type="string">
+   <column  name="noOfCandidates"/>
+  </property>  
+  <property name="createdOn" type="string">
+   <column  name="created_on"/>
+  </property>
+  <property name="createdBy" type="string">
+   <column  name="created_by"/>
+  </property>
+  <property name="modifyOn" type="string">
+   <column  name="modify_on"/>
+  </property>  
+  <property name="modifyBy" type="string">
+   <column  name="modify_by"/>
+  </property>
+ 
+ </class>
+</hibernate-mapping>
+  
+                                   

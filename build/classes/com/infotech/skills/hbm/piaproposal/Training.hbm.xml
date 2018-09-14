@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 17, 2013 4:31:40 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.infotech.skills.hbm.piaproposal.Training" table="TRAINING">
+        <id name="id" type="sun.security.util.BigInt">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="biometricMachines" type="int">
+            <column name="biometric_machines" />
+        </property>
+        <property name="trainerTraineeRatio" type="java.lang.String">
+            <column name="trainer_trainee_ratio" />
+        </property>
+        <property name="trainingSchedule" type="java.lang.String">
+            <column name="training_schedule" />
+        </property>
+        <property name="trainingMethodology" type="java.lang.String">
+            <column name="training_methodology" />
+        </property>
+        <property name="beneficiariesTraining" type="java.lang.String">
+            <column name="beneficiaries_job_training" />
+        </property>
+        <property name="internalMethodology" type="java.lang.String">
+            <column name="internal_assessment_methodology" />
+        </property>
+         <property name="createdOn" type="java.lang.String">
+   <column name="created_on" not-null="true"/>
+  </property>
+  <property name="createdBy" type="java.lang.String">
+   <column name="created_by" not-null="true"/>
+  </property>
+  <property name="modifyOn" type="java.lang.String">
+   <column name="modify_on" not-null="true"/>
+  </property>
+  <property name="modifyBy" type="java.lang.String">
+   <column name="modify_by" not-null="true"/>
+  </property>
+    </class>
+</hibernate-mapping>

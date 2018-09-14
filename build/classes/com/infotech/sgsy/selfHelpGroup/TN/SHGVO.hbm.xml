@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping auto-import="false"> 
+
+	<class name="com.infotech.sgsy.selfHelpGroup.TN.SHGVO" table="TN_SHG_Detail"> 
+
+  		<id name="shgCode" unsaved-value="null">
+  		 <column name="shg_code" />
+   			<generator class="sequence" >
+            	<param name="sequence">TN_shg_seq</param>
+   			</generator>
+  		</id> 		
+  	<property name="bankName" formula="(SELECT coalesce(bk.bank_name,'') FROM mst_bank as bk WHERE bk.bank_code = bank_code)"/>
+  	<property name="bankBranchName" formula="(SELECT coalesce(br.bank_branch_name,'') FROM mst_bank_branch as br WHERE br.bank_branch_code = bank_branch_code)"/>	
+	
+	<property   name="entityCode" type="string">
+   		<column length="13" name="entity_code"/>
+  	</property>
+  	<property   name="shgType" type="string">
+   		<column length="1" name="shg_type"/>
+  	</property>
+  	<property   name="groupName" type="string">
+   		<column length="50" name="group_name"/>
+  	</property>
+  	<property   name="formationdate" type="string">
+   		<column length="10" name="group_formation_date"/>
+  	</property>
+  	<property   name="promotedBy" type="string">
+   		<column length="5" name="promoted_by"/>
+  	</property>
+  	<property   name="promoterName" type="string">
+   		<column length="100" name="promoter_name"/>
+  	</property>
+  	
+  	<property   name="bankCode" type="string">
+   		<column length="6" name="bank_code"/>
+  	</property>  	
+  	<property   name="bankBranchCode" type="string">
+   		<column length="10" name="bank_branch_code"/>
+  	</property>
+  	<property   name="bankAccountNo" type="string">
+   		<column length="16" name="bank_account_no"/>
+  	</property>
+  	<property   name="opDateofAccount" type="string">
+   		<column length="10" name="op_date_of_account"/>
+  	</property>
+  	
+  	<property   name="microPlanPrepared" type="string">
+   		<column length="1" name="micro_plan_prepared"/>
+  	</property>  	
+  	<property   name="basicShgTraining" type="string">
+   		<column length="1" name="basic_shg_training"/>
+  	</property>
+  	<property   name="standardBookkeepingPractices" type="string">
+   		<column length="1" name="standard_bookkeeping_practices"/>
+  	</property>
+  	<property   name="bookkeeperIdentified" type="string">
+   		<column length="1" name="bookkeeper_identified"/>
+  	</property>
+  	
+  	<property   name="meetingFrequency" type="string">
+   		<column length="1" name="meeting_frequency"/>
+  	</property>  	
+  	<property  name="bankLinkageHappened" type="string">
+   		<column name="bank_linkage_happened"/>
+  	</property>
+  	<property   name="loanRunning" type="integer">
+   		<column name="loan_running" />
+  	</property>
+  	<property   name="usualAmountOfSaving" type="integer">
+   		<column name="usual_amount_of_saving" />
+  	</property>
+  	
+  	<property   name="createdBy" type="string">
+   		<column name="created_by" />
+  	</property>
+   	<property   name="createdOn" type="string">
+  	 	<column length="10" name="created_on" />
+ 	</property>
+   	<property   name="updatedBy" type="string">
+   		<column name="updated_by"/>
+  	</property>
+   	<property   name="updatedOn" type="string">
+   		<column length="10" name="updated_on"/>
+  	</property> 
+  	<property name="totalMember" formula="(select count(sm.*) from tn_shg_member sm where sm.shg_code = shg_code)"/> 
+ 	</class>
+	 
+</hibernate-mapping>

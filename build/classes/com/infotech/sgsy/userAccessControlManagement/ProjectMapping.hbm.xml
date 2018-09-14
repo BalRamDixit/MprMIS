@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 19, 2013 5:52:12 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.infotech.sgsy.userAccessControlManagement.ProjectMapping" table="project_mapping" schema="public">
+        <id name="id" column="id">
+    		<generator class="sequence">
+        		<param name="sequence">project_mapping_Id_Seq</param>
+    		</generator>
+		</id>
+        <property name="createdBy" type="string">
+            <column name="created_by" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="created_on" />
+        </property>
+        <property name="updatedBy" type="string">
+            <column name="last_modified_by" />
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="last_modified_on" />
+        </property>
+        <property name="projectId" type="string">
+            <column name="project_id" />
+        </property>
+        <property name="userId" type="string">
+            <column name="user_id" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

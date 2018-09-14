@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping> 
+
+	<class name="com.infotech.sgsy.master.block.BlockMasterVO" table="mst_block"> 
+		<id name="blockCode" column="block_code" >		
+			<generator class="increment">			 		
+			</generator> 
+		</id>		
+		
+		
+ 	 	<property name="ruralUrbanArea" column="rural_urban_area" length="1" /> 
+ 		<property name="blockName" column="block_name" length="7"/> 
+ 		
+ 		<property name="createdOn" column="created_On"  type="java.util.Date" length="10" /> 
+ 		<property name="createdBy" column="created_By" length="25"/> 		
+ 		<property name="lastModifiedOn" column="modified_On" type="java.util.Date" length="10" /> 
+ 		<property name="lastModifedBy" column="Modifed_By" length="25"/>
+ 		<property name="intensive" column="intensive" length="20"/>
+		<property name="stateCode" column="state_code" />
+ 		<property name="districtCode" column="district_code"/>
+ 		
+ 		<!-- <many-to-one 
+ 					name="stateCode" 
+ 					class="com.infotech.sgsy.master.state.StateVO"  
+ 					cascade="all" 
+ 					update="true"
+ 					insert="true"
+ 					property-ref="stateCode"
+ 					foreign-key="fk_block_stateCode" /> 
+ 					
+ 					
+ 					
+ 		<many-to-one 
+ 					name="districtCode" 
+ 					class="com.infotech.sgsy.master.district.DistrictVO"  
+ 					cascade="all" 
+ 					update="true"
+ 					insert="true"
+ 					property-ref="districtCode"
+ 					foreign-key="fk_block_districtCode" /> -->
+ 					
+ 		<set name="grampanchayatSet" table="mst_grampanchayat" inverse="true" lazy="true" fetch="select">
+ 			<key>
+ 				<column name="block_code"></column>
+ 			</key>
+ 			<one-to-many class="com.infotech.sgsy.master.grampanchayat.GramPanchayatVO"/>
+ 		</set>
+ 		<set name="villageSet" table="mst_village" inverse="true" lazy="true" fetch="select">
+ 			<key column="block_code"></key>
+ 			<one-to-many class="com.infotech.sgsy.master.village.VillageVO"/>
+ 		</set>
+ 		
+ 	</class>
+ 	
+</hibernate-mapping>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 17, 2013 1:17:47 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.infotech.skills.hbm.piaprofile.PiaAdditionalDetailVO" table="pia_additional_detail" schema="public">
+        <id name="piaCode" type="string">
+            <column name="pia_code" />
+            <generator class="assigned" />
+        </id>
+        <property name="sec12aRegistrationNo" type="string">
+            <column name="sec_12a_registration_no" />
+        </property>
+        <property name="sec12aRegistrationDate" type="string">
+            <column name="sec_12a_registration_date" />
+        </property>
+        <property name="sec80gRegistrationNo" type="string">
+            <column name="sec_80g_registration_no" />
+        </property>
+        <property name="sec80gRegistrationDate" type="string">
+            <column name="sec_80g_registration_date" />
+        </property>
+        <property name="fcraRegistrationNo" type="string">
+            <column name="fcra_registration_no" />
+        </property>
+        <property name="fcraRegistrationDate" type="string">
+            <column name="fcra_registration_date" />
+        </property>
+         <property name="createdOn" type="string">
+            <column name="created_on" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="created_by" />
+        </property>
+        <property name="modifyOn" type="string">
+            <column name="modify_on" />
+        </property>
+        <property name="modifyBy" type="string">
+            <column name="modify_by" />
+        </property>
+    </class>
+</hibernate-mapping>

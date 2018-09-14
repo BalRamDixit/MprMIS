@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 17, 2013 1:17:47 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.infotech.skills.hbm.piaprofile.PiaDetailVO" table="pia_detail" schema="public">
+        <id name="piaCode" type="string">
+            <column name="pia_code" />
+			<generator class="assigned"/>	
+        </id>
+        <property name="piaName" type="string">
+            <column name="pia_name" not-null="true" />
+        </property>
+        <property name="piaRegistrationNo" type="string">
+            <column name="pia_registration_no" />
+        </property>
+        <property name="categoryCode" type="string">
+            <column name="pia_category_code" not-null="true" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" />
+        </property>
+        <property name="pin" type="string">
+            <column name="pin" />
+        </property>
+        <property name="blockCode" type="string">
+            <column name="block_code" />
+        </property>
+        <property name="districtCode" type="string">
+            <column name="district_code" />
+        </property>
+        <property name="stateCode" type="string">
+            <column name="state_code" />
+        </property>
+        <property name="officePhone" type="string">
+            <column name="office_phone" />
+        </property>
+        <property name="officeFax" type="string">
+            <column name="office_fax" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" />
+        </property>
+        <property name="website" type="string">
+            <column name="website" />
+        </property>
+        <property name="officePhotoFileName" type="string"> 
+        	<column name="officephoto_file_path"/> 
+        </property>
+        <property name="registrationNumber" type="string">
+            <column name="registration_number" />
+        </property>
+        <property name="registrationStateCode" type="string">
+            <column name="registration_state_code" />
+        </property>
+        <property name="dateOfRegistration" type="string">
+            <column name="date_of_registration" />
+        </property>
+        <property name="panNo" type="string">
+            <column name="pan_no" />
+        </property>
+        <property name="tanNo" type="string">
+            <column name="tan_no" />
+        </property>
+         <property name="panFileName" type="string">
+            <column name="pan_file_path" />
+        </property>
+         <property name="tanFileName" type="string">
+            <column name="tan_file_path" />
+        </property>
+         <property name="regFileName" type="string">
+            <column name="reg_file_path" />
+        </property>
+            
+         <property name="piaStatus" type="string"  >
+            <column name="pia_status" />
+        </property>
+        <property name="piaConfirmationDate" type="string">
+            <column name="pia_confirmation_date" />
+        </property>
+        
+        <property name="regNoSection12A" type="string">
+            <column name="reg_no_sec_12a" />
+        </property>
+         <property name="regDateSection12A" type="string">
+            <column name="reg_date_sec_12a" />
+        </property>
+        <property name="regNoSection80G" type="string">
+            <column name="reg_no_sec_80g" />
+        </property>
+        <property name="regDateSection80G" type="string">
+            <column name="reg_date_sec_80g" />
+        </property>
+        <property name="regNoFCRA" type="string">
+            <column name="reg_no_fcra" />
+        </property>
+        <property name="regDateFCRA" type="string">
+            <column name="reg_date_fcra" />
+        </property>
+        <property name="addressLandBuilding" type="string">
+            <column name="address_land_building" />
+        </property>
+        <property name="freeholdMortgaged" type="string">
+            <column name="freehold_mortgaged" />
+        </property>
+        <property name="remark" type="string">
+            <column name="remark" />
+        </property>            
+        <property name="createdOn" type="string">
+            <column name="created_on" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="created_by" />
+        </property>
+        <property name="modifyOn" type="string">
+            <column name="modify_on" />
+        </property>
+        <property name="modifyBy" type="string">
+            <column name="modify_by" />
+        </property>
+        
+        <property name="l1Remark" type="string">
+            <column name="l1_remark" />
+        </property>  
+        
+          <property name="enrolmentNumber" type="string">
+            <column name="enrol_no" />
+        </property>  
+        
+         <property name="enrolmentFileName" type="string">
+            <column name="enrol_file_path" />
+        </property>
+        
+        
+        <property name="activityCode"  formula="(SELECT coalesce(array_agg(am.activity_id), null) FROM pia_activity_mapping am WHERE am.pia_code = pia_code)"/>
+		<property name="activityName"  formula="(SELECT coalesce(array_agg(at.activity_name), null) FROM pia_activity_mapping am, pia_activity at 
+											WHERE am.activity_id = at.activity_id AND am.pia_code = pia_code)"/>
+		 <property name="categoryName"  formula="(SELECT coalesce(c.category_name, null) FROM pia_category c WHERE c.category_id = pia_category_code)"/>
+		 <property name="stateName"  formula="(SELECT coalesce(s.state_name, null) FROM mst_state s WHERE s.state_code = state_code)"/>
+		 <property name="districtName"  formula="(SELECT coalesce(d.district_name, null) FROM mst_district d WHERE d.district_code = district_code)"/>
+		 <property name="blockName"  formula="(SELECT coalesce(b.block_name, null) FROM mst_block b WHERE b.block_code = block_code)"/>
+		 <property name="registrationStateName"  formula="(SELECT coalesce(s.state_name, null) FROM mst_state s WHERE s.state_code = registration_state_code)"/>
+    </class>
+</hibernate-mapping>

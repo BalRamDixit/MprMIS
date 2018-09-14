@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 17, 2013 1:17:47 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.infotech.skills.hbm.piaprofile.CategoryVO" table="pia_category" schema="public">
+        <id name="categoryId" type="string">
+            <column name="category_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="categoryName" type="string">
+            <column name="category_name" not-null="true" />
+        </property>
+        <property name="formType" type="string">
+            <column name="form_type" />
+        </property>
+         <property name="categoryStatus" type="string">
+            <column name="category_status" />
+        </property>
+         <property name="createdOn" type="string">
+            <column name="created_on" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="created_by" />
+        </property>
+        <property name="modifyOn" type="string">
+            <column name="modify_on" />
+        </property>
+        <property name="modifyBy" type="string">
+            <column name="modify_by" />
+        </property>
+    </class>
+</hibernate-mapping>

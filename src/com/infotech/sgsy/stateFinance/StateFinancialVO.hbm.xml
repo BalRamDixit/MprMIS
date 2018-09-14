@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+ <hibernate-mapping>
+	<class name="com.infotech.sgsy.stateFinance.StateFinancialVO"  table="state_financial" schema="public" > 
+           
+          <id name="id" column="id">
+    		<generator class="sequence">
+        		<param name="sequence">state_financial_Id_Seq </param>
+    		</generator>
+		</id> 
+       
+         
+        
+         <many-to-one name="sanctionDetailId" class="com.infotech.sgsy.stateSanctionDetail.StateSanctionVO" lazy="false" fetch="select" >
+        		<column name="sanction_Detail_Id"  />
+		</many-to-one> 
+        
+        
+        <property name="centralProgramCost"      type="long"><column name="centralProgramCost" /></property>
+        <property name="centralSuportCost"       type="long"><column name="central_SuportCost" /></property>
+        <property name="centralCtsa"             type="long"><column name="central_Ctsa" /></property>
+        
+      
+        <property name="centralAdminCost"        type="long"><column name="central_AdminCost" /></property>
+        <property name="centralCapacityCost"     type="long"> <column name="central_CapacityCost" /></property>
+        
+        <property name="stateProgramCost"        type="long"> <column name="state_ProgramCost" /></property>
+        <property name="stateSuportCost"         type="long"><column name="state_SuportCost" /></property>
+        <property name="stateCtsa"               type="long"><column name="state_Ctsa" /></property>
+        <property name="stateAdminCost"          type="long"><column name="state_AdminCost" /></property>
+        <property name="stateCapacityCost"       type="long"><column name="state_CapacityCost" /></property>
+        
+        <property name="centralReleasedProgramCost"       type="long"><column name="centralReleased_ProgramCost" /></property>
+        <property name="centralReleasedSuportCost"        type="long"> <column name="centralReleased_SuportCost" /></property>
+        <property name="centralReleasedCtsa"              type="long"><column name="centralReleased_Ctsa" /></property>
+        <property name="centralReleasedAdminCost"         type="long"><column name="centralReleased_AdminCost" /></property>
+        <property name="centralReleasedCapacityCost"      type="long"> <column name="centralReleased_CapacityCost" /></property>
+        
+        <property name="centralOnlyProgramCost"           type="long"><column name="centralOnly_ProgramCost" /></property>
+        <property name="centralOnlySuportCost"            type="long"> <column name="centralOnly_SuportCost" /></property>
+        <property name="centralOnlyCtsa"                  type="long"><column name="central_OnlyCtsa" /></property>
+        <property name="centralOnlyAdminCost"             type="long"><column name="centralOnly_AdminCost" /></property>
+        <property name="centralOnlyCapacityCost"          type="long"> <column name="centralOnly_CapacityCost" /></property>
+        
+        <property name="centralReleasedDateProgramCost"        type="date"><column name="centralReleased_DateProgramCost" /></property>
+        <property name="centralReleasedDatSuportCost"          type="date"> <column name="centralReleased_DatSuportCost" /></property>  
+        <property name="centralReleasedDatCtsa"                type="date"><column name="centralReleased_DatCtsa" /></property>
+        <property name="centralReleasedDatAdminCost"           type="date"><column name="centralReleased_DatAdminCost" /></property>
+        <property name="centralReleasedDatCapacityCost"        type="date"> <column name="centralReleased_DatCapacityCost" /></property>
+        
+        <property name="stateOnlyProgramCost"            type="long"><column name="stateOnly_ProgramCost" /></property>
+        <property name="stateOnlySuportCost"             type="long"> <column name="stateOnly_SuportCost" /></property>
+        <property name="stateOnlyCtsa"                   type="long"><column name="stateOnly_Ctsa" /></property>
+        <property name="stateOnlyAdminCost"              type="long"><column name="stateOnly_AdminCost" /></property>
+        <property name="stateOnlyCapacityCost"           type="long"> <column name="stateOnly_CapacityCost" /></property>
+       
+        <property name="stateReleasedDateProgramCost"         type="date"><column name="stateReleased_DateProgramCost" /></property>
+        <property name="stateReleasedDateSuportCost"          type="date"> <column name="stateReleased_DateSuportCost" /></property>
+        <property name="stateReleasedDateCtsa"                type="date"><column name="stateReleased_DateCtsa" /></property>
+        <property name="stateReleasedDateAdminCost"           type="date"><column name="stateReleased_DateAdminCost" /></property>
+        <property name="stateReleasedDateCapacityCost"        type="date"> <column name="stateReleased_DateCapacityCost" /></property>
+       
+       <!-- New added columns -->
+        <property name="central_totalprojectcost"      type="long"><column name="central_totalprojectcost" /></property>
+        <property name="central_otherprojectcost"      type="long"><column name="central_otherprojectcost" /></property>
+        <property name="central_totalcost"        	   type="long"><column name="central_totalcost" /> </property>
+       
+       
+        <property name="state_totalprojectcost"        type="long"><column name="state_totalprojectcost" /></property>
+        <property name="state_otherprojectcost"        type="long"><column name="state_otherprojectcost" /></property>
+        <property name="state_totalcost"           	   type="long"> <column name="state_totalcost" /></property>
+       
+       
+        <property name="centralreleased_totalprojectcost"      type="long"><column name="centralreleased_totalprojectcost" /></property>
+        <property name="centralreleased_otherprojectcost"      type="long"><column name="centralreleased_otherprojectcost" /></property>
+        <property name="centralreleased_totalcost"             type="long"><column name="centralreleased_totalcost" /></property>
+       
+       
+        <property name="centralonly_totalprojectcost"      type="long"><column name="centralonly_totalprojectcost" /></property>
+        <property name="centralonly_otherprojectcost"      type="long"><column name="centralonly_otherprojectcost" /></property>
+        <property name="centralonly_totalcost"             type="long"><column name="centralonly_totalcost" /></property>
+       
+       
+        <property name="stateonly_totalprojectcost"      type="long"><column name="stateonly_totalprojectcost" /></property>
+        <property name="stateonly_otherprojectcost"      type="long"><column name="stateonly_otherprojectcost" /></property>
+        <property name="stateonly_totalcost"             type="long"><column name="stateonly_totalcost" /></property>
+       
+        <property name="createdBy"              type="string"><column name="created_by" /></property>
+        <property name="createdOn"              type="date"><column name="created_on" /></property>
+        <property name="updatedBy"              type="string"><column name="updated_by" /></property>
+        <property name="updatedOn"              type="date"><column name="updated_on" /></property>
+        
+         
+         
+	</class>
+</hibernate-mapping> 
+

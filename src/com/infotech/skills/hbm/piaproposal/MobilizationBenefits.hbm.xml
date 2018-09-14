@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 17, 2013 1:17:47 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.infotech.skills.hbm.piaproposal.MobilizationBenefits" table="pia_mob_beneficiaries" schema="public">
+        <composite-id  mapped="true" >
+           <key-property name="piaCode" type="string">
+                <column name="pia_code" />
+            </key-property>
+            <key-property name="proposalCode" type="string">
+                <column name="proposal_code" />
+            </key-property>
+        </composite-id>
+         <property name="noOfMeetings" type="string">
+            <column name="no_of_meetings" />
+        </property>
+        <property name="noOfRoadShows" type="string">
+            <column name="no_of_road_shows" />
+        </property>
+        <property name="noOfCounselingSession" type="string">
+            <column name="no_of_counseling_session" />
+        </property>
+        <property name="noOfOtherAgenciesHiredForMobilization" type="string">
+            <column name="no_of_other_agencies_hired_for_mobilization" />
+        </property>
+         <property name="drdasLocalLevelAuthorities" type="string">
+            <column name="drdas_local_level_authorities" />
+        </property>
+        <property name="noOfTimesAdvertising" type="string">
+            <column name="no_of_times_advertising" />
+        </property>
+        <property name="anyOther" type="string">
+            <column name="any_other" />
+        </property>  
+         <property name="createdOn" type="string">
+            <column name="created_on" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="created_by" />
+        </property>
+        <property name="modifyOn" type="string">
+            <column name="modify_on" />
+        </property>
+        <property name="modifyBy" type="string">
+            <column name="modify_by" />
+        </property>
+    </class>
+</hibernate-mapping>

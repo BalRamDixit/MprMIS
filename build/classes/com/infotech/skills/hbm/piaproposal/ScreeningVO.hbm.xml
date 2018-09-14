@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 17, 2013 1:17:47 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.infotech.skills.hbm.piaproposal.ScreeningVO" table="pia_screening" schema="public">
+        <composite-id  mapped="true" >
+           <key-property name="piaCode" type="string">
+                <column name="pia_code" />
+            </key-property>
+            <key-property name="proposalCode" type="string">
+                <column name="proposal_code" />
+            </key-property>
+        </composite-id>
+        <property name="methodology " type="string">
+            <column name="methodology " />
+        </property>
+        <property name="criteria" type="string">
+            <column name="criteria" />
+        </property>
+        <property name="tools" type="string">
+            <column name="tools" />
+        </property>
+        <property name="interview" type="string">
+            <column name="interview" />
+        </property>
+         <property name="discussion" type="string">
+            <column name="discussion" />
+        </property>
+        <property name="hiring" type="string">
+            <column name="hiring" />
+        </property>
+        <property name="anyOtherInform" type="string">
+            <column name="any_other" />
+        </property>
+         <property name="createdOn" type="string">
+            <column name="created_on" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="created_by" />
+        </property>
+        <property name="modifyOn" type="string">
+            <column name="modify_on" />
+        </property>
+        <property name="modifyBy" type="string">
+            <column name="modify_by" />
+        </property>
+    </class>
+</hibernate-mapping>

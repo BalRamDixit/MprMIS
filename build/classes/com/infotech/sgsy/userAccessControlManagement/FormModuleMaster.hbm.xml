@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 19, 2013 5:52:12 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.infotech.sgsy.userAccessControlManagement.FormModuleMaster" table="Form_Module_master" schema="public">
+        <id name="id" column="id">
+    		<generator class="sequence">
+        		<param name="sequence">Form_Module_master_Id_Seq</param>
+    		</generator>
+		</id>
+        <property name="createdBy" type="string">
+            <column name="created_by" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="created_on" />
+        </property>
+        <property name="updatedBy" type="string">
+            <column name="last_modified_by" />
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="last_modified_on" />
+        </property>
+        <property name="formName" type="string">
+            <column name="form_name" />
+        </property>
+        <property name="moduleName" type="string">
+            <column name="module_name" />
+        </property>
+        <property name="url" type="string">
+            <column name="url" />
+        </property>
+        <property name="formOrderNo" type="integer">
+            <column name="order_no" />
+        </property>
+        <property name="help" type="string">
+            <column name="help" />
+        </property>
+    </class>
+</hibernate-mapping>

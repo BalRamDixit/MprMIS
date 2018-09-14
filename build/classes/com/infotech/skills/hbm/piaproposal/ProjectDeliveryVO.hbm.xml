@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 17, 2013 4:31:40 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.infotech.skills.hbm.piaproposal.ProjectDeliveryVO" table="pia_project_delivery" schema="public">
+        <id name="praposalCode" unsaved-value="null">
+		   <column name="praposal_code" />
+		   <generator class="sequence" >
+		            <param name="sequence">pia_proposal_seq</param>
+		   </generator>
+		 </id>
+       
+        <property name="candidateSocial" type="string">
+            <column name="candidates_social_mobilization" />
+        </property>
+        <property name="candidateSelection" type="string">
+            <column name="candidates_selection" />
+        </property>
+        <property name="hiringTrainers" type="string">
+            <column name="hiring_of_trainers" />
+        </property>
+        <property name="trainingInfra" type="string">
+            <column name="training_activities_infrastructure" />
+        </property>
+        <property name="trainersTraining" type="string">
+            <column name="trainers_training" />
+        </property>
+        <property name="traineesTraining" type="string">
+            <column name="trainees_training" />
+        </property>
+        <property name="traineesAssessment" type="string">
+            <column name="trainees_assessment" />
+        </property>
+        <property name="traineesCertification" type="string">
+            <column name="trainees_certification" />
+        </property>
+        <property name="traineesPlacement" type="string">
+            <column name="trainees_placement" />
+        </property>
+        <property name="postTracking" type="string">
+            <column name="post_placement_tracking" />
+        </property>
+        <property name="createdOn" type="string">
+   <column name="created_on" />
+  </property>
+  <property name="createdBy" type="string">
+   <column name="created_by" />
+  </property>
+  <property name="modifyOn" type="string">
+   <column name="modify_on" />
+  </property>
+  <property name="modifyBy" type="string">
+   <column name="modify_by" />
+  </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.infotech.skills.candidateStatistics.CandidateVO"  table="candidate_statistics" schema="public">
+  
+  
+  <id name="id" column="id">
+    		<generator class="sequence">
+        		<param name="sequence">candidate_statistics_Id_Seq</param>
+    		</generator>
+		</id> 
+        
+   
+ <many-to-one name="project" class="com.infotech.sgsy.projectSetup.projectDetails.ProjectDetailsVO" lazy="false" fetch="select" >
+                <column name="project_id"  />
+                 </many-to-one> 
+<property name="month" type="string">
+		<column name="month" />
+	</property>
+	<property name="year" type="int">
+		<column name="year" />
+	</property>
+
+
+	<property name="total_no_of_can" type="integer">
+		<column name="total_no_of_can" />
+	</property>
+	<property name="total_no_of_can_with_Adhar_no" type="integer">
+		<column name="total_no_of_can_with_adhar_no" />
+	</property>
+	<property name="total_no_of_can_Bank_acc" type="integer">
+		<column name="total_no_of_can_bank_acc" />
+	</property>
+	<property name="total_no_of_can_Mobile_no" type="integer">
+		<column name="total_no_of_can_mobile_no" />
+	</property>
+	<property name="total_no_can_aadhar_lin_bank_acc" type="integer">
+		<column name="total_no_can_aadhar_lin_bank_acc" />
+	</property>
+	<property name="no_of_can_insurance" type="integer">
+		<column name="no_of_can_insurance" />
+	</property>
+	<property name="pro_life_trained_can" type="integer">
+		<column name="pro_life_trained_can" />
+	</property>
+	<property name="foreign_placed" type="integer">
+		<column name="foreign_placed" />
+	</property>
+	<property name="can_place_earn_more" type="integer">
+		<column name="can_place_earn_more" />
+	</property>
+	<property name="can_retained" type="integer">
+		<column name="can_retained" />
+	</property>
+	<property name="placed_documented_sub_upload" type="integer">
+		<column name="placed_documented_sub_upload" />
+	</property>
+
+	<property name="createdBy" type="string">
+		<column name="created_by" />
+	</property>
+	<property name="createdOn" type="date">
+		<column name="created_on" />
+	</property>
+	<property name="updatedBy" type="string">
+		<column name="updated_by" />
+	</property>
+	<property name="updatedOn" type="date">
+		<column name="updated_on" />
+	</property>
+        
+  	</class>
+</hibernate-mapping> 

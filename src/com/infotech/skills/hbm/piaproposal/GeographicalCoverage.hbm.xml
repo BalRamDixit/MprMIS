@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 17, 2013 1:17:47 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.infotech.skills.hbm.piaproposal.GeographicalCoverage" table="pia_geographical_coverage" schema="public">
+        <composite-id  mapped="true" >
+            <key-property name="piaCode" type="string">
+                <column name="pia_code" />
+            </key-property>
+            <key-property name="proposalCode" type="string">
+                <column name="proposal_code" />
+            </key-property>
+        </composite-id>
+        <property name="stateName" type="string">
+            <column name="state_name" />
+        </property>
+        <property name="districtName" type="string">
+            <column name="district_name" />
+        </property>
+        <property name="noOfDistricts" type="string">
+            <column name="no_districts" />
+        </property>
+         <property name="projectDuration" type="string">
+            <column name="project_duration" />
+        </property>
+         <property name="createdOn" type="string">
+            <column name="created_on" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="created_by" />
+        </property>
+        <property name="modifyOn" type="string">
+            <column name="modify_on" />
+        </property>
+        <property name="modifyBy" type="string">
+            <column name="modify_by" />
+        </property>
+    </class>
+</hibernate-mapping>

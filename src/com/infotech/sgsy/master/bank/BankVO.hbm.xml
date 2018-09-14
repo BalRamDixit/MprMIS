@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping> 
+
+	<class name="com.infotech.sgsy.master.bank.BankVO" table="mst_bank"> 
+		
+		
+		<id name="bankCode" column="bank_Code" length="6">		
+			<generator class="sequence">				
+				<param name="sequence">bank_seq</param>		
+			</generator> 
+		</id>	 	
+ 	  	<property name="bankName" column="bank_Name" not-null="true" length="40"/> 	  
+ 		<property name="entityCode" column="entity_code" not-null="true" length="4"/> 	  	  	  
+ 	  	<property name="bankShortName" column="bank_shortname" not-null="true" length="10"/>	
+ 	  	<property name="bankTypeCode" column="bankType_Code" not-null="true" length="2"/>
+ 	  	 <property name="bankLevelCode" column="bankLevel_Code" not-null="true" length="2"/> 	  	  		   	
+ 	  	<property name="activeFlag" column="activeFlag" not-null="true"  length="1"/>  	  	 		 	
+ 		<property name="createdOn" column="created_On"   length="10" /> 
+ 		<property name="createdBy" column="created_By" length="25"/> 		
+ 		<property name="lastModifiedOn" column="lastModifiedOn"  length="10" /> 
+ 		<property name="lastModifedBy" column="lastModifedBy" length="25"/>
+ 		
+ 
+ 		<!-- 	<one-to-many name="bankTypeCode" 
+ 					class="com.infotech.sgsy.master.bankType.BankTypeVO"  
+ 					cascade="all" 
+ 					update="true"
+ 					insert="true"
+ 					property-ref="bankTypeCode"
+ 					foreign-key="fk_bankTypeCode" />
+ 					
+ 			-->		 
+ 	<!--  					
+ 		<join table="mst_bank_branch">
+              <key column="bank_Code"/>
+              <property name="bankCode"/>
+        </join>
+ 	-->	
+ 	
+ 	</class>
+</hibernate-mapping>

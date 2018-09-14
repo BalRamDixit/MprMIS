@@ -1,0 +1,40 @@
+/* 
+Magazine Template 
+http://www.templatemo.com/preview/templatemo_312_magazine 
+*/
+
+
+
+
+
+.float_l { float: left }
+.float_r { float: right }
+
+.image_wrapper { display: inline-block; border: 5px solid #fff; background: none; margin-bottom: 5px }
+.image_fl { float: left; margin: 3px 15px 0 0 }
+.image_fr { float: right; margin: 3px 0 0 15px }
+
+
+.tmo_list { margin: 20px 0 20px 20px; padding: 0; list-style: none }
+.tmo_list li { color:#e98236; margin: 0; padding: 0 0 0 20px; background: url(images/templatemo_list.jpg) no-repeat scroll 0 7px  }
+.tmo_list li a { color: #e98236; font-weight: normal }
+.tmo_list li a:hover { color: #e98236 }
+
+#templatemo_wrapper {
+	width: 930px;
+	padding: 0 0px;
+	margin: 0 auto; margin-right: 10px;
+}
+
+#slider { 
+	clear: both;
+	width: 900px;
+	height: 280px;
+	margin: 0px 0px;
+	overflow: hidden; 
+}
+
+
+
+
+

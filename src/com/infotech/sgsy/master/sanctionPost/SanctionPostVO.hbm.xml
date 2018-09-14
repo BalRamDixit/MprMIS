@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19 Jul, 2011 10:04:55 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.infotech.sgsy.master.sanctionPost.SanctionPostVO" table="mst_sanction_post">
+        <id name="sanctionId" column="sanction_id">
+			<generator class="sequence">
+				<param name="sequence">mst_sanction_post_Id_Seq</param>
+			</generator>
+		</id>
+        <many-to-one name="state" class="com.infotech.sgsy.master.state.StateVO" lazy="false" fetch="select" >
+            <column name="state_id"  />
+        </many-to-one>
+        <many-to-one name="designationMaster" class="com.infotech.sgsy.master.designationMaster.DesignationMasterVo" lazy="false" fetch="select" >
+            <column name="designation_id"  />
+        </many-to-one>
+        <property name="noofPost"        type="string"> <column name="no_of_post" /></property>
+        
+        <property name="createdBy"       type="string"> <column name="created_by" /></property>
+        <property name="createdDate"   type="date">   <column name="created_on" /></property>
+        <property name="updatedBy"       type="string"> <column name="updated_by" /></property>
+        <property name="updatedDate"   type="date">   <column name="updated_on" /></property>
+        <property name="isDeleted"      type="string"> <column name="is_deleted" /></property>
+        
+        
+    </class>
+</hibernate-mapping>

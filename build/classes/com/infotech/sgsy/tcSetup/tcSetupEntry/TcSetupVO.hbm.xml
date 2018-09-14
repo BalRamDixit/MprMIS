@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.infotech.sgsy.tcSetup.tcSetupEntry.TcSetupVO"  table="training_center_detail" schema="public">
+	
+         <id name="id" column="id" >		
+			<generator class="sequence">
+        		<param name="sequence">training_center_detail_Id_Seq</param>
+    		</generator>
+</id>	
+               	 <many-to-one name="project" class="com.infotech.sgsy.projectSetup.projectDetails.ProjectDetailsVO" lazy="false" fetch="select" >
+            <column name="project_id"  />
+       </many-to-one> 
+       <many-to-one name="state" class="com.infotech.sgsy.master.state.StateVO" lazy="false" fetch="select" >
+            <column name="state_id"  />
+       </many-to-one> 
+       <many-to-one name="district" class="com.infotech.sgsy.master.districtMasterNew.DistrictMasterVO" lazy="false" fetch="select" >
+            <column name="district_id"  />
+       </many-to-one> 
+  			    
+  		   <property name="parliament"   		                  type="string"><column name="parliament_name" /></property>   		
+  			    
+   			    <property name="address" length="1500"  		                  type="string"><column name="address" /></property>   			    
+   			     <property name="pinCode"   		              type="string"><column name="pincode" /></property>
+   			    <!--  <property name="assemblyCons"   		          type="string"><column name="assemblyCons" /></property> -->
+   			    <many-to-one name="assemblyCons" class="com.infotech.sgsy.masterdata.constituencyMaster.ConstituencyMasterVO" lazy="false" fetch="select" >
+            <column name="assembly_Cons"  />
+       </many-to-one> 
+   			    
+   			    
+   			     <property name="tcLatitude"   		            type="string"><column name="tc_latitude" /></property>
+   			     <property name="tcLongitude"   		        type="string"><column name="tc_longitude" /></property>
+   			     <property name="resiStatus"   		            type="string"><column name="resi_status" /></property>
+   			     <property name="inChargeName"   		        type="string"><column name="incharge_name" /></property>   			     
+   			<!-- <property name="inChargeNo"   		            type="string"><column name="incharge_mobile" /></property> -->
+   			     <property name="inChargeMobile"   		        type="string"><column name="incharge_mobile" /></property>
+   			      <property name="inChargeAltMobile"   		    type="string"><column name="incharge_alt_mobile" /></property>
+   			     <property name="inChargeEmail"   		        type="string"><column name="incharge_email" /></property>
+   			     <property name="tcID"   		                type="string"><column name="tc_id" /></property>   			     	 
+   			     <property name="tcName"   		                type="string"><column name="tc_Name" /></property>   			     
+   			    <property name="createdBy"              		type="string"><column name="created_by" /></property>
+                <property name="createdOn"              		type="date"><column name="created_on" /></property>
+                <property name="updatedBy"              		type="string"><column name="updated_by" /></property>
+                <property name="updatedOn"              		type="date"><column name="updated_on" /></property>
+       
+  	</class>
+</hibernate-mapping>

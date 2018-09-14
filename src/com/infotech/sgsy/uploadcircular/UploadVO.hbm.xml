@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping> 
+
+	<class name="com.infotech.sgsy.common.uploadCircularVO" table="mst_uploadCircularVO"> 
+		<id name="id" column="ulid" >		
+			<generator class="sequence">				
+				<param name="sequence">role_id_seq</param>		
+			</generator> 
+		</id>		
+ 		<property name="circularScheme_code" column="circular_scheme" /> 
+ 		<property name="uploadCircularName" column="circular_desc" /> 
+ 		<property name="uploadCircularDate" column="circular_date" />
+ 		<property name="UploadCircularFileName" column="circular_file_name" /> 
+ 		
+ 		<property name="serverDate" column="circular_sys_date" />  
+ 		<property name="uploadCircularFileNameHindi" column="circular_file_name_hindi"/>
+ 		<property name="show" column="show"/>
+ 	</class>
+</hibernate-mapping>

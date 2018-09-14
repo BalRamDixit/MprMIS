@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  	
+  	<class name="com.infotech.sgsy.masterdata.constituencyMaster.ConstituencyMasterVO"  table="mst_constituency" schema="public">
+	    
+	    
+         <id name="constituencyId" column="constituency_Id">
+    		<generator class="sequence">
+        		<param name="sequence">mst_constituency_id_seq </param>
+    		</generator>
+		</id> 
+        	   
+   			    <property name="assemblyConstituencyCode"   					  type="string"><column name="assembly_constituency_Code" /></property>      
+   			    <property name="assemblyConstituencyName"      					  type="string"><column name="assembly_constituency_Name" /></property>
+   			    <many-to-one name="parliamentaryConstituencyName" class="com.infotech.sgsy.master.parliamentaryConstituencyMaster.ParliamentaryConstituencyMasterVO"   lazy="false" fetch="select" >
+   			    	<column name="parliamentary_constituency_Name" />
+   			    </many-to-one> 			     
+   			    <property name="createdBy"             					  type="string"><column name="created_by" /></property>
+                <property name="createdOn"           					  type="date"><column name="created_on" /></property>
+                <property name="updatedBy"           					  type="string"><column name="last_modified_by" /></property>
+                <property name="updatedOn"             					  type="date"><column name="last_modified_on" /></property>
+                <many-to-one name="district" class="com.infotech.sgsy.master.districtMasterNew.DistrictMasterVO" lazy="false" fetch="select" >
+				            <column name="district_id"  />
+				</many-to-one>
+       
+  	</class>
+  	</hibernate-mapping>

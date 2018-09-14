@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 19, 2013 5:52:12 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.infotech.skills.hbm.admin.AssignRoleVO" table="mst_assign_role" schema="public">
+        <composite-id mapped="true">
+            <key-property name="loginId" type="string">
+                <column name="login_id" />
+            </key-property>
+            <key-property name="roleCd" type="string">
+                <column name="role_cd" />
+            </key-property>
+            <key-property name="entityCode" type="string">
+                <column name="entity_code" />
+            </key-property>
+        </composite-id>
+        <property name="levelCd" type="string">
+            <column name="level_cd" />
+        </property>
+        <property name="levelRole" type="string">
+            <column name="level_role" />
+        </property>
+        <property name="createdOn" type="string">
+            <column name="created_on" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="created_by" />
+        </property>
+        <property name="modifiedBy" type="string">
+            <column name="modified_by" />
+        </property>
+        <property name="modifiedOn" type="string">
+            <column name="modified_on" />
+        </property>
+    </class>
+</hibernate-mapping>

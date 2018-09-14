@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping> 
+	<class name="com.infotech.sgsy.master.bankBranch.BankBranchVO" table="mst_bank_branch"> 
+		<composite-id class="com.infotech.sgsy.master.bankBranch.BankBranchVO" mapped="true">
+			<key-property name="entityCode"  column="entity_Code"  length="13" />	
+			<key-property  name="bankBranchCode" column="bank_branch_Code"  length="10"/> 	  
+			<key-property name="bankCode" column="bank_Code"    length="6"/>   
+		</composite-id>
+ 	  	<property name="bankBranchName" column="bank_branch_name" not-null="true"  length="100"/>
+ 	  	<property name="ifscCode" column="ifsc_code" not-null="true"  length="11"/>		  	
+ 	  	<property name="activeFlag" column="activeFlag"  not-null="true"  length="1"/>  
+ 	  	<property name="address" column="address" length="250"/> 	  	 		 	
+ 		<property name="createdOn" column="created_On"    length="10" /> 
+ 		<property name="createdBy" column="created_By" length="25"/> 		
+ 		<property name="lastModifiedOn" column="lastModified_On"   length="10" /> 
+ 		<property name="lastModifedBy" column="lastModifed_By" length="25"/>
+ 		
+ 	</class>	
+</hibernate-mapping>

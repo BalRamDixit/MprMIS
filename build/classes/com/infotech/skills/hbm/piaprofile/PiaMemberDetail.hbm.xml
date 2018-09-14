@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 17, 2013 1:17:47 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.infotech.skills.hbm.piaprofile.PiaMemberDetailVO" table="pia_members_detail" schema="public">
+        <id name="memberCode" type="string" >
+            <column name="member_code" />
+            <generator class="sequence">
+            		 <param name="sequence">pia_member_code_seq</param>
+            </generator>
+        </id>
+        <property name="piaCode" type="string">
+            <column name="pia_code" />
+        </property>
+        <property name="memberName" type="string">
+            <column name="name" />
+        </property>
+        <property name="contact" type="string">
+            <column name="contact" />
+        </property>
+         <property name="designation" type="string">
+            <column name="designation" />
+        </property>
+        <property name="liability" type="string">
+            <column name="liability"/>
+        </property>
+        <property name="email" type="string">
+            <column name="email" />
+        </property>
+        <property name="pan" type="string">
+            <column name="pan" />
+        </property>
+         <property name="aadharVoterNo" type="string">
+            <column name="aadhar_voter_no" />
+        </property>
+        <property name="passportDrivingNo" type="string">
+            <column name="passport_driving_no" />
+        </property>
+        <property name="country" type="string">
+            <column name="country" />
+        </property>
+        <property name="passportValidDate" type="string">
+            <column name="passport_valid_date" />
+        </property>
+        <property name="visaValidDate" type="string">
+            <column name="visa_valid_date" />
+        </property>
+        <property name="workingPermitDate" type="string">
+            <column name="working_permit_date" />
+        </property>
+        <property name="workPermit" type="string">
+            <column name="work_permit" />
+        </property>
+        <property name="clearanceFRAMHA" type="string">
+            <column name="clearance_fra_mha" />
+        </property>
+        <property name="nriStatus" type="string">
+            <column name="nri_status"/>
+        </property>
+        <property name="authorizedPerson" type="string">
+            <column name="authorized_person_status"/>
+        </property>
+        
+        <property name="relativeName" type="string">
+            <column name="relative_name"/>
+        </property>
+        <property name="age" type="string">
+            <column name="age"/>
+        </property>
+        <property name="occupation" type="string">
+            <column name="occupation"/>
+        </property>
+        <property name="address" type="string">
+            <column name="address"/>
+        </property>
+        <property name="postOffice" type="string">
+            <column name="post_office"/>
+        </property>
+        <property name="policeStation" type="string">
+            <column name="police_station"/>
+        </property>
+         <property name="stateCode" type="string">
+            <column name="state_code"/>
+        </property>
+        <property name="place" type="string">
+            <column name="place"/>
+        </property>
+         <property name="cvFileName" type="string">
+            <column name="cv_file_name"/>
+        </property>
+        <property name="photoFileName" type="string">
+            <column name="photo_file_name"/>
+        </property>
+        
+        <property name="isNonProfitOrg" type="string">
+            <column name="isnonprofitorg"/>
+        </property>
+        
+        <property name="stateName"  formula="(SELECT coalesce(s.state_name, null) FROM mst_state s WHERE s.state_code = state_code)"/>
+        
+        <property name="createdOn" type="string">
+            <column name="created_on" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="created_by" />
+        </property>
+        <property name="modifyOn" type="string">
+            <column name="modify_on" />
+        </property>
+        <property name="modifyBy" type="string">
+            <column name="modify_by" />
+        </property>
+    </class>
+</hibernate-mapping>

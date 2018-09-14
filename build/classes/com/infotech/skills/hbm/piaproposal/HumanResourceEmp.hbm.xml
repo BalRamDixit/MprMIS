@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+                                   
+<hibernate-mapping>
+ <class name="com.infotech.skills.hbm.piaproposal.HumanResourceEmpVO" schema="public" table="pia_human_resource_employed">
+	<id name="proposalCode" type="string">		
+		<column name="proposal_code" />
+		<generator class="sequence">				
+					<param name="sequence">pia_proposal_seq</param>		
+		</generator> 
+	</id>
+
+   <property name="piaCode" type="string">
+                <column name="pia_code" />
+   </property>
+  <property   name="employeeName" type="string">
+   <column  name="employee_name"/>
+  </property>
+  <property  name="employeeDesig" type="string">
+   <column  name="employee_designation"/>
+  </property>
+  
+  <property name="createdOn" type="string">
+   <column  name="created_on"/>
+  </property>
+  <property name="createdBy" type="string">
+   <column  name="created_by"/>
+  </property>
+  <property name="modifyOn" type="string">
+   <column  name="modify_on"/>
+  </property>  
+  <property name="modifyBy" type="string">
+   <column  name="modify_by"/>
+  </property>
+ 
+ </class>
+</hibernate-mapping>

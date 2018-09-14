@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" version="2.4">
+
+
+<!-- FILTERS START --> 
+	<filter>
+		<filter-name>SGSYFilter</filter-name>
+		<filter-class>com.infotech.sgsy.filter.AuthFilter</filter-class>
+		<init-param>
+		    <param-name>host1</param-name>
+		    <param-value>http://localhost:8080/ddu_atul</param-value>
+		</init-param>					
+		<init-param>
+		    <param-name>login</param-name>
+		    <param-value>login</param-value>
+		</init-param>
+		<init-param>
+		    <param-name>loginMapping</param-name>
+		    <param-value>/login/login.do</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>SGSYFilter</filter-name>
+		<servlet-name>action</servlet-name>
+	</filter-mapping>	
+		    
+   	<filter>
+		<filter-name>UTF8Filter</filter-name>
+		<filter-class>com.infotech.sgsy.filter.CharsetFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>UTF8Filter</filter-name>
+		<servlet-name>action</servlet-name>
+	</filter-mapping>
+	
+	<!-- <filter>
+		<filter-name>crossSite</filter-name> 
+		<filter-class>com.infotech.sgsy.filter.RequestFilter</filter-class> 
+    </filter> 
+	<filter-mapping>
+	    <filter-name>crossSite</filter-name> 
+	    <url-pattern>/*</url-pattern>
+    </filter-mapping>  -->
+<!-- FILTERS END -->   	
+	<listener>
+		<listener-class>com.infotech.sgsy.filter.SessionListener</listener-class>
+	</listener>	
+    <!-- <listener>
+		<listener-class>com.infotech.sgsy.util.Scheduler.SchedulerListener</listener-class>
+	</listener> -->	
+
+<!-- SERVLET MAPPING START -->
+	<servlet> 
+	    <servlet-name>action</servlet-name> 
+	    <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+	    <init-param>
+	      <param-name>config</param-name>
+	      <param-value>/WEB-INF/struts-config.xml,/WEB-INF/skillstruts-config.xml</param-value>
+	    </init-param>
+	    <init-param>
+		    <param-name>application</param-name>
+		    <param-value>ApplicationResources</param-value>
+		</init-param>
+	    <load-on-startup>1</load-on-startup>
+    </servlet> 
+	<servlet-mapping>
+	    <servlet-name>action</servlet-name>
+	    <url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet> 
+	   <servlet-name>Init</servlet-name> 
+	   <servlet-class>com.infotech.sgsy.language.Init</servlet-class>
+	   <load-on-startup>0</load-on-startup>
+    </servlet> 
+	<servlet-mapping>
+	    <servlet-name>Init</servlet-name>
+	    <url-pattern>/Init</url-pattern>
+	</servlet-mapping>
+	
+	<servlet> 
+		<servlet-name>Downloader</servlet-name> 
+		<servlet-class>com.infotech.sgsy.util.Downloader</servlet-class> 
+	</servlet>
+	<servlet-mapping> 
+		<servlet-name>Downloader</servlet-name> 
+		<url-pattern>/Downloader</url-pattern> 
+	</servlet-mapping>
+	
+	<servlet>
+	   	<servlet-name>ReportServlet</servlet-name>
+   		<servlet-class>com.infotech.sgsy.reports.specialProjectReport.ReportServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	   	<servlet-name>ReportServlet</servlet-name>
+	   	<url-pattern>/ReportServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	   	<servlet-name>DataPopulatorServlet</servlet-name>
+	   	<servlet-class>com.infotech.sgsy.util.DataPopulatorServlet</servlet-class>
+   	</servlet>
+	<servlet-mapping>
+   		<servlet-name>DataPopulatorServlet</servlet-name>
+   		<url-pattern>/DataPopulatorServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>This is the servlet needed for cache.type servlet, returns the packed resources</description>
+		<display-name>PackServlet</display-name>
+		<servlet-name>PackServlet</servlet-name>
+		<servlet-class>net.sf.packtag.servlet.PackServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PackServlet</servlet-name>
+		<url-pattern>*.pack</url-pattern>
+	</servlet-mapping>
+	<!-- catcha servlet mapping by laxman-->
+	
+	<servlet>
+		<display-name>CaptchaServlet</display-name>
+		<servlet-name>CaptchaServlet</servlet-name>
+		<servlet-class>com.infotech.skills.registration.pia.CaptchaServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CaptchaServlet</servlet-name>
+		<url-pattern>/captcha</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<display-name>CaptchaCheck</display-name>
+		<servlet-name>CaptchaCheck</servlet-name>
+		<servlet-class>com.infotech.skills.registration.pia.CaptchaCheck</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CaptchaCheck</servlet-name>
+		<url-pattern>/captchaCheck</url-pattern>
+	</servlet-mapping>
+	<servlet> 
+		<servlet-name>DocDownloader</servlet-name> 
+		<servlet-class>com.infotech.sgsy.util.DocDownloader</servlet-class> 
+	</servlet> 
+	<servlet-mapping> 
+		<servlet-name>DocDownloader</servlet-name> 
+		<url-pattern>/docDownloader</url-pattern> 
+	</servlet-mapping>
+<!-- SERVLET MAPPING END -->   
+    
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>/WEB-INF/classes/log4j.properties</param-value>
+	</context-param>
+  
+<!--  FIRST PAGE -->
+	<welcome-file-list>
+		<welcome-file>/WEB-INF/login/pages/main/redirectPage.jsp</welcome-file>
+	</welcome-file-list>   
+<!--  FIRST PAGE END -->
+  
+  	    
+	
+<!--  SESSION CONFIGURATION -->	    
+	<session-config>
+    	<session-timeout>30</session-timeout>   
+	</session-config>
+<!--  SESSION CONFIGURATION END-->    
+	
+<!-- JSP CONFIGARATION STARTS -->
+  <jsp-config>
+	<taglib>
+  		<taglib-uri>/WEB-INF/struts-html.tld</taglib-uri>
+  		<taglib-location>/WEB-INF/tld/struts-html.tld</taglib-location>
+  	</taglib>
+  	<taglib>
+  		<taglib-uri>/WEB-INF/struts-bean.tld</taglib-uri>
+  		<taglib-location>/WEB-INF/tld/struts-bean.tld</taglib-location>
+	</taglib>
+	<taglib>
+  		<taglib-uri>/WEB-INF/struts-logic.tld</taglib-uri>
+  		<taglib-location>/WEB-INF/tld/struts-logic.tld</taglib-location>
+	</taglib>
+	<taglib>
+  		<taglib-uri>/WEB-INF/struts-tiles.tld</taglib-uri>
+  		<taglib-location>/WEB-INF/tld/struts-tiles.tld</taglib-location>
+	</taglib>  
+	<taglib>
+  		<taglib-uri>/WEB-INF/displaytag-12.tld</taglib-uri>
+  		<taglib-location>/WEB-INF/tld/displaytag-12.tld</taglib-location>
+	</taglib> 
+	<taglib>
+ 		<taglib-uri>/WEB-INF/c.tld</taglib-uri>
+  		<taglib-location>/WEB-INF/tld/c.tld</taglib-location>
+	</taglib> 
+	</jsp-config> 
+<!-- JSP CONFIGARATION ENDS -->
+	
+<!-- ERROR HANDLING STARTS -->	
+	<error-page>
+	  <error-code>404</error-code>
+	  <location>/WEB-INF/login/pages/common/commonError.jsp</location>
+    </error-page>
+    <error-page>
+	  <error-code>400</error-code>
+	  <location>/WEB-INF/login/pages/common/commonError.jsp</location>
+    </error-page>   
+    <error-page>
+	  <error-code>500</error-code>
+	  <location>/WEB-INF/login/pages/common/commonError.jsp</location>
+    </error-page>   
+    <error-page>
+	  <error-code>505</error-code>
+	  <location>/WEB-INF/login/pages/common/commonError.jsp</location>
+    </error-page>   
+    <error-page>
+	  <error-code>403</error-code>
+	  <location>/WEB-INF/login/pages/common/commonError.jsp</location>
+    </error-page>   
+    <error-page>
+	  <exception-type>com.infotech.sgsy.exception.SystemFailureException</exception-type>
+	  <location>/WEB-INF/login/pages/common/commonError.jsp</location>
+    </error-page>   
+    <error-page>
+		<exception-type>com.infotech.sgsy.exception.PermissionNotSelectedException</exception-type>
+		<location>/WEB-INF/login/pages/common/commonError.jsp</location>		
+	</error-page>
+	<error-page> 
+		<exception-type>javax.servlet.ServletException</exception-type> 
+		<location>/WEB-INF/login/pages/common/commonError.jsp</location> 
+	</error-page>
+<!-- ERROR HANDLING END -->	
+	
+
+
+</web-app>

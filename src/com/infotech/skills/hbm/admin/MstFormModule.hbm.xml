@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 17, 2013 3:38:18 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="admin.MstFormModule" table="mst_form_module" schema="public">
+        <id name="formCd" type="string">
+            <column name="form_cd" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="mstFormModule" class="admin.MstFormModule" update="false" insert="false" fetch="select">
+            <column name="form_cd" not-null="true" unique="true" />
+        </many-to-one>
+        <property name="formName" type="string">
+            <column name="form_name" />
+        </property>
+        <property name="moduleCd" type="string">
+            <column name="module_cd" />
+        </property>
+        <property name="url" type="string">
+            <column name="url" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="created_by" />
+        </property>
+        <property name="createdOn" type="date">
+            <column name="created_on" length="13" />
+        </property>
+        <property name="lastModifiedBy" type="string">
+            <column name="last_modified_by" />
+        </property>
+        <property name="lastModifiedOn" type="date">
+            <column name="last_modified_on" length="13" />
+        </property>
+        <property name="order" type="big_decimal">
+            <column name="order" precision="131089" scale="0" />
+        </property>
+        <set name="mstFormModules" inverse="true">
+            <key>
+                <column name="form_cd" not-null="true" unique="true" />
+            </key>
+            <one-to-many class="admin.MstFormModule" />
+        </set>
+        <set name="mstRoleDetails" inverse="true">
+            <key>
+                <column name="form_cd" not-null="true" />
+            </key>
+            <one-to-many class="admin.MstRoleDetail" />
+        </set>
+    </class>
+</hibernate-mapping>

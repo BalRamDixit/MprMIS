@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping auto-import="false"> 
+	<class name="com.infotech.sgsy.selfHelpGroup.MZ.SHGMonthlyLoanCalculationsVO" table="MZ_monthly_loan_calculations" dynamic-update="true"> 
+		<composite-id mapped="true">
+			<key-property name="shgCode" column="shg_code" />	
+			<key-property  name="financialYear" column="financial_year" /> 	  
+			<key-property name="entryMonth" column="entry_month" />   
+			<key-property name="shgBankLinkageCode" column="shg_bank_linkage_code" />   
+		</composite-id>
+		
+		 <property  name="entityCode" type="string">
+   			<column name="entity_code"/>
+  		</property>
+  		<property name="principalBeforeRepayment" type="big_decimal">
+   			<column name="principal_before_repayment"/>
+  		</property>
+  		<property name="rateOfInterest" type="big_decimal">
+   			<column name="rate_of_interest"/>
+  		</property> 
+		<property name="interestPaid" type="big_decimal">
+   			<column name="interest_paid"/>
+  		</property>  		
+  		<property   name="repaidPrincipal" type="big_decimal">
+   			<column name="repaid_principal"/>
+  		</property>		
+  		<property name="createdBy" type="string">
+   			<column name="created_by"/>
+	  	</property>
+	   	<property   name="createdOn" type="string">
+	  	 	<column length="10" name="created_on"/>
+	 	</property>
+	   	<property name="updatedBy" type="string">
+	   		<column name="updated_by"/>
+	  	</property>
+	   	<property   name="updatedOn" type="string">
+	   		<column length="10" name="updated_on"/>
+	  	</property>
+ 	</class>
+	 
+</hibernate-mapping>

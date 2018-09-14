@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping auto-import="false"> 
+
+	<class name="com.infotech.sgsy.master.miscellaneous.MiscellaneousVO" table="mst_miscellaneous"> 
+		<composite-id class="com.infotech.sgsy.master.miscellaneous.MiscellaneousVO" mapped="true">
+      		<key-property name="objectCode" column="object_Code"   />
+      		<key-property name="objectName" column="object_Name"  />
+      		<key-property name="critera"  column="critera"  />
+    	</composite-id>		
+	 <property name="flag" column="flag" length="1" not-null="true"/>  		
+ 		
+ 	</class>
+ 	
+</hibernate-mapping>

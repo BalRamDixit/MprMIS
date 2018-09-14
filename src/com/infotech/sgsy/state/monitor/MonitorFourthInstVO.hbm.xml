@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.infotech.sgsy.state.monitor.MonitorFourthInstVO"  table="user_monitoring_fourth_installment" schema="public">
+    
+        <id name="id" type="int">
+         <column name="id" /><generator class="increment"></generator>   </id>
+     
+       <!--  <property name="entryYear"           type="string"><column name="entryYear" /></property> -->
+       <!--  <property name="entryMonth"          type="string"><column name="entryMonth" /></property> -->
+                                                                                         
+        <property name="projectId"                type="string"><column name="projectId" /></property>
+        <property name="stateName"                type="string"><column name="state_name" /></property>
+        
+        <property name="issuanceDate"             type="string"><column name="issuance_date" /></property>
+        <property name="installmentRectoFd"       type="string"><column name="installment_rectoFd" /></property>
+        <property name="receiptDatePiaClaim"      type="string"><column name="receiptDatePiaClaim" /></property>
+        <property name="amountClaimed"            type="int"><column name="amountClaimed" /></property>
+        <property name="amountReleased"           type="string"><column name="amountReleased" /></property>
+        <property name="releasedDate"             type="string"><column name="releasedDate" /></property>
+        <property name="claimStatus"              type="string"><column name="claimStatus" /></property>
+        <property name="remarks"                  type="string"><column name="remarks" /></property>
+       
+        <property name="createdBy"              type="string"> <column name="created_by" /></property>
+        <property name="createdOnDate"          type="string"><column name="created_on" /></property>
+        <property name="updatedBy"              type="string">  <column name="updated_by" /></property>
+        <property name="updatedOnDate"          type="string"><column name="updated_on" /></property>
+      <!--   <property name="entityCode"             type="string"><column name="entity_code" /></property> -->
+      
+         
+	</class>
+</hibernate-mapping>

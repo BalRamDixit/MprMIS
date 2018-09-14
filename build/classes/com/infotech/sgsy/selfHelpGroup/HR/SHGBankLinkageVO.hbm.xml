@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping auto-import="false"> 
+	<class name="com.infotech.sgsy.selfHelpGroup.HR.SHGBankLinkageVO" table="HR_shg_bank_linkage" dynamic-update="true"> 
+		
+		<id name="shgBankLinkageCode" unsaved-value="null">
+  		 <column name="shg_bank_linkage_code" />
+   			<generator class="sequence" >
+            	<param name="sequence">HR_shg_bank_linkage_seq</param>
+   			</generator>
+  		</id>
+		<property name="shgCode" type="string" not-null="true">
+   			<column length="17" name="shg_code"/>
+  		</property>
+  		<property   name="entityCode" type="string" not-null="true">
+   			<column length="13" name="entity_code"/>
+  		</property>
+  		<property name="loanType" type="string">
+   			<column name="loan_type"/>
+  		</property>  		
+  		<property   name="loanAmount" type="big_decimal">
+   			<column name="loan_amount"/>
+  		</property>
+  		<property   name="rateOfInterest" type="big_decimal">
+   			<column name="rate_of_interest"/>
+  		</property>
+  		<property   name="loanIssueDate" type="string">
+   			<column name="loan_issue_date"/>
+  		</property>
+  		<property   name="cashCreditLimit" type="big_decimal">
+   			<column name="cash_credit_limit"/>
+  		</property>
+  		<property   name="emi" type="big_decimal">
+   			<column name="emi"/>
+  		</property>
+  		<property   name="numberOfInstallment" type="integer">
+   			<column name="number_of_installment"/>
+  		</property>
+  		<property   name="outstanding" type="big_decimal">
+   			<column name="outstanding"/>
+  		</property>		
+  		<property  name="systemDefinedOutstanding" type="big_decimal">
+   			<column name="system_defined_outstanding"/>
+  		</property>
+  		<property  name="irragularCounter" type="integer">
+   			<column name="irragular_counter"/>
+  		</property>  		
+  		<property  name="npaCounter" type="integer">
+   			<column name="npa_counter"/>
+  		</property>
+  		<property  name="paymentCounter" type="integer">
+   			<column name="payment_counter"/>
+  		</property>
+  		<property  name="paidInstallmentCounter" type="integer">
+   			<column name="paid_installment_counter"/>
+  		</property>
+  		<property  name="loanStatus" type="string">
+   			<column name="loan_status"/>
+  		</property>
+  		<property name="createdBy" type="string">
+   			<column name="created_by"/>
+	  	</property>
+	   	<property   name="createdOn" type="string">
+	  	 	<column length="10" name="created_on"/>
+	 	</property>
+	   	<property name="updatedBy" type="string">
+	   		<column name="updated_by"/>
+	  	</property>
+	   	<property   name="updatedOn" type="string">
+	   		<column length="10" name="updated_on"/>
+	  	</property>
+ 	</class>
+	 
+</hibernate-mapping>
